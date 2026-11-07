@@ -1,0 +1,78 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 09/03/2024 18:58 (sjfhw317) $
+          : sub-version  IC6.1.8-64b.500.36 
+Started at: 07-Nov-2026  03:33:04
+User Name : ymahmud
+Host Name : ece-lnx-07
+Directory : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/layout.gds' already exists. It will be overwritten.
+INFO (XSTRM-217): Reading the layer map file, /apps/cds/local/GPDK045/gpdk045/gpdk045.layermap
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 sram_project
+strmFile                                /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/layout.gds
+topCell                                 sram_4x6
+view                                    layout
+logFile                                 /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/streamout.log
+layerMap                                /apps/cds/local/GPDK045/gpdk045/gpdk045.layermap
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_794040384510.
+INFO (XSTRM-223): 2. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_794040384511.
+INFO (XSTRM-223): 3. Translating cellView sram_project/inv/layout as STRUCTURE inv.
+INFO (XSTRM-223): 4. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_794040384512.
+INFO (XSTRM-223): 5. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_794040384513.
+INFO (XSTRM-223): 6. Translating cellView sram_project/tg/layout as STRUCTURE tg.
+INFO (XSTRM-223): 7. Translating cellView sram_project/column_mux/layout as STRUCTURE column_mux.
+INFO (XSTRM-223): 8. Translating cellView sram_project/precharge_unit/layout as STRUCTURE precharge_unit.
+INFO (XSTRM-223): 9. Translating cellView sram_project/precharge/layout as STRUCTURE precharge.
+INFO (XSTRM-223): 10. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_794040384514.
+INFO (XSTRM-223): 11. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_794040384515.
+INFO (XSTRM-223): 12. Translating cellView sram_project/sense_amp/layout as STRUCTURE sense_amp.
+INFO (XSTRM-223): 13. Translating cellView sram_project/and3/layout as STRUCTURE and3.
+INFO (XSTRM-223): 14. Translating cellView sram_project/rw_control/layout as STRUCTURE rw_control.
+INFO (XSTRM-223): 15. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_794040384516.
+INFO (XSTRM-223): 16. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_794040384517.
+INFO (XSTRM-223): 17. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_794040384518.
+INFO (XSTRM-223): 18. Translating cellView sram_project/bitcell/layout as STRUCTURE bitcell.
+INFO (XSTRM-223): 19. Translating cellView sram_project/bit_array/layout as STRUCTURE bit_array.
+INFO (XSTRM-223): 20. Translating cellView sram_project/read_latch/layout as STRUCTURE read_latch.
+INFO (XSTRM-223): 21. Translating cellView sram_project/column_decoder/layout as STRUCTURE column_decoder.
+INFO (XSTRM-223): 22. Translating cellView sram_project/row_decoder/layout as STRUCTURE row_decoder.
+INFO (XSTRM-223): 23. Translating cellView sram_project/write_driver/layout as STRUCTURE write_driver.
+INFO (XSTRM-223): 24. Translating cellView sram_project/sram_4x6/layout as STRUCTURE sram_4x6.
+
+Summary of Objects Translated:
+	Scalar Instances:                       120
+	Array Instances:                        0
+	Polygons:                               0
+	Paths:                                  0
+	Rectangles:                             7377
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               0
+	Text:                                   149
+	TextDisplay:                            0
+	Cells:                                  24
+
+Elapsed Time: 0.3s   User Time: 0.1s   CPU Time: 0.0s   Peak VM: 6972KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

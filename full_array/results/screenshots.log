@@ -1,0 +1,709 @@
+\# Program start time:     UTC 2026.11.07 08:36:56.711
+\# Local time: EST (UTC-05:00) 2026.11.07 03:36:56.711
+\o Program:		@(#)$CDS: virtuoso version 6.1.8-64b 09/03/2024 19:11 (sjfhw316) $
+\o Hierarchy:		/apps/cds/IC618/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.8-64b.500.36  (64-bit addresses)
+\# Command line:	/apps/cds/IC618/tools/dfII/bin/64bit/virtuoso -nocdsinit -replay /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/scripts/screenshots_generated.il -log /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/screenshots.log
+\# Host name (type):	ece-lnx-07 (x86_64)
+\# Operating system:	Linux 4.18.0-553.180.1.el8_10.x86_64 #1 SMP Tue Oct 27 22:01:38 EDT 2026
+\# Linux /etc/issue:	\S
+\# Linux /etc/issue:	Kernel \r on an \m
+\# X display name (WxH):	:99 (2560x1600)
+\# Available geometry:			TL(0:0) BR(2559:1599)
+\# X server:			The X.Org Foundation
+\# Depth of Visual (Root):	24 (24)
+\# Number of Planes Used:	24
+\# X version:		11.0 (vendor release 12011000)
+\# X resource pool:	base 0x400000, mask 0x1fffff (2097151), shift 0
+\# 			current id 0x0, current max 0x1ffffa (2097146)
+\# Max data seg size:	     unlimited
+\# Max process size:	     unlimited
+\# Initial sbrk value:	        632 MB
+\# Available memory:	    603,391 MB
+\# System memory:	    646,255 MB
+\# Maximum memory size:	    645,743 MB
+\# Max mem available:	    603,512 MB
+\# Initial memory used:	        120 MB
+\#        process size:	      1,732 MB
+\# Thread usage limits (effective/default):	maxthreads 2060485/2060485 maxload 64.00/64.00
+\# Qt version:		5.9.1
+\# Window Manager:	other
+\# User Name:		ymahmud
+\o Working Directory:	ece-lnx-07:/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array
+\# Process Id:		1766924
+\o 
+\o COPYRIGHT (C) 1992-2024  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           (C) 1992-2024  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading wireEdit.cxt 
+\o Loading pte2.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Loading adexlDM.cxt 
+\o Loading cpf.cxt 
+\o Loading cli.cxt 
+\o Loading lp.cxt 
+\# [03:36:56.075193] Configured Lic search path (22.01-s002): 5280@ece-itop-licsvr.ece.ufl.edu
+\o Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.01s.
+\# Memory report: using         230 MB, process size 1,922 MB at UTC 2026.11.07 08:36:58.853
+\p > 
+\i w=deOpenCellView("sram_project" "inv" "schematic" "schematic" nil "r")
+\# [03:36:58.386435] Periodic Lic check successful
+\# [03:36:58.386544] Feature usage summary:
+\# [03:36:58.386544] 111
+\# Current Window: window(2)
+\o Loading gpdk045/libInit.il ...
+\o 	Loading gpdk045/loadCxt.ile ... done!
+\o 	Loading context 'gpdk045' from library 'gpdk045' ... done!
+\o 	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+\o 	Loading gpdk045/gpdk045_customFilter.il ... done!
+\o 	Loading gpdk045/libInitCustomExit.il ... 
+\o 	Loading Environment Settings ...
+\o 	Loading Model Management File ...
+\o Loading oasis.cxt 
+\o Loading analog.cxt 
+\o Loading asimenv.cxt 
+\o Loading spectrei.cxt 
+\o Loading dal.cxt 
+\o Loading awv.cxt 
+\o Loading socket.cxt 
+\o Loading par.cxt 
+\o Loading alvs.cxt 
+\o Loading caa.cxt 
+\o Loading amps.cxt 
+\o Loading adexlCore.cxt 
+\o Loading adexl.cxt 
+\o Loading vdsil.cxt 
+\o Loading lx.cxt 
+\o Loading lce.cxt 
+\o Loading le.cxt 
+\o Loading drdEdit.cxt 
+\o Loading rte.cxt 
+\o Loading te.cxt 
+\o Loading schHDL.cxt 
+\o Loading devCheck.cxt 
+\# Memory report: using         372 MB, process size 2,179 MB at UTC 2026.11.07 08:37:00.038
+\o Loading relXpert.cxt 
+\o Loading hspiceD.cxt 
+\o Loading spectreinl.cxt 
+\o Loading UltraSim.cxt 
+\o Loading msgHandler.cxt 
+\o Loading AMSOSS.cxt 
+\o Loading AMS.cxt 
+\o 	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+\o 
+\o   *************************************************************           
+\o   *              Cadence Design Systems, Inc.                 *           
+\o   *                                                           *           
+\o   *                    Generic 45nm PDK                       *           
+\o   *                        (gpdk045)                          *           
+\o   *                                                           *           
+\o   *************************************************************           
+\o 	
+\o 
+\o 	VERSION: 6.0 (09-September-2019)
+\o 
+\o done!
+\o Loaded gpdk045/libInit.il successfully!
+\o Loading schematic.cxt 
+\o Loading vb.cxt 
+\o Loading nt.cxt 
+\o Loading oi.cxt 
+\o Loading see.cxt 
+\o Loading treeAssistant.cxt 
+\o Loading asst.cxt 
+\o Loading simui.cxt 
+\o Loading hsm.cxt 
+\t window:2
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/inv_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/inv_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "inv" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(3)
+\t window:3
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/inv_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/inv_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "inv" "layout" "maskLayout" nil "r")
+\# Current Window: window(4)
+\o Loading soi.cxt 
+\o Loading vfoCmd.cxt 
+\o Loading wsp.cxt 
+\o Loading mpt.cxt 
+\o Loading ia.cxt 
+\o Loading vca.cxt 
+\o Loading atd.cxt 
+\t window:4
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/inv_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/inv_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "nand2" "schematic" "schematic" nil "r")
+\# Current Window: window(5)
+\t window:5
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/nand2_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/nand2_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "nand2" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(6)
+\t window:6
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/nand2_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/nand2_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "nand2" "layout" "maskLayout" nil "r")
+\# Current Window: window(7)
+\t window:7
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/nand2_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\# Memory report: using         475 MB, process size 2,296 MB at UTC 2026.11.07 08:37:03.145
+\o Saved to 'results/figures/nand2_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "nand3" "schematic" "schematic" nil "r")
+\# Current Window: window(8)
+\t window:8
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/nand3_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/nand3_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "nand3" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(9)
+\t window:9
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/nand3_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/nand3_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "nand3" "layout" "maskLayout" nil "r")
+\# Current Window: window(10)
+\t window:10
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/nand3_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/nand3_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "and3" "schematic" "schematic" nil "r")
+\# Current Window: window(11)
+\t window:11
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/and3_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/and3_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "and3" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(12)
+\t window:12
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/and3_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/and3_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "and3" "layout" "maskLayout" nil "r")
+\# Current Window: window(13)
+\t window:13
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/and3_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/and3_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "bitcell" "schematic" "schematic" nil "r")
+\# Current Window: window(14)
+\t window:14
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/bitcell_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/bitcell_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "bitcell" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(15)
+\t window:15
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/bitcell_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/bitcell_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "bitcell" "layout" "maskLayout" nil "r")
+\# Current Window: window(16)
+\t window:16
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/bitcell_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/bitcell_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "row_decoder" "schematic" "schematic" nil "r")
+\# Current Window: window(17)
+\t window:17
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/row_decoder_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/row_decoder_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "row_decoder" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(18)
+\t window:18
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/row_decoder_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/row_decoder_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "row_decoder" "layout" "maskLayout" nil "r")
+\# Current Window: window(19)
+\t window:19
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/row_decoder_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/row_decoder_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "column_decoder" "schematic" "schematic" nil "r")
+\# Current Window: window(20)
+\# Available memory:        603,396 MB at UTC 2026.11.07 08:37:07.045
+\# Memory report: Maximum memory size now 603,896 MB at UTC 2026.11.07 08:37:07.045
+\# Thread usage report: 69 active threads, active load 1.40 at UTC 2026.11.07 08:37:07.045
+\t window:20
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/column_decoder_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/column_decoder_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "column_decoder" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(21)
+\t window:21
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/column_decoder_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/column_decoder_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "column_decoder" "layout" "maskLayout" nil "r")
+\# Current Window: window(22)
+\t window:22
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/column_decoder_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/column_decoder_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "rw_control" "schematic" "schematic" nil "r")
+\# Current Window: window(23)
+\t window:23
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/rw_control_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/rw_control_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "rw_control" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(24)
+\t window:24
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/rw_control_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/rw_control_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "rw_control" "layout" "maskLayout" nil "r")
+\# Current Window: window(25)
+\t window:25
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/rw_control_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/rw_control_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "write_driver" "schematic" "schematic" nil "r")
+\# Current Window: window(26)
+\t window:26
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/write_driver_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/write_driver_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "write_driver" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(27)
+\t window:27
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/write_driver_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/write_driver_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "write_driver" "layout" "maskLayout" nil "r")
+\# Current Window: window(28)
+\t window:28
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/write_driver_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/write_driver_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "column_mux" "schematic" "schematic" nil "r")
+\# Current Window: window(29)
+\t window:29
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/column_mux_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/column_mux_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "column_mux" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(30)
+\t window:30
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/column_mux_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/column_mux_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "column_mux" "layout" "maskLayout" nil "r")
+\# Current Window: window(31)
+\t window:31
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/column_mux_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/column_mux_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "precharge_unit" "schematic" "schematic" nil "r")
+\# Current Window: window(32)
+\t window:32
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/precharge_unit_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/precharge_unit_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "precharge_unit" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(33)
+\t window:33
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/precharge_unit_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/precharge_unit_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "precharge_unit" "layout" "maskLayout" nil "r")
+\# Current Window: window(34)
+\t window:34
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/precharge_unit_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/precharge_unit_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "precharge" "schematic" "schematic" nil "r")
+\# Current Window: window(35)
+\t window:35
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/precharge_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/precharge_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "precharge" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(36)
+\t window:36
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/precharge_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/precharge_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "precharge" "layout" "maskLayout" nil "r")
+\# Current Window: window(37)
+\t window:37
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/precharge_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/precharge_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "sense_amp" "schematic" "schematic" nil "r")
+\# Current Window: window(38)
+\t window:38
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/sense_amp_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/sense_amp_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "sense_amp" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(39)
+\t window:39
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/sense_amp_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/sense_amp_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "sense_amp" "layout" "maskLayout" nil "r")
+\# Current Window: window(40)
+\t window:40
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/sense_amp_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/sense_amp_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "read_latch" "schematic" "schematic" nil "r")
+\# Current Window: window(41)
+\t window:41
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/read_latch_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/read_latch_schematic.png'
+\t t
+\p > 
+\# Memory report: using         584 MB, process size 2,485 MB at UTC 2026.11.07 08:37:16.118
+\i w=deOpenCellView("sram_project" "read_latch" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(42)
+\t window:42
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/read_latch_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/read_latch_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "read_latch" "layout" "maskLayout" nil "r")
+\# Current Window: window(43)
+\t window:43
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/read_latch_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/read_latch_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "bit_array" "schematic" "schematic" nil "r")
+\# Current Window: window(44)
+\t window:44
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/bit_array_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/bit_array_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "bit_array" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(45)
+\t window:45
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/bit_array_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/bit_array_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "bit_array" "layout" "maskLayout" nil "r")
+\# Current Window: window(46)
+\t window:46
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/bit_array_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/bit_array_layout.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "sram_4x6" "schematic" "schematic" nil "r")
+\# Current Window: window(47)
+\t window:47
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/sram_4x6_schematic.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/sram_4x6_schematic.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "sram_4x6" "symbol" "schematicSymbol" nil "r")
+\# Current Window: window(48)
+\t window:48
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/sram_4x6_symbol.png" ?window w ?exportRegion 'entireDesign ?width 1000)
+\o Saved to 'results/figures/sram_4x6_symbol.png'
+\t t
+\p > 
+\i w=deOpenCellView("sram_project" "sram_4x6" "layout" "maskLayout" nil "r")
+\# Current Window: window(49)
+\t window:49
+\p > 
+\i geSetAreaViewLevel(w w~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3" "Metal4" "Metal5" "Metal6" "Metal7") leSetLayerVisible(list(layer "pin") nil) leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3" "Metal4" "Metal5"
+\t     "Metal6" "Metal7"
+\t )
+\p > 
+\i hiExportImage(?fileName "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/figures/sram_4x6_layout.png" ?window w ?exportRegion 'entireDesign ?width 2400)
+\o Saved to 'results/figures/sram_4x6_layout.png'
+\t t
+\p > 
+\i exit()
+\o 
+\# Current Window: window(48) Window cellview: sram_project:sram_4x6:symbol  Application: Symbol
+\# Current Window: window(47) Window cellview: sram_project:sram_4x6:schematic  Application: Schematics
+\# Current Window: window(46) Window cellview: sram_project:bit_array:layout  Application: Layout
+\# Current Window: window(45) Window cellview: sram_project:bit_array:symbol  Application: Symbol
+\# Current Window: window(44) Window cellview: sram_project:bit_array:schematic  Application: Schematics
+\# Current Window: window(43) Window cellview: sram_project:read_latch:layout  Application: Layout
+\# Current Window: window(42) Window cellview: sram_project:read_latch:symbol  Application: Symbol
+\# Current Window: window(41) Window cellview: sram_project:read_latch:schematic  Application: Schematics
+\# Current Window: window(40) Window cellview: sram_project:sense_amp:layout  Application: Layout
+\# Current Window: window(39) Window cellview: sram_project:sense_amp:symbol  Application: Symbol
+\# Current Window: window(38) Window cellview: sram_project:sense_amp:schematic  Application: Schematics
+\# Current Window: window(37) Window cellview: sram_project:precharge:layout  Application: Layout
+\# Current Window: window(36) Window cellview: sram_project:precharge:symbol  Application: Symbol
+\# Current Window: window(35) Window cellview: sram_project:precharge:schematic  Application: Schematics
+\# Current Window: window(34) Window cellview: sram_project:precharge_unit:layout  Application: Layout
+\# Current Window: window(33) Window cellview: sram_project:precharge_unit:symbol  Application: Symbol
+\# Current Window: window(32) Window cellview: sram_project:precharge_unit:schematic  Application: Schematics
+\# Current Window: window(31) Window cellview: sram_project:column_mux:layout  Application: Layout
+\# Current Window: window(30) Window cellview: sram_project:column_mux:symbol  Application: Symbol
+\# Current Window: window(29) Window cellview: sram_project:column_mux:schematic  Application: Schematics
+\# Current Window: window(28) Window cellview: sram_project:write_driver:layout  Application: Layout
+\# Current Window: window(27) Window cellview: sram_project:write_driver:symbol  Application: Symbol
+\# Current Window: window(26) Window cellview: sram_project:write_driver:schematic  Application: Schematics
+\# Current Window: window(25) Window cellview: sram_project:rw_control:layout  Application: Layout
+\# Current Window: window(24) Window cellview: sram_project:rw_control:symbol  Application: Symbol
+\# Current Window: window(23) Window cellview: sram_project:rw_control:schematic  Application: Schematics
+\# Current Window: window(22) Window cellview: sram_project:column_decoder:layout  Application: Layout
+\# Current Window: window(21) Window cellview: sram_project:column_decoder:symbol  Application: Symbol
+\# Current Window: window(20) Window cellview: sram_project:column_decoder:schematic  Application: Schematics
+\# Current Window: window(19) Window cellview: sram_project:row_decoder:layout  Application: Layout
+\# Current Window: window(18) Window cellview: sram_project:row_decoder:symbol  Application: Symbol
+\# Current Window: window(17) Window cellview: sram_project:row_decoder:schematic  Application: Schematics
+\# Current Window: window(16) Window cellview: sram_project:bitcell:layout  Application: Layout
+\# Current Window: window(15) Window cellview: sram_project:bitcell:symbol  Application: Symbol
+\# Current Window: window(14) Window cellview: sram_project:bitcell:schematic  Application: Schematics
+\# Current Window: window(13) Window cellview: sram_project:and3:layout  Application: Layout
+\# Current Window: window(12) Window cellview: sram_project:and3:symbol  Application: Symbol
+\# Current Window: window(11) Window cellview: sram_project:and3:schematic  Application: Schematics
+\# Current Window: window(10) Window cellview: sram_project:nand3:layout  Application: Layout
+\# Current Window: window(9) Window cellview: sram_project:nand3:symbol  Application: Symbol
+\# Current Window: window(8) Window cellview: sram_project:nand3:schematic  Application: Schematics
+\# Current Window: window(7) Window cellview: sram_project:nand2:layout  Application: Layout
+\# Current Window: window(6) Window cellview: sram_project:nand2:symbol  Application: Symbol
+\# Current Window: window(5) Window cellview: sram_project:nand2:schematic  Application: Schematics
+\# Current Window: window(4) Window cellview: sram_project:inv:layout  Application: Layout
+\# Current Window: window(3) Window cellview: sram_project:inv:symbol  Application: Symbol
+\# Current Window: window(2) Window cellview: sram_project:inv:schematic  Application: Schematics
+\# Lic Summary:
+\# [03:37:23.045947] Cdslmd servers: ece-itop-licsvr
+\# [03:37:23.045960] Feature usage summary:
+\# [03:37:23.045961] 111
+\# Memory report: on exit            615 MB, process size 2,530 MB at UTC 2026.11.07 08:37:23.570
+\# Memory report: peak usage         615 MB, process size 2,530 MB

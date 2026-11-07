@@ -1,0 +1,30 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.24s.
+Loading gpdk045/libInit.il ...
+	Loading gpdk045/loadCxt.ile ... done!
+	Loading context 'gpdk045' from library 'gpdk045' ... done!
+	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+	Loading gpdk045/gpdk045_customFilter.il ... done!
+	Loading gpdk045/libInitCustomExit.il ... 
+	Loading Environment Settings ...
+	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 45nm PDK                       *           
+  *                        (gpdk045)                          *           
+  *                                                           *           
+  *************************************************************           
+	
+
+	VERSION: 6.0 (09-September-2019)
+
+done!
+Loaded gpdk045/libInit.il successfully!
+TERMDATA symbol (db:0x057bd01f cellView db:0x057be89a objType "term" prop (db:0x057bcf9b) direction "input" groupMembers nil name "Vdd" net db:0x057bcf1f numBits 1 pins (db:0x057bce9f) routeMethod "symbolic" connRoutes nil textDisplays nil assocTextDisplays nil pinCount 1 markers nil mustJoinTerms nil position nil physOnly nil pinConnectMethod "default" isInterface t)
+TPROP sigType "power"
+TERMDATA symbol (db:0x057bd020 cellView db:0x057be89a objType "term" prop (db:0x057bcf9c) direction "input" groupMembers nil name "GND" net db:0x057bcf20 numBits 1 pins (db:0x057bcea0) routeMethod "symbolic" connRoutes nil textDisplays nil assocTextDisplays nil pinCount 1 markers nil mustJoinTerms nil position nil physOnly nil pinConnectMethod "default" isInterface t)
+TPROP sigType "ground"
+TERMDATA schematic (db:0x057bcc1d cellView db:0x057bcd1a objType "term" prop nil direction "input" groupMembers nil name "Vdd" net db:0x057bcb9d numBits 1 pins (db:0x057bcb1d) routeMethod "symbolic" connRoutes nil textDisplays (db:0x057bca9d) assocTextDisplays (db:0x057bca9d) pinCount 1 markers (db:0x057bca1b) mustJoinTerms nil position nil physOnly nil pinConnectMethod "default" isInterface t)
+TERMDATA schematic (db:0x057bcc20 cellView db:0x057bcd1a objType "term" prop nil direction "input" groupMembers nil name "GND" net db:0x057bcba8 numBits 1 pins (db:0x057bcb20) routeMethod "symbolic" connRoutes nil textDisplays (db:0x057bcaf5) assocTextDisplays (db:0x057bcaf5) pinCount 1 markers (db:0x057bca1a) mustJoinTerms nil position nil physOnly nil pinConnectMethod "default" isInterface t)
+

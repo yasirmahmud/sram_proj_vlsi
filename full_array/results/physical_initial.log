@@ -1,0 +1,26 @@
+tg DRC 0
+inv DRC 0
+nand3 DRC 0
+bitcell DRC 0
+[
+  {
+    "cell": "inv",
+    "drc_results": 0,
+    "drc_pass": true
+  },
+  {
+    "cell": "nand3",
+    "drc_results": 0,
+    "drc_pass": true
+  },
+  {
+    "cell": "tg",
+    "drc_results": 0,
+    "drc_pass": true
+  },
+  {
+    "cell": "bitcell",
+    "drc_results": 0,
+    "drc_pass": true
+  }
+]

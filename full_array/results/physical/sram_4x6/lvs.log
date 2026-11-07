@@ -1,0 +1,79 @@
+Pegasus 25.14-s010 BYyzATXPqM8ORTjs4KUtWg 2026-11-07 03:33:20 1765984 ece-lnx-07
+Copyright 2026 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+INFO:    Command Line Options: -lvs -spice /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/extracted.spice -log /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/lvs.log /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/lvs.pvl
+INFO:    Launch host CPU: Model: AMD EPYC 7662 64-Core Processor, OS: Red Hat Enterprise Linux release 8.10 (Ootpa), Logical cores: 64, Physical cores: 64, Cache: 512 KB, CPU Speed: 3277.92 MHz
+         Launch host Memory: MemTotal: 515183 MB,  MemFree: 450012 MB,  SwapTotal: 131071 MB,  SwapFree: 131071 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 543 MB
+INFO:    Current path: /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6
+INFO:    Run directory same as current path
+INFO:    Log directory: /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/pegasus-1794040400-ece-lnx-07-1765984
+INFO:    Setting LAYOUT_PATH to /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/layout.gds
+INFO:    Setting LAYOUT_PRIMARY to sram_4x6
+INFO:    Setting SCHEMATIC_PATH to /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/netlists/native.cdl
+INFO:    Setting SCHEMATIC_PRIMARY to sram_4x6
+INFO:    PVL parsing results:
+INFO:    See /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/pegasus-1794040400-ece-lnx-07-1765984/pvl.log for additional details
+INFO:    Worker 1 started on host ece-lnx-07 with 16 threads
+         CPU: Model: AMD EPYC 7662 64-Core Processor, OS: Red Hat Enterprise Linux release 8.10 (Ootpa), Logical cores: 64, Physical cores: 64, Cache: 512 KB, CPU Speed: 3289.89 MHz
+         Memory: MemTotal: 515183 MB,  MemFree: 450083 MB,  SwapTotal: 131071 MB,  SwapFree: 131071 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 543 MB
+INFO:    Checking out 1 license(s) of feature: 'Pegasus_LVS' version 25.1
+INFO:    License checkout successful ... 2026-11-07 03:33:21 (0s) (License)
+INFO:    Checking out 1 license(s) of feature: 'Pegasus_16nm' version 25.1
+INFO:    License checkout successful ... 2026-11-07 03:33:21 (0s) (License)
+INFO:    Gdsii input summary
+         File name: /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/layout.gds
+         File size: 487424
+         Version: 5.0
+         Library name: sram_project
+         Last modified: 2026-11-07 03:06:32
+         Last accessed: 2026-11-07 03:33:04
+         Database unit in user units: 0.0005
+         Database unit in meters: 5e-10
+         Magnification: 1
+INFO:    CHIP EXTENT: 250 760 262020 84080
+INFO:    Extraction report file: /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/lvs_report.txt (Worker 1)
+INFO:    Extracted layout netlist: /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/extracted.spice (Worker 1)
+INFO:    Comparing netlists using calculon ... (Worker 1)
+INFO:    Reading schematic network
+INFO:     inputting cdl netlist /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/netlists/native.cdl...
+INFO:     finished loading cdl netlist /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/netlists/native.cdl (0s)
+INFO:    Reading layout network
+INFO:     inputting cdl netlist /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/extracted.spice...
+INFO:     finished loading cdl netlist /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/extracted.spice (0s)
+INFO:    Netlists preprocessing ... (Worker 1)
+INFO:    Finished netlists preprocessing ...
+INFO:    Comparing cells ... (Worker 1)
+INFO:    Finished comparing cells ... (Worker 1)
+INFO: #################################################################################################################################################
+      #                                                                                                                                               #
+      # Comparison Run Result  : MATCH                                                                                                                #
+      # Comparison Report File : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/lvs_report.txt.cls            #
+      #                                                                                                                                               #
+      #################################################################################################################################################
+INFO:    See /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/pegasus-1794040400-ece-lnx-07-1765984/nvn.log for additional details (Worker 1)
+INFO:    Status: Runset Finished as of 2026-11-07 03:33:50   Elapsed: 00:00:30   CPU time[s]: 24
+INFO:    Resource usage by worker at exit:
+                  CPU      Elapsed  Threads    CPU       Peak Total  Peak Active
+         Worker:  time[s]  time[s]  Allocated  usage[%]  Memory[MB]  Memory[MB]
+              1:       24       28         16      5.36         867           76  Peak ExtMem: 308 MB
+         Worker resource usage  summary: Total CPU[s]: 24  Run duration[s]: 28  Max peak memory[MB]: 867
+         Worker CPU utilization summary: 24 of 448 available CPU seconds (5.36%) with 16 average available CPUs
+INFO:    Extraction result: CLEAN (Reporter)
+INFO:    Generating ERC summary in /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sram_4x6/result.sum
+INFO:    ###########################################
+         #                                         #
+         # Extraction Run Summary : Clean          #
+         # Extraction Report File : lvs_report.txt #
+         # ERC Results            : Empty          #
+         # ERC Summary File       : result.sum     #
+         #                                         #
+         ###########################################
+         Total CPU Time                    : 24(s)
+         Total Real Time                   : 28(s)
+         Total Original Geometry           : 7357 (24403)
+         Total ERC RuleChecks              : 0
+         Total ERC Results                 : 0 (0)
+INFO:    Checking in all SoftShare licenses.
+
+Pegasus finished normally. 2026-11-07 03:33:50

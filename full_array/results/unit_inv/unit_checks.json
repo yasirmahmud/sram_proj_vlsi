@@ -1,0 +1,54 @@
+{
+  "cell": "inv",
+  "pass": true,
+  "checks": [
+    {
+      "inputs": {
+        "IN": 0
+      },
+      "expected": {
+        "OUT": 1
+      },
+      "measured_V": {
+        "OUT": 1.099999950022043
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "IN": 1
+      },
+      "expected": {
+        "OUT": 0
+      },
+      "measured_V": {
+        "OUT": 1.983250436574913e-07
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "IN": 0
+      },
+      "expected": {
+        "OUT": 1
+      },
+      "measured_V": {
+        "OUT": 1.100000016697757
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "IN": 1
+      },
+      "expected": {
+        "OUT": 0
+      },
+      "measured_V": {
+        "OUT": 1.9835325638593733e-07
+      },
+      "pass": true
+    }
+  ]
+}

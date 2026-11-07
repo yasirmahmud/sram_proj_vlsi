@@ -1,0 +1,4752 @@
+{
+  "write_50pct": {
+    "1": {
+      "trigger_s": 1.0005000000000003e-07,
+      "response_s": 1.0009565386233547e-07,
+      "delay_ps": 45.65386233544228
+    },
+    "0": {
+      "trigger_s": 1.5005000000000002e-07,
+      "response_s": 1.5008598985989633e-07,
+      "delay_ps": 35.98985989630815
+    }
+  },
+  "write_default_50pct": {
+    "1": {
+      "trigger_s": 1.0005e-07,
+      "response_s": 1.000957411323035e-07,
+      "delay_ps": 45.741132303501715
+    },
+    "0": {
+      "trigger_s": 1.5005e-07,
+      "response_s": 1.5008858719816198e-07,
+      "delay_ps": 38.58719816198349
+    }
+  },
+  "extracted_write_50pct": {
+    "1": {
+      "trigger_s": 1.0005e-07,
+      "response_s": 1.0009562216550294e-07,
+      "delay_ps": 45.62216550293669
+    },
+    "0": {
+      "trigger_s": 1.5004999999999997e-07,
+      "response_s": 1.5008596510896628e-07,
+      "delay_ps": 35.96510896630854
+    }
+  },
+  "read_forced_50pct": {
+    "1": {
+      "trigger_s": 1.0004999999999997e-07,
+      "response_s": 1.0168258898394165e-07,
+      "delay_ps": 1632.588983941675
+    },
+    "0": {
+      "trigger_s": 1.5005000000000002e-07,
+      "response_s": 1.5011362127383224e-07,
+      "delay_ps": 63.62127383222056
+    }
+  },
+  "functional": {
+    "functional": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1251901848039098,
+          "precharged_bitline_min_V": 1.1239499806282616,
+          "BL_minus_BLbar_V": 1.1256481245237604,
+          "states": {
+            "write": {
+              "Q": 1.099999807677269,
+              "Q_bar": 3.9637789411150054e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.09999979888905,
+              "Q_bar": 2.8821514006176437e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998077164619,
+              "Q_bar": 1.536753844070634e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999798890303,
+              "Q_bar": 2.893074231013029e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.125150685901815,
+          "precharged_bitline_min_V": 1.1239499262011377,
+          "BL_minus_BLbar_V": -1.1256480701117282,
+          "states": {
+            "write": {
+              "Q": 3.9637789444708354e-08,
+              "Q_bar": 1.099999807677269,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.8821532244251994e-08,
+              "Q_bar": 1.09999979888905,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.536753528088983e-07,
+              "Q_bar": 1.0999998077164617,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.893074330850448e-08,
+              "Q_bar": 1.099999798890303,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508218865316,
+          "precharged_bitline_min_V": 1.1239498046226895,
+          "BL_minus_BLbar_V": 1.125647948566898,
+          "states": {
+            "write": {
+              "Q": 1.099999807677269,
+              "Q_bar": 3.963778941880682e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.09999979888905,
+              "Q_bar": 2.8821537968518965e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998077164614,
+              "Q_bar": 1.536752654963516e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999798890303,
+              "Q_bar": 2.8930743344815208e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508218972919,
+          "precharged_bitline_min_V": 1.1239498046226846,
+          "BL_minus_BLbar_V": 1.1256479485668816,
+          "states": {
+            "write": {
+              "Q": 1.099999807677269,
+              "Q_bar": 3.963778940886538e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.09999979888905,
+              "Q_bar": 2.8821538807474298e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998077164614,
+              "Q_bar": 1.536752654955758e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999798890303,
+              "Q_bar": 2.8930743331129502e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508209339803,
+          "precharged_bitline_min_V": 1.1239498046196488,
+          "BL_minus_BLbar_V": -1.1256479485638389,
+          "states": {
+            "write": {
+              "Q": 3.9637789421526564e-08,
+              "Q_bar": 1.099999807677269,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.8821537955597302e-08,
+              "Q_bar": 1.09999979888905,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.5367526542810407e-07,
+              "Q_bar": 1.0999998077164614,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.8930743339193173e-08,
+              "Q_bar": 1.099999798890303,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508209308306,
+          "precharged_bitline_min_V": 1.1239498046196479,
+          "BL_minus_BLbar_V": -1.1256479485638302,
+          "states": {
+            "write": {
+              "Q": 3.963778940971409e-08,
+              "Q_bar": 1.099999807677269,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.882153885406381e-08,
+              "Q_bar": 1.09999979888905,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.5367526547642034e-07,
+              "Q_bar": 1.0999998077164614,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.8930743324630774e-08,
+              "Q_bar": 1.099999798890303,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508215947228,
+          "precharged_bitline_min_V": 1.12394980462257,
+          "BL_minus_BLbar_V": 1.1256479485667672,
+          "states": {
+            "write": {
+              "Q": 1.099999807677269,
+              "Q_bar": 3.963778939877169e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.09999979888905,
+              "Q_bar": 2.882153795344858e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998077164614,
+              "Q_bar": 1.5367526550101185e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999798890303,
+              "Q_bar": 2.8930743339688912e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508209351365,
+          "precharged_bitline_min_V": 1.123949804619763,
+          "BL_minus_BLbar_V": -1.125647948563963,
+          "states": {
+            "write": {
+              "Q": 3.963778941413933e-08,
+              "Q_bar": 1.099999807677269,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.8821537983845775e-08,
+              "Q_bar": 1.09999979888905,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.5367526546545028e-07,
+              "Q_bar": 1.0999998077164614,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.8930743321986066e-08,
+              "Q_bar": 1.099999798890303,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_tt_-40": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.119094982410865,
+          "precharged_bitline_min_V": 1.1230377949096753,
+          "BL_minus_BLbar_V": 1.1247601180887772,
+          "states": {
+            "write": {
+              "Q": 1.099999876509724,
+              "Q_bar": 2.6425824006504063e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999869453307,
+              "Q_bar": 1.963119404020557e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998765113457,
+              "Q_bar": 9.277636119601963e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999869454284,
+              "Q_bar": 1.963365925122614e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1190658312554735,
+          "precharged_bitline_min_V": 1.1230378354170931,
+          "BL_minus_BLbar_V": -1.1247601585899036,
+          "states": {
+            "write": {
+              "Q": 2.6425824040864338e-08,
+              "Q_bar": 1.099999876509724,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.963119430645319e-08,
+              "Q_bar": 1.099999869453307,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.277636290086204e-08,
+              "Q_bar": 1.0999998765113455,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.963365915202276e-08,
+              "Q_bar": 1.099999869454284,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1190658115274898,
+          "precharged_bitline_min_V": 1.1230379112066318,
+          "BL_minus_BLbar_V": 1.1247602343676606,
+          "states": {
+            "write": {
+              "Q": 1.099999876509724,
+              "Q_bar": 2.642582400105961e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999869453307,
+              "Q_bar": 1.963119442426456e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998765113455,
+              "Q_bar": 9.27763638911643e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999869454284,
+              "Q_bar": 1.9633659109570587e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1190658115170434,
+          "precharged_bitline_min_V": 1.1230379112096829,
+          "BL_minus_BLbar_V": 1.1247602343707137,
+          "states": {
+            "write": {
+              "Q": 1.099999876509724,
+              "Q_bar": 2.642582401431778e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999869453307,
+              "Q_bar": 1.963119440508416e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998765113455,
+              "Q_bar": 9.277636387890443e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999869454284,
+              "Q_bar": 1.963365913758505e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1190658114289912,
+          "precharged_bitline_min_V": 1.1230379112100948,
+          "BL_minus_BLbar_V": -1.1247602343711245,
+          "states": {
+            "write": {
+              "Q": 2.6425824064379442e-08,
+              "Q_bar": 1.099999876509724,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.9631194417769836e-08,
+              "Q_bar": 1.099999869453307,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.277636388597235e-08,
+              "Q_bar": 1.0999998765113455,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.9633659137049633e-08,
+              "Q_bar": 1.099999869454284,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1190658114345828,
+          "precharged_bitline_min_V": 1.1230379112126598,
+          "BL_minus_BLbar_V": -1.1247602343736942,
+          "states": {
+            "write": {
+              "Q": 2.6425823974949872e-08,
+              "Q_bar": 1.099999876509724,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.9631194419549336e-08,
+              "Q_bar": 1.099999869453307,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.277636388330543e-08,
+              "Q_bar": 1.0999998765113455,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.9633659142158105e-08,
+              "Q_bar": 1.099999869454284,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1190658113040932,
+          "precharged_bitline_min_V": 1.1230379112125926,
+          "BL_minus_BLbar_V": 1.1247602343736238,
+          "states": {
+            "write": {
+              "Q": 1.099999876509724,
+              "Q_bar": 2.6425824018284197e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999869453307,
+              "Q_bar": 1.963119441348933e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998765113455,
+              "Q_bar": 9.277636388020148e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999869454284,
+              "Q_bar": 1.963365912661113e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.119065811432362,
+          "precharged_bitline_min_V": 1.1230379112125908,
+          "BL_minus_BLbar_V": -1.1247602343736263,
+          "states": {
+            "write": {
+              "Q": 2.6425824069310987e-08,
+              "Q_bar": 1.099999876509724,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.96311944076096e-08,
+              "Q_bar": 1.099999869453307,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.27763638794393e-08,
+              "Q_bar": 1.0999998765113455,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.9633659142196092e-08,
+              "Q_bar": 1.099999869454284,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_tt_27": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1251901848039098,
+          "precharged_bitline_min_V": 1.1239499806282616,
+          "BL_minus_BLbar_V": 1.1256481245237604,
+          "states": {
+            "write": {
+              "Q": 1.099999807677269,
+              "Q_bar": 3.9637789411150054e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.09999979888905,
+              "Q_bar": 2.8821514006176437e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998077164619,
+              "Q_bar": 1.536753844070634e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999798890303,
+              "Q_bar": 2.893074231013029e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.125150685901815,
+          "precharged_bitline_min_V": 1.1239499262011377,
+          "BL_minus_BLbar_V": -1.1256480701117282,
+          "states": {
+            "write": {
+              "Q": 3.9637789444708354e-08,
+              "Q_bar": 1.099999807677269,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.8821532244251994e-08,
+              "Q_bar": 1.09999979888905,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.536753528088983e-07,
+              "Q_bar": 1.0999998077164617,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.893074330850448e-08,
+              "Q_bar": 1.099999798890303,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508218865316,
+          "precharged_bitline_min_V": 1.1239498046226895,
+          "BL_minus_BLbar_V": 1.125647948566898,
+          "states": {
+            "write": {
+              "Q": 1.099999807677269,
+              "Q_bar": 3.963778941880682e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.09999979888905,
+              "Q_bar": 2.8821537968518965e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998077164614,
+              "Q_bar": 1.536752654963516e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999798890303,
+              "Q_bar": 2.8930743344815208e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508218972919,
+          "precharged_bitline_min_V": 1.1239498046226846,
+          "BL_minus_BLbar_V": 1.1256479485668816,
+          "states": {
+            "write": {
+              "Q": 1.099999807677269,
+              "Q_bar": 3.963778940886538e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.09999979888905,
+              "Q_bar": 2.8821538807474298e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998077164614,
+              "Q_bar": 1.536752654955758e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999798890303,
+              "Q_bar": 2.8930743331129502e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508209339803,
+          "precharged_bitline_min_V": 1.1239498046196488,
+          "BL_minus_BLbar_V": -1.1256479485638389,
+          "states": {
+            "write": {
+              "Q": 3.9637789421526564e-08,
+              "Q_bar": 1.099999807677269,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.8821537955597302e-08,
+              "Q_bar": 1.09999979888905,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.5367526542810407e-07,
+              "Q_bar": 1.0999998077164614,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.8930743339193173e-08,
+              "Q_bar": 1.099999798890303,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508209308306,
+          "precharged_bitline_min_V": 1.1239498046196479,
+          "BL_minus_BLbar_V": -1.1256479485638302,
+          "states": {
+            "write": {
+              "Q": 3.963778940971409e-08,
+              "Q_bar": 1.099999807677269,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.882153885406381e-08,
+              "Q_bar": 1.09999979888905,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.5367526547642034e-07,
+              "Q_bar": 1.0999998077164614,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.8930743324630774e-08,
+              "Q_bar": 1.099999798890303,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508215947228,
+          "precharged_bitline_min_V": 1.12394980462257,
+          "BL_minus_BLbar_V": 1.1256479485667672,
+          "states": {
+            "write": {
+              "Q": 1.099999807677269,
+              "Q_bar": 3.963778939877169e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.09999979888905,
+              "Q_bar": 2.882153795344858e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998077164614,
+              "Q_bar": 1.5367526550101185e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999798890303,
+              "Q_bar": 2.8930743339688912e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1251508209351365,
+          "precharged_bitline_min_V": 1.123949804619763,
+          "BL_minus_BLbar_V": -1.125647948563963,
+          "states": {
+            "write": {
+              "Q": 3.963778941413933e-08,
+              "Q_bar": 1.099999807677269,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.8821537983845775e-08,
+              "Q_bar": 1.09999979888905,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.5367526546545028e-07,
+              "Q_bar": 1.0999998077164614,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.8930743321986066e-08,
+              "Q_bar": 1.099999798890303,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_tt_125": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1339443448671354,
+          "precharged_bitline_min_V": 1.1251633413030182,
+          "BL_minus_BLbar_V": 1.1267802917566512,
+          "states": {
+            "write": {
+              "Q": 1.099998811302444,
+              "Q_bar": 2.1747095690328928e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099998799375308,
+              "Q_bar": 1.3351976101375523e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999988136215357,
+              "Q_bar": 1.4065722869875767e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099998799377003,
+              "Q_bar": 1.3681696877493794e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1338931403357754,
+          "precharged_bitline_min_V": 1.1251632162500205,
+          "BL_minus_BLbar_V": -1.1267801669274864,
+          "states": {
+            "write": {
+              "Q": 2.1747095688577385e-07,
+              "Q_bar": 1.099998811302444,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.3352011137537702e-07,
+              "Q_bar": 1.099998799375308,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.406596098581068e-06,
+              "Q_bar": 1.0999988136209542,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.3681693616743375e-07,
+              "Q_bar": 1.0999987993770033,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1338902493471086,
+          "precharged_bitline_min_V": 1.1251629401910994,
+          "BL_minus_BLbar_V": 1.1267798915284386,
+          "states": {
+            "write": {
+              "Q": 1.099998811302444,
+              "Q_bar": 2.174709568788557e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099998799375308,
+              "Q_bar": 1.3352034584671311e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099998813620923,
+              "Q_bar": 1.4065906940903146e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099998799377003,
+              "Q_bar": 1.3681693567590103e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.133890249346686,
+          "precharged_bitline_min_V": 1.1251629401911025,
+          "BL_minus_BLbar_V": 1.1267798915284484,
+          "states": {
+            "write": {
+              "Q": 1.099998811302444,
+              "Q_bar": 2.1747095685113743e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099998799375308,
+              "Q_bar": 1.335204099421577e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099998813620923,
+              "Q_bar": 1.4065906940623943e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099998799377003,
+              "Q_bar": 1.3681693560434742e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1338902495304216,
+          "precharged_bitline_min_V": 1.1251629401824896,
+          "BL_minus_BLbar_V": -1.1267798915198513,
+          "states": {
+            "write": {
+              "Q": 2.1747095688989882e-07,
+              "Q_bar": 1.099998811302444,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.3352034581680068e-07,
+              "Q_bar": 1.099998799375308,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.406590694869208e-06,
+              "Q_bar": 1.099998813620923,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.3681693563147323e-07,
+              "Q_bar": 1.099998799377003,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1338902495268659,
+          "precharged_bitline_min_V": 1.1251629401825092,
+          "BL_minus_BLbar_V": -1.1267798915198675,
+          "states": {
+            "write": {
+              "Q": 2.174709568992464e-07,
+              "Q_bar": 1.099998811302444,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.3352040992012657e-07,
+              "Q_bar": 1.099998799375308,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.4065906948700758e-06,
+              "Q_bar": 1.099998813620923,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.3681693565051188e-07,
+              "Q_bar": 1.099998799377003,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1338902493470416,
+          "precharged_bitline_min_V": 1.1251629401911807,
+          "BL_minus_BLbar_V": 1.1267798915285288,
+          "states": {
+            "write": {
+              "Q": 1.099998811302444,
+              "Q_bar": 2.1747095689403888e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099998799375308,
+              "Q_bar": 1.3352034581593138e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099998813620923,
+              "Q_bar": 1.4065906940763743e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099998799377003,
+              "Q_bar": 1.3681693563876362e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.133890249530893,
+          "precharged_bitline_min_V": 1.1251629401825807,
+          "BL_minus_BLbar_V": -1.126779891519943,
+          "states": {
+            "write": {
+              "Q": 2.1747095686334876e-07,
+              "Q_bar": 1.099998811302444,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.335203458386908e-07,
+              "Q_bar": 1.099998799375308,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.40659069486432e-06,
+              "Q_bar": 1.099998813620923,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.3681693560092133e-07,
+              "Q_bar": 1.099998799377003,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_ff_-40": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1240592574221615,
+          "precharged_bitline_min_V": 1.1224505046618218,
+          "BL_minus_BLbar_V": 1.124312992057867,
+          "states": {
+            "write": {
+              "Q": 1.099999815393044,
+              "Q_bar": 3.9557169941241155e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999806187786,
+              "Q_bar": 3.020396183204772e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099999815401306,
+              "Q_bar": 1.3153596227646921e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.09999980618864,
+              "Q_bar": 3.024107507320477e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1240045676848344,
+          "precharged_bitline_min_V": 1.1224505426857605,
+          "BL_minus_BLbar_V": -1.1243130300745001,
+          "states": {
+            "write": {
+              "Q": 3.9557169932179875e-08,
+              "Q_bar": 1.099999815393044,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.020396328296104e-08,
+              "Q_bar": 1.099999806187786,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.3153596657930238e-07,
+              "Q_bar": 1.099999815401306,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.024107456909416e-08,
+              "Q_bar": 1.09999980618864,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1240045909594891,
+          "precharged_bitline_min_V": 1.1224506351222379,
+          "BL_minus_BLbar_V": 1.1243131224932932,
+          "states": {
+            "write": {
+              "Q": 1.099999815393044,
+              "Q_bar": 3.955716992924789e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999806187786,
+              "Q_bar": 3.0203964045079383e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099999815401306,
+              "Q_bar": 1.315359779804698e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.09999980618864,
+              "Q_bar": 3.024107459598383e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1240045909456749,
+          "precharged_bitline_min_V": 1.1224506351284373,
+          "BL_minus_BLbar_V": 1.1243131224994847,
+          "states": {
+            "write": {
+              "Q": 1.099999815393044,
+              "Q_bar": 3.9557169931085534e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999806187786,
+              "Q_bar": 3.0203962948888015e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099999815401306,
+              "Q_bar": 1.315359780159417e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.09999980618864,
+              "Q_bar": 3.0241074608497156e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1240045918051999,
+          "precharged_bitline_min_V": 1.1224506351257424,
+          "BL_minus_BLbar_V": -1.1243131224967853,
+          "states": {
+            "write": {
+              "Q": 3.955716991786844e-08,
+              "Q_bar": 1.099999815393044,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.020396405400042e-08,
+              "Q_bar": 1.099999806187786,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.3153597797545875e-07,
+              "Q_bar": 1.099999815401306,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.0241074581299306e-08,
+              "Q_bar": 1.09999980618864,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1240045917985483,
+          "precharged_bitline_min_V": 1.1224506351301353,
+          "BL_minus_BLbar_V": -1.1243131225011773,
+          "states": {
+            "write": {
+              "Q": 3.955716993360083e-08,
+              "Q_bar": 1.099999815393044,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.0203962953478524e-08,
+              "Q_bar": 1.099999806187786,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.315359779851185e-07,
+              "Q_bar": 1.099999815401306,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.0241074590386216e-08,
+              "Q_bar": 1.09999980618864,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1240045905284624,
+          "precharged_bitline_min_V": 1.122450635130046,
+          "BL_minus_BLbar_V": 1.124313122501096,
+          "states": {
+            "write": {
+              "Q": 1.099999815393044,
+              "Q_bar": 3.955716993840559e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999806187786,
+              "Q_bar": 3.0203964063566996e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099999815401306,
+              "Q_bar": 1.3153597797122263e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.09999980618864,
+              "Q_bar": 3.024107462824921e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1240045918255697,
+          "precharged_bitline_min_V": 1.122450635130058,
+          "BL_minus_BLbar_V": -1.1243131225010996,
+          "states": {
+            "write": {
+              "Q": 3.9557169949141134e-08,
+              "Q_bar": 1.099999815393044,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.020396404011316e-08,
+              "Q_bar": 1.099999806187786,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.3153597797112236e-07,
+              "Q_bar": 1.099999815401306,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.024107458410814e-08,
+              "Q_bar": 1.09999980618864,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_ff_27": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1336690934338232,
+          "precharged_bitline_min_V": 1.123533690453091,
+          "BL_minus_BLbar_V": 1.1253646512662987,
+          "states": {
+            "write": {
+              "Q": 1.099999501006058,
+              "Q_bar": 9.481479673787293e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999489430855,
+              "Q_bar": 8.446318554601719e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999995013945036,
+              "Q_bar": 3.6317603578929306e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999489431964,
+              "Q_bar": 8.529861947206344e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1335073183695308,
+          "precharged_bitline_min_V": 1.1235337213218572,
+          "BL_minus_BLbar_V": -1.1253646821113685,
+          "states": {
+            "write": {
+              "Q": 9.481479672807247e-08,
+              "Q_bar": 1.099999501006058,
+              "pass": true
+            },
+            "hold": {
+              "Q": 8.446311586569864e-08,
+              "Q_bar": 1.099999489430855,
+              "pass": true
+            },
+            "read": {
+              "Q": 3.631762387877676e-07,
+              "Q_bar": 1.0999995013945014,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 8.529858502049484e-08,
+              "Q_bar": 1.099999489431964,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1337662307104006,
+          "precharged_bitline_min_V": 1.1235338118224405,
+          "BL_minus_BLbar_V": 1.125364772544129,
+          "states": {
+            "write": {
+              "Q": 1.099999501006058,
+              "Q_bar": 9.48147967209674e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999489430855,
+              "Q_bar": 8.44630291322998e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999995013945048,
+              "Q_bar": 3.631765071098801e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999489431964,
+              "Q_bar": 8.529859074165719e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1337662344937736,
+          "precharged_bitline_min_V": 1.1235338118271305,
+          "BL_minus_BLbar_V": 1.1253647725488147,
+          "states": {
+            "write": {
+              "Q": 1.099999501006058,
+              "Q_bar": 9.481479673315251e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999489430855,
+              "Q_bar": 8.446302914116771e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999995013945048,
+              "Q_bar": 3.631765070810508e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999489431964,
+              "Q_bar": 8.529859071680511e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1337662461807757,
+          "precharged_bitline_min_V": 1.1235338118256446,
+          "BL_minus_BLbar_V": -1.1253647725473324,
+          "states": {
+            "write": {
+              "Q": 9.481479675024655e-08,
+              "Q_bar": 1.099999501006058,
+              "pass": true
+            },
+            "hold": {
+              "Q": 8.44630291449899e-08,
+              "Q_bar": 1.099999489430855,
+              "pass": true
+            },
+            "read": {
+              "Q": 3.631765071102569e-07,
+              "Q_bar": 1.0999995013945048,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 8.52985907096512e-08,
+              "Q_bar": 1.099999489431964,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1337662462011046,
+          "precharged_bitline_min_V": 1.1235338118291225,
+          "BL_minus_BLbar_V": -1.1253647725508078,
+          "states": {
+            "write": {
+              "Q": 9.481479673555508e-08,
+              "Q_bar": 1.099999501006058,
+              "pass": true
+            },
+            "hold": {
+              "Q": 8.446302913406172e-08,
+              "Q_bar": 1.099999489430855,
+              "pass": true
+            },
+            "read": {
+              "Q": 3.631765070969521e-07,
+              "Q_bar": 1.0999995013945048,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 8.529859076200625e-08,
+              "Q_bar": 1.099999489431964,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1337662368807995,
+          "precharged_bitline_min_V": 1.1235338118291023,
+          "BL_minus_BLbar_V": 1.1253647725507903,
+          "states": {
+            "write": {
+              "Q": 1.099999501006058,
+              "Q_bar": 9.481479673174976e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999489430855,
+              "Q_bar": 8.446302908960921e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999995013945048,
+              "Q_bar": 3.6317650709660674e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999489431964,
+              "Q_bar": 8.529859072738132e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1337662461766157,
+          "precharged_bitline_min_V": 1.1235338118291165,
+          "BL_minus_BLbar_V": -1.1253647725507994,
+          "states": {
+            "write": {
+              "Q": 9.481479675007604e-08,
+              "Q_bar": 1.099999501006058,
+              "pass": true
+            },
+            "hold": {
+              "Q": 8.446302907959694e-08,
+              "Q_bar": 1.099999489430855,
+              "pass": true
+            },
+            "read": {
+              "Q": 3.631765071348044e-07,
+              "Q_bar": 1.0999995013945048,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 8.529859071258313e-08,
+              "Q_bar": 1.099999489431964,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_ff_125": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1443208436723078,
+          "precharged_bitline_min_V": 1.124954303147079,
+          "BL_minus_BLbar_V": 1.1265856094054345,
+          "states": {
+            "write": {
+              "Q": 1.099995526854832,
+              "Q_bar": 1.000989440425668e-06,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.0999955108713098,
+              "Q_bar": 9.118735705853998e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099995539379489,
+              "Q_bar": 4.935359755516182e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.0999955108716872,
+              "Q_bar": 9.26840165867741e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1442750605131583,
+          "precharged_bitline_min_V": 1.124954330635646,
+          "BL_minus_BLbar_V": -1.1265856366236187,
+          "states": {
+            "write": {
+              "Q": 1.0009894404048733e-06,
+              "Q_bar": 1.099995526854832,
+              "pass": true
+            },
+            "hold": {
+              "Q": 9.118753126147312e-07,
+              "Q_bar": 1.0999955108713095,
+              "pass": true
+            },
+            "read": {
+              "Q": 4.935363124700989e-06,
+              "Q_bar": 1.099995539379468,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 9.26839689523229e-07,
+              "Q_bar": 1.0999955108716872,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.144275081229816,
+          "precharged_bitline_min_V": 1.124954441511143,
+          "BL_minus_BLbar_V": 1.126585746603194,
+          "states": {
+            "write": {
+              "Q": 1.099995526854832,
+              "Q_bar": 1.0009894403812517e-06,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.0999955108713098,
+              "Q_bar": 9.118750219551123e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999955393795093,
+              "Q_bar": 4.935371008916234e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.0999955108716872,
+              "Q_bar": 9.268396938244218e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1442750812335359,
+          "precharged_bitline_min_V": 1.1249544415163384,
+          "BL_minus_BLbar_V": 1.1265857466083564,
+          "states": {
+            "write": {
+              "Q": 1.099995526854832,
+              "Q_bar": 1.0009894404314873e-06,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.0999955108713098,
+              "Q_bar": 9.118750219731882e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999955393795093,
+              "Q_bar": 4.935371009306636e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.0999955108716872,
+              "Q_bar": 9.2683969375542e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1442750810899891,
+          "precharged_bitline_min_V": 1.1249544415159713,
+          "BL_minus_BLbar_V": -1.1265857466079945,
+          "states": {
+            "write": {
+              "Q": 1.0009894403662876e-06,
+              "Q_bar": 1.099995526854832,
+              "pass": true
+            },
+            "hold": {
+              "Q": 9.118750219642721e-07,
+              "Q_bar": 1.0999955108713098,
+              "pass": true
+            },
+            "read": {
+              "Q": 4.935371009282527e-06,
+              "Q_bar": 1.0999955393795093,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 9.26839693783707e-07,
+              "Q_bar": 1.0999955108716872,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1442750810900022,
+          "precharged_bitline_min_V": 1.1249544415201456,
+          "BL_minus_BLbar_V": -1.1265857466121354,
+          "states": {
+            "write": {
+              "Q": 1.0009894403886651e-06,
+              "Q_bar": 1.099995526854832,
+              "pass": true
+            },
+            "hold": {
+              "Q": 9.118750219716131e-07,
+              "Q_bar": 1.0999955108713098,
+              "pass": true
+            },
+            "read": {
+              "Q": 4.935371009587888e-06,
+              "Q_bar": 1.0999955393795093,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 9.268396937626454e-07,
+              "Q_bar": 1.0999955108716872,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1442750811426813,
+          "precharged_bitline_min_V": 1.1249544415201533,
+          "BL_minus_BLbar_V": 1.126585746612148,
+          "states": {
+            "write": {
+              "Q": 1.099995526854832,
+              "Q_bar": 1.0009894404452366e-06,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.0999955108713098,
+              "Q_bar": 9.118750219789554e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999955393795093,
+              "Q_bar": 4.935371009596491e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.0999955108716872,
+              "Q_bar": 9.26839693763281e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1442750810904231,
+          "precharged_bitline_min_V": 1.1249544415201547,
+          "BL_minus_BLbar_V": -1.1265857466121454,
+          "states": {
+            "write": {
+              "Q": 1.0009894404060715e-06,
+              "Q_bar": 1.099995526854832,
+              "pass": true
+            },
+            "hold": {
+              "Q": 9.11875021962118e-07,
+              "Q_bar": 1.0999955108713098,
+              "pass": true
+            },
+            "read": {
+              "Q": 4.935371009613619e-06,
+              "Q_bar": 1.0999955393795093,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 9.268396937953327e-07,
+              "Q_bar": 1.0999955108716872,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_ss_-40": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1099723768573451,
+          "precharged_bitline_min_V": 1.1233801148606046,
+          "BL_minus_BLbar_V": 1.1249679277181033,
+          "states": {
+            "write": {
+              "Q": 1.09999990963801,
+              "Q_bar": 1.8463232837759937e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999904032442,
+              "Q_bar": 1.3564651600292206e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999999096395454,
+              "Q_bar": 6.907040931819013e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999904033588,
+              "Q_bar": 1.3564833068130014e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.109946853497317,
+          "precharged_bitline_min_V": 1.1233801432758743,
+          "BL_minus_BLbar_V": -1.124967956129415,
+          "states": {
+            "write": {
+              "Q": 1.8463232838910996e-08,
+              "Q_bar": 1.09999990963801,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.3564651562855986e-08,
+              "Q_bar": 1.099999904032442,
+              "pass": true
+            },
+            "read": {
+              "Q": 6.907041352578282e-08,
+              "Q_bar": 1.0999999096395459,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.3564833048368528e-08,
+              "Q_bar": 1.099999904033588,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1099468037223319,
+          "precharged_bitline_min_V": 1.123380184702218,
+          "BL_minus_BLbar_V": 1.1249679975500242,
+          "states": {
+            "write": {
+              "Q": 1.09999990963801,
+              "Q_bar": 1.8463232821747372e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999904032442,
+              "Q_bar": 1.356465156270536e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999999096395459,
+              "Q_bar": 6.907041356523342e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999904033588,
+              "Q_bar": 1.3564833061591494e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1099468037244355,
+          "precharged_bitline_min_V": 1.123380184702342,
+          "BL_minus_BLbar_V": 1.1249679975501667,
+          "states": {
+            "write": {
+              "Q": 1.09999990963801,
+              "Q_bar": 1.846323283533807e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999904032442,
+              "Q_bar": 1.3564651580839196e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999999096395452,
+              "Q_bar": 6.907041356205371e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999904033588,
+              "Q_bar": 1.356483308412541e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1099468033564059,
+          "precharged_bitline_min_V": 1.1233801847039027,
+          "BL_minus_BLbar_V": -1.1249679975517215,
+          "states": {
+            "write": {
+              "Q": 1.8463232829312283e-08,
+              "Q_bar": 1.09999990963801,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.3564651585224836e-08,
+              "Q_bar": 1.099999904032442,
+              "pass": true
+            },
+            "read": {
+              "Q": 6.907041356376934e-08,
+              "Q_bar": 1.0999999096395452,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.3564833101677452e-08,
+              "Q_bar": 1.099999904033588,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1099468033561185,
+          "precharged_bitline_min_V": 1.1233801847040379,
+          "BL_minus_BLbar_V": -1.1249679975518652,
+          "states": {
+            "write": {
+              "Q": 1.846323285262141e-08,
+              "Q_bar": 1.09999990963801,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.3564651611205517e-08,
+              "Q_bar": 1.099999904032442,
+              "pass": true
+            },
+            "read": {
+              "Q": 6.907041358571587e-08,
+              "Q_bar": 1.0999999096395452,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.356483306844016e-08,
+              "Q_bar": 1.099999904033588,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1099468034465505,
+          "precharged_bitline_min_V": 1.1233801847039848,
+          "BL_minus_BLbar_V": 1.1249679975518008,
+          "states": {
+            "write": {
+              "Q": 1.09999990963801,
+              "Q_bar": 1.8463232809338412e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999904032442,
+              "Q_bar": 1.3564651590225062e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999999096395459,
+              "Q_bar": 6.907041355135848e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999904033588,
+              "Q_bar": 1.3564833044481011e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1099468033584779,
+          "precharged_bitline_min_V": 1.1233801847039888,
+          "BL_minus_BLbar_V": -1.124967997551808,
+          "states": {
+            "write": {
+              "Q": 1.84632328636511e-08,
+              "Q_bar": 1.09999990963801,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.3564651598794728e-08,
+              "Q_bar": 1.099999904032442,
+              "pass": true
+            },
+            "read": {
+              "Q": 6.907041353875092e-08,
+              "Q_bar": 1.0999999096395459,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.3564833068806575e-08,
+              "Q_bar": 1.099999904033588,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_ss_27": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1159305062886471,
+          "precharged_bitline_min_V": 1.1241168268555828,
+          "BL_minus_BLbar_V": 1.1256824205067268,
+          "states": {
+            "write": {
+              "Q": 1.099999881012583,
+              "Q_bar": 2.5750336604471587e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999874071998,
+              "Q_bar": 1.8629374420901247e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998810186775,
+              "Q_bar": 9.879761694822811e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999874073448,
+              "Q_bar": 1.8643492450101537e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.115887157690706,
+          "precharged_bitline_min_V": 1.1241166925945494,
+          "BL_minus_BLbar_V": -1.1256822862718368,
+          "states": {
+            "write": {
+              "Q": 2.5750336603494584e-08,
+              "Q_bar": 1.099999881012583,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.8629374898044224e-08,
+              "Q_bar": 1.099999874071998,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.879698594893279e-08,
+              "Q_bar": 1.0999998810186926,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.8643492179340388e-08,
+              "Q_bar": 1.099999874073448,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1158871372234996,
+          "precharged_bitline_min_V": 1.124116455361905,
+          "BL_minus_BLbar_V": 1.1256820490827457,
+          "states": {
+            "write": {
+              "Q": 1.099999881012583,
+              "Q_bar": 2.5750336584342596e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999874071998,
+              "Q_bar": 1.8629374836117433e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998810186917,
+              "Q_bar": 9.879695187525889e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999874073448,
+              "Q_bar": 1.864349216545005e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1158871372278606,
+          "precharged_bitline_min_V": 1.124116455361902,
+          "BL_minus_BLbar_V": 1.1256820490827366,
+          "states": {
+            "write": {
+              "Q": 1.099999881012583,
+              "Q_bar": 2.5750336603872053e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999874071998,
+              "Q_bar": 1.8629374913507697e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998810186917,
+              "Q_bar": 9.879695187493588e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999874073448,
+              "Q_bar": 1.8643492156728635e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1158871370738542,
+          "precharged_bitline_min_V": 1.1241164553384893,
+          "BL_minus_BLbar_V": -1.1256820490593282,
+          "states": {
+            "write": {
+              "Q": 2.575033655839339e-08,
+              "Q_bar": 1.099999881012583,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.862937479979678e-08,
+              "Q_bar": 1.099999874071998,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.87969518613463e-08,
+              "Q_bar": 1.0999998810186917,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.8643492167650536e-08,
+              "Q_bar": 1.099999874073448,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1158871370744994,
+          "precharged_bitline_min_V": 1.1241164553384593,
+          "BL_minus_BLbar_V": -1.1256820490592934,
+          "states": {
+            "write": {
+              "Q": 2.575033658449668e-08,
+              "Q_bar": 1.099999881012583,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.8629374897027827e-08,
+              "Q_bar": 1.099999874071998,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.879695185731098e-08,
+              "Q_bar": 1.0999998810186917,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.864349222110267e-08,
+              "Q_bar": 1.099999874073448,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1158871372046734,
+          "precharged_bitline_min_V": 1.1241164553620238,
+          "BL_minus_BLbar_V": 1.1256820490828672,
+          "states": {
+            "write": {
+              "Q": 1.099999881012583,
+              "Q_bar": 2.5750336583383686e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999874071998,
+              "Q_bar": 1.862937482045776e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998810186917,
+              "Q_bar": 9.879695185425915e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999874073448,
+              "Q_bar": 1.8643492161255335e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1158871370774705,
+          "precharged_bitline_min_V": 1.124116455338515,
+          "BL_minus_BLbar_V": -1.1256820490593562,
+          "states": {
+            "write": {
+              "Q": 2.5750336600834913e-08,
+              "Q_bar": 1.099999881012583,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.8629374825129358e-08,
+              "Q_bar": 1.099999874071998,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.879695187254681e-08,
+              "Q_bar": 1.0999998810186917,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.8643492172626772e-08,
+              "Q_bar": 1.099999874073448,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_ss_125": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1222265756460405,
+          "precharged_bitline_min_V": 1.1251243678547034,
+          "BL_minus_BLbar_V": 1.1266436528836148,
+          "states": {
+            "write": {
+              "Q": 1.099999601537893,
+              "Q_bar": 7.519021825223763e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999592249267,
+              "Q_bar": 3.7500775628429464e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999996021528324,
+              "Q_bar": 4.954648192113098e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.09999959225126,
+              "Q_bar": 3.823525337777918e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1221844617055878,
+          "precharged_bitline_min_V": 1.1251243991481739,
+          "BL_minus_BLbar_V": -1.126643684182085,
+          "states": {
+            "write": {
+              "Q": 7.519021827577984e-08,
+              "Q_bar": 1.099999601537893,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.75008553824201e-08,
+              "Q_bar": 1.099999592249267,
+              "pass": true
+            },
+            "read": {
+              "Q": 4.954517087601236e-07,
+              "Q_bar": 1.0999996021531253,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.823525361053201e-08,
+              "Q_bar": 1.09999959225126,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1221844207174076,
+          "precharged_bitline_min_V": 1.1251244507852862,
+          "BL_minus_BLbar_V": 1.1266437357734345,
+          "states": {
+            "write": {
+              "Q": 1.099999601537893,
+              "Q_bar": 7.519021827976852e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999592249267,
+              "Q_bar": 3.750088658272982e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099999602153126,
+              "Q_bar": 4.954520647960334e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.09999959225126,
+              "Q_bar": 3.823525364046132e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1221844207200316,
+          "precharged_bitline_min_V": 1.1251244507859766,
+          "BL_minus_BLbar_V": 1.1266437357741268,
+          "states": {
+            "write": {
+              "Q": 1.099999601537893,
+              "Q_bar": 7.519021831529472e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999592249267,
+              "Q_bar": 3.7500883218963673e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099999602153126,
+              "Q_bar": 4.954520647714878e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.09999959225126,
+              "Q_bar": 3.823525367513517e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1221844208623063,
+          "precharged_bitline_min_V": 1.1251244507877254,
+          "BL_minus_BLbar_V": -1.126643735775868,
+          "states": {
+            "write": {
+              "Q": 7.519021826668922e-08,
+              "Q_bar": 1.099999601537893,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.75008865048424e-08,
+              "Q_bar": 1.099999592249267,
+              "pass": true
+            },
+            "read": {
+              "Q": 4.954520650069616e-07,
+              "Q_bar": 1.0999996021531262,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.8235253647502646e-08,
+              "Q_bar": 1.09999959225126,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.122184420862323,
+          "precharged_bitline_min_V": 1.1251244507881561,
+          "BL_minus_BLbar_V": -1.1266437357763066,
+          "states": {
+            "write": {
+              "Q": 7.519021830181049e-08,
+              "Q_bar": 1.099999601537893,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.750088318481134e-08,
+              "Q_bar": 1.099999592249267,
+              "pass": true
+            },
+            "read": {
+              "Q": 4.954520649887653e-07,
+              "Q_bar": 1.0999996021531262,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.82352536879902e-08,
+              "Q_bar": 1.09999959225126,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1221844207200656,
+          "precharged_bitline_min_V": 1.1251244507881162,
+          "BL_minus_BLbar_V": 1.126643735776264,
+          "states": {
+            "write": {
+              "Q": 1.099999601537893,
+              "Q_bar": 7.519021828782112e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999592249267,
+              "Q_bar": 3.75008865007428e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999996021531262,
+              "Q_bar": 4.954520649944815e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.09999959225126,
+              "Q_bar": 3.8235253642196064e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1221844208627541,
+          "precharged_bitline_min_V": 1.1251244507881122,
+          "BL_minus_BLbar_V": -1.1266437357762684,
+          "states": {
+            "write": {
+              "Q": 7.5190218305966e-08,
+              "Q_bar": 1.099999601537893,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.750088652187396e-08,
+              "Q_bar": 1.099999592249267,
+              "pass": true
+            },
+            "read": {
+              "Q": 4.954520649801127e-07,
+              "Q_bar": 1.0999996021531262,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.823525366942474e-08,
+              "Q_bar": 1.09999959225126,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_fs_-40": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1212491672106506,
+          "precharged_bitline_min_V": 1.1233953259840783,
+          "BL_minus_BLbar_V": 1.1251134889513366,
+          "states": {
+            "write": {
+              "Q": 1.099999848495645,
+              "Q_bar": 2.6349079658326552e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999840540156,
+              "Q_bar": 1.9238617933410205e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998484988358,
+              "Q_bar": 8.957401256010907e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999840541279,
+              "Q_bar": 1.924789148772872e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1202360753566984,
+          "precharged_bitline_min_V": 1.12339530108322,
+          "BL_minus_BLbar_V": -1.1251134640543903,
+          "states": {
+            "write": {
+              "Q": 2.6349079702435693e-08,
+              "Q_bar": 1.099999848495645,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.9238618614791517e-08,
+              "Q_bar": 1.099999840540156,
+              "pass": true
+            },
+            "read": {
+              "Q": 8.95740121972161e-08,
+              "Q_bar": 1.0999998484988354,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.924789195006639e-08,
+              "Q_bar": 1.099999840541279,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1202361399866715,
+          "precharged_bitline_min_V": 1.123395245575673,
+          "BL_minus_BLbar_V": 1.1251134085555385,
+          "states": {
+            "write": {
+              "Q": 1.099999848495645,
+              "Q_bar": 2.634907969837211e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999840540156,
+              "Q_bar": 1.92386188048969e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998484988354,
+              "Q_bar": 8.957401197284306e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999840541279,
+              "Q_bar": 1.9247891939460494e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1202361399600133,
+          "precharged_bitline_min_V": 1.1233952455756862,
+          "BL_minus_BLbar_V": 1.1251134085555523,
+          "states": {
+            "write": {
+              "Q": 1.099999848495645,
+              "Q_bar": 2.634907967179393e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999840540156,
+              "Q_bar": 1.923861876209709e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998484988354,
+              "Q_bar": 8.957401195942074e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999840541279,
+              "Q_bar": 1.924789192714096e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.120236139790601,
+          "precharged_bitline_min_V": 1.1233952455746985,
+          "BL_minus_BLbar_V": -1.125113408554561,
+          "states": {
+            "write": {
+              "Q": 2.634907970885345e-08,
+              "Q_bar": 1.099999848495645,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.9238618774707254e-08,
+              "Q_bar": 1.099999840540156,
+              "pass": true
+            },
+            "read": {
+              "Q": 8.957401195340569e-08,
+              "Q_bar": 1.0999998484988354,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.9247891947596424e-08,
+              "Q_bar": 1.099999840541279,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1202361397822081,
+          "precharged_bitline_min_V": 1.1233952455747005,
+          "BL_minus_BLbar_V": -1.125113408554571,
+          "states": {
+            "write": {
+              "Q": 2.6349079686421437e-08,
+              "Q_bar": 1.099999848495645,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.9238618785896344e-08,
+              "Q_bar": 1.099999840540156,
+              "pass": true
+            },
+            "read": {
+              "Q": 8.957401197695027e-08,
+              "Q_bar": 1.0999998484988354,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.924789192635141e-08,
+              "Q_bar": 1.099999840541279,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1202361398362721,
+          "precharged_bitline_min_V": 1.1233952455752103,
+          "BL_minus_BLbar_V": 1.125113408555083,
+          "states": {
+            "write": {
+              "Q": 1.099999848495645,
+              "Q_bar": 2.6349079669558576e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999840540156,
+              "Q_bar": 1.9238618807055654e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998484988354,
+              "Q_bar": 8.957401193683122e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999840541279,
+              "Q_bar": 1.9247891940950776e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1202361397840293,
+          "precharged_bitline_min_V": 1.1233952455747405,
+          "BL_minus_BLbar_V": -1.1251134085546046,
+          "states": {
+            "write": {
+              "Q": 2.6349079661139826e-08,
+              "Q_bar": 1.099999848495645,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.9238618835400493e-08,
+              "Q_bar": 1.099999840540156,
+              "pass": true
+            },
+            "read": {
+              "Q": 8.957401195779556e-08,
+              "Q_bar": 1.0999998484988354,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.9247891941438822e-08,
+              "Q_bar": 1.099999840541279,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_fs_27": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.129689425136827,
+          "precharged_bitline_min_V": 1.12418947416358,
+          "BL_minus_BLbar_V": 1.1258839278495893,
+          "states": {
+            "write": {
+              "Q": 1.099999695624024,
+              "Q_bar": 3.729003778934451e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999685574006,
+              "Q_bar": 2.5976745939635942e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999996957680593,
+              "Q_bar": 1.3285394121138774e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999685575459,
+              "Q_bar": 2.6279729902055857e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.129638873111164,
+          "precharged_bitline_min_V": 1.124189475127116,
+          "BL_minus_BLbar_V": -1.125883928812759,
+          "states": {
+            "write": {
+              "Q": 3.729003776420073e-08,
+              "Q_bar": 1.099999695624024,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.597674731013094e-08,
+              "Q_bar": 1.099999685574006,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.328540219062507e-07,
+              "Q_bar": 1.0999996957680573,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.6279735085236475e-08,
+              "Q_bar": 1.099999685575459,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.129639370207555,
+          "precharged_bitline_min_V": 1.1241894770355692,
+          "BL_minus_BLbar_V": 1.1258839307207482,
+          "states": {
+            "write": {
+              "Q": 1.099999695624024,
+              "Q_bar": 3.729003777971516e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999685574006,
+              "Q_bar": 2.5976732711641804e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999996957680573,
+              "Q_bar": 1.3285402224929636e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999685575459,
+              "Q_bar": 2.627973514069301e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1296393702486081,
+          "precharged_bitline_min_V": 1.124189477035603,
+          "BL_minus_BLbar_V": 1.125883930720782,
+          "states": {
+            "write": {
+              "Q": 1.099999695624024,
+              "Q_bar": 3.729003777539856e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999685574006,
+              "Q_bar": 2.597673267840311e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999996957680573,
+              "Q_bar": 1.328540221890793e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999685575459,
+              "Q_bar": 2.6279735094149187e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1296393689147657,
+          "precharged_bitline_min_V": 1.1241894770355634,
+          "BL_minus_BLbar_V": -1.1258839307207562,
+          "states": {
+            "write": {
+              "Q": 3.729003777226798e-08,
+              "Q_bar": 1.099999695624024,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.5976732695713045e-08,
+              "Q_bar": 1.099999685574006,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.3285402223485866e-07,
+              "Q_bar": 1.0999996957680573,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.6279735106288162e-08,
+              "Q_bar": 1.099999685575459,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1296393689282047,
+          "precharged_bitline_min_V": 1.1241894770355885,
+          "BL_minus_BLbar_V": -1.1258839307207618,
+          "states": {
+            "write": {
+              "Q": 3.729003778948542e-08,
+              "Q_bar": 1.099999695624024,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.59767326864267e-08,
+              "Q_bar": 1.099999685574006,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.3285402218522427e-07,
+              "Q_bar": 1.0999996957680573,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.627973511318822e-08,
+              "Q_bar": 1.099999685575459,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1296393688576733,
+          "precharged_bitline_min_V": 1.1241894770355954,
+          "BL_minus_BLbar_V": 1.1258839307207769,
+          "states": {
+            "write": {
+              "Q": 1.099999695624024,
+              "Q_bar": 3.729003779109195e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999685574006,
+              "Q_bar": 2.597673270070171e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999996957680573,
+              "Q_bar": 1.3285402223145899e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999685575459,
+              "Q_bar": 2.6279735097033453e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1296393689297421,
+          "precharged_bitline_min_V": 1.1241894770356002,
+          "BL_minus_BLbar_V": -1.1258839307207857,
+          "states": {
+            "write": {
+              "Q": 3.729003777354724e-08,
+              "Q_bar": 1.099999695624024,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.5976732679179282e-08,
+              "Q_bar": 1.099999685574006,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.3285402223653494e-07,
+              "Q_bar": 1.0999996957680573,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.627973506391715e-08,
+              "Q_bar": 1.099999685575459,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_fs_125": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1380543690761835,
+          "precharged_bitline_min_V": 1.125205953555019,
+          "BL_minus_BLbar_V": 1.1268490171238565,
+          "states": {
+            "write": {
+              "Q": 1.09999736126871,
+              "Q_bar": 1.278810303358804e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.0999973474816873,
+              "Q_bar": 5.5919073998171563e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099997367949285,
+              "Q_bar": 7.992348310770057e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099997347483354,
+              "Q_bar": 6.299085362028439e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1379731310355471,
+          "precharged_bitline_min_V": 1.125205894222684,
+          "BL_minus_BLbar_V": -1.126848957865377,
+          "states": {
+            "write": {
+              "Q": 1.2788103032482124e-07,
+              "Q_bar": 1.09999736126871,
+              "pass": true
+            },
+            "hold": {
+              "Q": 5.59195752126414e-08,
+              "Q_bar": 1.099997347481687,
+              "pass": true
+            },
+            "read": {
+              "Q": 7.992342182262501e-07,
+              "Q_bar": 1.0999973679492716,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 6.299085515547258e-08,
+              "Q_bar": 1.099997347483354,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1386652034269551,
+          "precharged_bitline_min_V": 1.125205732836148,
+          "BL_minus_BLbar_V": 1.126848796692268,
+          "states": {
+            "write": {
+              "Q": 1.09999736126871,
+              "Q_bar": 1.2788103029007878e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.0999973474816875,
+              "Q_bar": 5.591909307813494e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099997367949163,
+              "Q_bar": 7.992352386734659e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099997347483354,
+              "Q_bar": 6.299083578484447e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1386652034388885,
+          "precharged_bitline_min_V": 1.1252057328361635,
+          "BL_minus_BLbar_V": 1.1268487966922947,
+          "states": {
+            "write": {
+              "Q": 1.09999736126871,
+              "Q_bar": 1.278810303070911e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.0999973474816875,
+              "Q_bar": 5.591909304496223e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099997367949163,
+              "Q_bar": 7.992352386956e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099997347483354,
+              "Q_bar": 6.299083579308077e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1386652031404225,
+          "precharged_bitline_min_V": 1.1252057328358462,
+          "BL_minus_BLbar_V": -1.126848796691969,
+          "states": {
+            "write": {
+              "Q": 1.278810303281516e-07,
+              "Q_bar": 1.09999736126871,
+              "pass": true
+            },
+            "hold": {
+              "Q": 5.5919093032147176e-08,
+              "Q_bar": 1.0999973474816875,
+              "pass": true
+            },
+            "read": {
+              "Q": 7.992352386619319e-07,
+              "Q_bar": 1.099997367949163,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 6.299083575721865e-08,
+              "Q_bar": 1.099997347483354,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1386652031420872,
+          "precharged_bitline_min_V": 1.1252057328358323,
+          "BL_minus_BLbar_V": -1.1268487966919634,
+          "states": {
+            "write": {
+              "Q": 1.2788103031344288e-07,
+              "Q_bar": 1.09999736126871,
+              "pass": true
+            },
+            "hold": {
+              "Q": 5.591909303533768e-08,
+              "Q_bar": 1.0999973474816875,
+              "pass": true
+            },
+            "read": {
+              "Q": 7.992352386275197e-07,
+              "Q_bar": 1.099997367949163,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 6.299083575481729e-08,
+              "Q_bar": 1.099997347483354,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1386652031473155,
+          "precharged_bitline_min_V": 1.1252057328363847,
+          "BL_minus_BLbar_V": 1.1268487966925202,
+          "states": {
+            "write": {
+              "Q": 1.09999736126871,
+              "Q_bar": 1.2788103031516943e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.0999973474816875,
+              "Q_bar": 5.591909304492212e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.099997367949163,
+              "Q_bar": 7.992352386841049e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099997347483354,
+              "Q_bar": 6.29908357767997e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1386652031473198,
+          "precharged_bitline_min_V": 1.125205732836103,
+          "BL_minus_BLbar_V": -1.1268487966922351,
+          "states": {
+            "write": {
+              "Q": 1.2788103031975285e-07,
+              "Q_bar": 1.09999736126871,
+              "pass": true
+            },
+            "hold": {
+              "Q": 5.591909303526879e-08,
+              "Q_bar": 1.0999973474816875,
+              "pass": true
+            },
+            "read": {
+              "Q": 7.992352386219855e-07,
+              "Q_bar": 1.099997367949163,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 6.299083577449757e-08,
+              "Q_bar": 1.099997347483354,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_sf_-40": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1137551385169324,
+          "precharged_bitline_min_V": 1.1226944884540357,
+          "BL_minus_BLbar_V": 1.1244209633596454,
+          "states": {
+            "write": {
+              "Q": 1.099999891713032,
+              "Q_bar": 2.7037526777902583e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999885103756,
+              "Q_bar": 2.0507156826136472e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998917142957,
+              "Q_bar": 9.797330541826943e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999885104653,
+              "Q_bar": 2.050785278021442e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1137310036302212,
+          "precharged_bitline_min_V": 1.1226945087980111,
+          "BL_minus_BLbar_V": -1.1244209837004357,
+          "states": {
+            "write": {
+              "Q": 2.7037526798815453e-08,
+              "Q_bar": 1.099999891713032,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.050715680667305e-08,
+              "Q_bar": 1.099999885103756,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.79733090641507e-08,
+              "Q_bar": 1.0999998917142955,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.0507852804856947e-08,
+              "Q_bar": 1.099999885104653,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1137310045835318,
+          "precharged_bitline_min_V": 1.1226945420187813,
+          "BL_minus_BLbar_V": 1.12442101691604,
+          "states": {
+            "write": {
+              "Q": 1.099999891713032,
+              "Q_bar": 2.7037526783383955e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999885103756,
+              "Q_bar": 2.0507156734901313e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998917142955,
+              "Q_bar": 9.797331035064058e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999885104653,
+              "Q_bar": 2.0507852786088884e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1137310046015057,
+          "precharged_bitline_min_V": 1.1226945420196823,
+          "BL_minus_BLbar_V": 1.1244210169169506,
+          "states": {
+            "write": {
+              "Q": 1.099999891713032,
+              "Q_bar": 2.703752672610739e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999885103756,
+              "Q_bar": 2.0507156751275065e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998917142955,
+              "Q_bar": 9.797331036475105e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999885104653,
+              "Q_bar": 2.0507852795416162e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1137310048223294,
+          "precharged_bitline_min_V": 1.1226945420194494,
+          "BL_minus_BLbar_V": -1.1244210169167077,
+          "states": {
+            "write": {
+              "Q": 2.703752679651993e-08,
+              "Q_bar": 1.099999891713032,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.0507156736608316e-08,
+              "Q_bar": 1.099999885103756,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.797331039025239e-08,
+              "Q_bar": 1.0999998917142955,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.0507852786213414e-08,
+              "Q_bar": 1.099999885104653,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1137310048181459,
+          "precharged_bitline_min_V": 1.1226945420200984,
+          "BL_minus_BLbar_V": -1.1244210169173596,
+          "states": {
+            "write": {
+              "Q": 2.703752677561667e-08,
+              "Q_bar": 1.099999891713032,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.050715671707044e-08,
+              "Q_bar": 1.099999885103756,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.797331038512676e-08,
+              "Q_bar": 1.0999998917142955,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.0507852800799927e-08,
+              "Q_bar": 1.099999885104653,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1137310044596317,
+          "precharged_bitline_min_V": 1.1226945420200762,
+          "BL_minus_BLbar_V": 1.1244210169173234,
+          "states": {
+            "write": {
+              "Q": 1.099999891713032,
+              "Q_bar": 2.7037526806547705e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999885103756,
+              "Q_bar": 2.050715671967471e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998917142955,
+              "Q_bar": 9.797331038712717e-08,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999885104653,
+              "Q_bar": 2.0507852793439654e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1137310048102155,
+          "precharged_bitline_min_V": 1.1226945420200782,
+          "BL_minus_BLbar_V": -1.1244210169173368,
+          "states": {
+            "write": {
+              "Q": 2.7037526775062075e-08,
+              "Q_bar": 1.099999891713032,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.050715672995441e-08,
+              "Q_bar": 1.099999885103756,
+              "pass": true
+            },
+            "read": {
+              "Q": 9.797331037902477e-08,
+              "Q_bar": 1.0999998917142955,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.0507852784344174e-08,
+              "Q_bar": 1.099999885104653,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_sf_27": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1210378255949324,
+          "precharged_bitline_min_V": 1.1237569393643305,
+          "BL_minus_BLbar_V": 1.1254577966226338,
+          "states": {
+            "write": {
+              "Q": 1.099999850840228,
+              "Q_bar": 4.824106663958805e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999842640587,
+              "Q_bar": 3.811888353750474e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998508527316,
+              "Q_bar": 2.0438232946474608e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999842641739,
+              "Q_bar": 3.815952589479653e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1210016508238246,
+          "precharged_bitline_min_V": 1.1237569856760525,
+          "BL_minus_BLbar_V": -1.1254578429169002,
+          "states": {
+            "write": {
+              "Q": 4.8241066658237565e-08,
+              "Q_bar": 1.099999850840228,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.8118881349413204e-08,
+              "Q_bar": 1.099999842640586,
+              "pass": true
+            },
+            "read": {
+              "Q": 2.0438221972076028e-07,
+              "Q_bar": 1.0999998508527353,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.815952482428521e-08,
+              "Q_bar": 1.099999842641739,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1210016064569622,
+          "precharged_bitline_min_V": 1.1237570947520037,
+          "BL_minus_BLbar_V": 1.1254579519510857,
+          "states": {
+            "write": {
+              "Q": 1.099999850840228,
+              "Q_bar": 4.824106665339425e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999842640586,
+              "Q_bar": 3.811887818363264e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998508527353,
+              "Q_bar": 2.0438240639916557e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999842641739,
+              "Q_bar": 3.815952479554239e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1210016064568053,
+          "precharged_bitline_min_V": 1.1237570947585356,
+          "BL_minus_BLbar_V": 1.125457951957619,
+          "states": {
+            "write": {
+              "Q": 1.099999850840228,
+              "Q_bar": 4.8241066676583034e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999842640586,
+              "Q_bar": 3.8118878186876505e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998508527353,
+              "Q_bar": 2.0438240641779125e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999842641739,
+              "Q_bar": 3.8159524821761156e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1210016063513661,
+          "precharged_bitline_min_V": 1.1237570947624549,
+          "BL_minus_BLbar_V": -1.125457951961531,
+          "states": {
+            "write": {
+              "Q": 4.824106663013624e-08,
+              "Q_bar": 1.099999850840228,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.811887816033194e-08,
+              "Q_bar": 1.099999842640586,
+              "pass": true
+            },
+            "read": {
+              "Q": 2.0438240643466202e-07,
+              "Q_bar": 1.0999998508527353,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.815952481087216e-08,
+              "Q_bar": 1.099999842641739,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.121001606353029,
+          "precharged_bitline_min_V": 1.1237570947670499,
+          "BL_minus_BLbar_V": -1.1254579519661219,
+          "states": {
+            "write": {
+              "Q": 4.824106667719653e-08,
+              "Q_bar": 1.099999850840228,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.811887821413774e-08,
+              "Q_bar": 1.099999842640586,
+              "pass": true
+            },
+            "read": {
+              "Q": 2.0438240644112412e-07,
+              "Q_bar": 1.0999998508527353,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.8159524804722413e-08,
+              "Q_bar": 1.099999842641739,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1210016063541608,
+          "precharged_bitline_min_V": 1.123757094766986,
+          "BL_minus_BLbar_V": 1.1254579519660628,
+          "states": {
+            "write": {
+              "Q": 1.099999850840228,
+              "Q_bar": 4.824106665090862e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999842640586,
+              "Q_bar": 3.811887819305155e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998508527353,
+              "Q_bar": 2.0438240645742124e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999842641739,
+              "Q_bar": 3.8159524817456786e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1210016063586747,
+          "precharged_bitline_min_V": 1.1237570947670026,
+          "BL_minus_BLbar_V": -1.125457951966077,
+          "states": {
+            "write": {
+              "Q": 4.824106668535351e-08,
+              "Q_bar": 1.099999850840228,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.8118878187902665e-08,
+              "Q_bar": 1.099999842640587,
+              "pass": true
+            },
+            "read": {
+              "Q": 2.0438240642904913e-07,
+              "Q_bar": 1.0999998508527353,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.815952481152183e-08,
+              "Q_bar": 1.099999842641739,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "functional_sf_125": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1285820658115165,
+          "precharged_bitline_min_V": 1.1251651397573001,
+          "BL_minus_BLbar_V": 1.1267376699177116,
+          "states": {
+            "write": {
+              "Q": 1.099999377240697,
+              "Q_bar": 4.503655147226252e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999366110053,
+              "Q_bar": 3.568677653576468e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999993781775828,
+              "Q_bar": 2.704025349635461e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999366111671,
+              "Q_bar": 3.584421986848899e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.12723701855296,
+          "precharged_bitline_min_V": 1.1251651265517733,
+          "BL_minus_BLbar_V": -1.1267376564797427,
+          "states": {
+            "write": {
+              "Q": 4.5036551471790945e-07,
+              "Q_bar": 1.099999377240697,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.5686776833514706e-07,
+              "Q_bar": 1.099999366110053,
+              "pass": true
+            },
+            "read": {
+              "Q": 2.7041365486975334e-06,
+              "Q_bar": 1.09999937817552,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.5844218660136837e-07,
+              "Q_bar": 1.099999366111671,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1272367740707003,
+          "precharged_bitline_min_V": 1.1251650946145526,
+          "BL_minus_BLbar_V": 1.1267376246764094,
+          "states": {
+            "write": {
+              "Q": 1.099999377240697,
+              "Q_bar": 4.5036551472032053e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999366110053,
+              "Q_bar": 3.568677001531789e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999993781755246,
+              "Q_bar": 2.704134888161285e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999366111671,
+              "Q_bar": 3.584421865231595e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1272367740704605,
+          "precharged_bitline_min_V": 1.1251650946145502,
+          "BL_minus_BLbar_V": 1.126737624676405,
+          "states": {
+            "write": {
+              "Q": 1.099999377240697,
+              "Q_bar": 4.5036551472351183e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999366110053,
+              "Q_bar": 3.5686770020142095e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999993781755246,
+              "Q_bar": 2.7041348881526006e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999366111671,
+              "Q_bar": 3.584421864523547e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1272367741899277,
+          "precharged_bitline_min_V": 1.125165094614427,
+          "BL_minus_BLbar_V": -1.1267376246762917,
+          "states": {
+            "write": {
+              "Q": 4.5036551471564645e-07,
+              "Q_bar": 1.099999377240697,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.568677001673875e-07,
+              "Q_bar": 1.099999366110053,
+              "pass": true
+            },
+            "read": {
+              "Q": 2.7041348868641237e-06,
+              "Q_bar": 1.0999993781755246,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.584421864528734e-07,
+              "Q_bar": 1.099999366111671,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1272367741898915,
+          "precharged_bitline_min_V": 1.1251650946144258,
+          "BL_minus_BLbar_V": -1.126737624676291,
+          "states": {
+            "write": {
+              "Q": 4.503655147201838e-07,
+              "Q_bar": 1.099999377240697,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.5686770020103735e-07,
+              "Q_bar": 1.099999366110053,
+              "pass": true
+            },
+            "read": {
+              "Q": 2.7041348868819152e-06,
+              "Q_bar": 1.0999993781755246,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.5844218645717414e-07,
+              "Q_bar": 1.099999366111671,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1272367740705059,
+          "precharged_bitline_min_V": 1.1251650946145704,
+          "BL_minus_BLbar_V": 1.1267376246764311,
+          "states": {
+            "write": {
+              "Q": 1.099999377240697,
+              "Q_bar": 4.5036551471371156e-07,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999366110053,
+              "Q_bar": 3.568677001898957e-07,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999993781755246,
+              "Q_bar": 2.704134888145397e-06,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999366111671,
+              "Q_bar": 3.5844218645911786e-07,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1272367741899318,
+          "precharged_bitline_min_V": 1.1251650946144414,
+          "BL_minus_BLbar_V": -1.1267376246763061,
+          "states": {
+            "write": {
+              "Q": 4.503655147022048e-07,
+              "Q_bar": 1.099999377240697,
+              "pass": true
+            },
+            "hold": {
+              "Q": 3.568677001639132e-07,
+              "Q_bar": 1.099999366110053,
+              "pass": true
+            },
+            "read": {
+              "Q": 2.7041348868985688e-06,
+              "Q_bar": 1.0999993781755246,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 3.5844218646100505e-07,
+              "Q_bar": 1.099999366111671,
+              "pass": true
+            }
+          }
+        }
+      ]
+    },
+    "extracted_functional": {
+      "pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1256627739727223,
+          "precharged_bitline_min_V": 1.1239499798284225,
+          "BL_minus_BLbar_V": 1.1256481255717161,
+          "states": {
+            "write": {
+              "Q": 1.099999807938225,
+              "Q_bar": 3.947745431716994e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999799161918,
+              "Q_bar": 2.8633867715859973e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998079773432,
+              "Q_bar": 1.526752094617078e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999799163169,
+              "Q_bar": 2.874243002220301e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 1,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1256308119750507,
+          "precharged_bitline_min_V": 1.123949925547758,
+          "BL_minus_BLbar_V": -1.125648071306203,
+          "states": {
+            "write": {
+              "Q": 3.947745429884307e-08,
+              "Q_bar": 1.099999807938225,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.8633877890895997e-08,
+              "Q_bar": 1.099999799161918,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.526751651010027e-07,
+              "Q_bar": 1.0999998079773439,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.874242990101699e-08,
+              "Q_bar": 1.099999799163169,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 2,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1256279584873514,
+          "precharged_bitline_min_V": 1.1239498041550442,
+          "BL_minus_BLbar_V": 1.125647949946541,
+          "states": {
+            "write": {
+              "Q": 1.099999807938225,
+              "Q_bar": 3.947745431505898e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999799161918,
+              "Q_bar": 2.863388321437614e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998079773432,
+              "Q_bar": 1.5267507362286198e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999799163169,
+              "Q_bar": 2.8742429930562385e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 3,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1256279584813474,
+          "precharged_bitline_min_V": 1.123949804155039,
+          "BL_minus_BLbar_V": 1.1256479499465475,
+          "states": {
+            "write": {
+              "Q": 1.099999807938225,
+              "Q_bar": 3.9477454292550485e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999799161918,
+              "Q_bar": 2.8633884252193773e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998079773432,
+              "Q_bar": 1.5267507359740348e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999799163169,
+              "Q_bar": 2.8742429931689068e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 4,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1256279576099171,
+          "precharged_bitline_min_V": 1.1239498041520015,
+          "BL_minus_BLbar_V": -1.125647949943511,
+          "states": {
+            "write": {
+              "Q": 3.9477454323104797e-08,
+              "Q_bar": 1.099999807938225,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.8633883217642018e-08,
+              "Q_bar": 1.099999799161918,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.5267507362793102e-07,
+              "Q_bar": 1.0999998079773432,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.874242989986438e-08,
+              "Q_bar": 1.099999799163169,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 5,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1256279576123902,
+          "precharged_bitline_min_V": 1.1239498041520104,
+          "BL_minus_BLbar_V": -1.1256479499435172,
+          "states": {
+            "write": {
+              "Q": 3.947745432590737e-08,
+              "Q_bar": 1.099999807938225,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.8633884229620166e-08,
+              "Q_bar": 1.099999799161918,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.526750735818825e-07,
+              "Q_bar": 1.0999998079773432,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.874242991548347e-08,
+              "Q_bar": 1.099999799163169,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 6,
+          "bit": 1,
+          "pass": true,
+          "read_low_node_max_V": 0.1256279584891763,
+          "precharged_bitline_min_V": 1.1239498041549183,
+          "BL_minus_BLbar_V": 1.1256479499464238,
+          "states": {
+            "write": {
+              "Q": 1.099999807938224,
+              "Q_bar": 3.94774543228685e-08,
+              "pass": true
+            },
+            "hold": {
+              "Q": 1.099999799161918,
+              "Q_bar": 2.8633883234884568e-08,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.0999998079773432,
+              "Q_bar": 1.5267507365992835e-07,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 1.099999799163169,
+              "Q_bar": 2.8742429916460146e-08,
+              "pass": true
+            }
+          }
+        },
+        {
+          "cycle": 7,
+          "bit": 0,
+          "pass": true,
+          "read_low_node_max_V": 0.1256279576207864,
+          "precharged_bitline_min_V": 1.1239498041520866,
+          "BL_minus_BLbar_V": -1.1256479499435912,
+          "states": {
+            "write": {
+              "Q": 3.94774543121569e-08,
+              "Q_bar": 1.099999807938224,
+              "pass": true
+            },
+            "hold": {
+              "Q": 2.8633883193168814e-08,
+              "Q_bar": 1.099999799161918,
+              "pass": true
+            },
+            "read": {
+              "Q": 1.526750736020861e-07,
+              "Q_bar": 1.0999998079773432,
+              "pass": true
+            },
+            "after_read": {
+              "Q": 2.8742429896573037e-08,
+              "Q_bar": 1.099999799163169,
+              "pass": true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "margins": [
+    {
+      "kind": "read",
+      "sizing": "default",
+      "margin_mV": 215.25385615447306,
+      "square_x_V": 0.28563333333333335,
+      "square_y_V": 0.8407703250055938,
+      "square_side_V": 0.21525385615447307
+    },
+    {
+      "kind": "read",
+      "sizing": "access2",
+      "margin_mV": 177.1925937612599,
+      "square_x_V": 0.3289,
+      "square_y_V": 0.8686414655499801,
+      "square_side_V": 0.1771925937612599
+    },
+    {
+      "kind": "read",
+      "sizing": "pulldown2",
+      "margin_mV": 248.18057117207408,
+      "square_x_V": 0.8147333333333333,
+      "square_y_V": 0.22599865970063893,
+      "square_side_V": 0.2481805711720741
+    },
+    {
+      "kind": "read",
+      "sizing": "final",
+      "margin_mV": 223.5818469785737,
+      "square_x_V": 0.8345333333333333,
+      "square_y_V": 0.24214014885613513,
+      "square_side_V": 0.2235818469785737
+    },
+    {
+      "kind": "write",
+      "sizing": "default",
+      "margin_mV": 531.8881363578838,
+      "square_x_V": 0.0,
+      "square_y_V": 0.2852436687312416,
+      "square_side_V": 0.5318881363578838
+    },
+    {
+      "kind": "write",
+      "sizing": "access2",
+      "margin_mV": 541.8937471084064,
+      "square_x_V": 0.0,
+      "square_y_V": 0.114816013792962,
+      "square_side_V": 0.5418937471084064
+    },
+    {
+      "kind": "write",
+      "sizing": "pullup2",
+      "margin_mV": 438.5790319471854,
+      "square_x_V": 0.088,
+      "square_y_V": 0.6087150420080386,
+      "square_side_V": 0.4385790319471854
+    },
+    {
+      "kind": "write",
+      "sizing": "final",
+      "margin_mV": 513.5739219491369,
+      "square_x_V": 0.0,
+      "square_y_V": 0.1148160113498356,
+      "square_side_V": 0.5135739219491369
+    }
+  ],
+  "reliability": [
+    {
+      "run": "vdd_coarse_0.000",
+      "vdd_V": 0.0,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.0,
+      "pass": false
+    },
+    {
+      "run": "vdd_coarse_0.275",
+      "vdd_V": 0.275,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.15819506294040991,
+      "pass": false
+    },
+    {
+      "run": "vdd_coarse_0.550",
+      "vdd_V": 0.55,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9999992183336599,
+      "pass": true
+    },
+    {
+      "run": "vdd_coarse_0.825",
+      "vdd_V": 0.825,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9999998319484495,
+      "pass": true
+    },
+    {
+      "run": "vdd_coarse_1.100",
+      "vdd_V": 1.1,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.999999817171577,
+      "pass": true
+    },
+    {
+      "run": "vdd_refine_0.100",
+      "vdd_V": 0.1,
+      "offset_V": 0,
+      "minimum_rail_fraction": -0.06244397865067294,
+      "pass": false
+    },
+    {
+      "run": "vdd_refine_0.150",
+      "vdd_V": 0.15,
+      "offset_V": 0,
+      "minimum_rail_fraction": -0.037335716779002825,
+      "pass": false
+    },
+    {
+      "run": "vdd_refine_0.200",
+      "vdd_V": 0.2,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.04722378694125548,
+      "pass": false
+    },
+    {
+      "run": "vdd_refine_0.250",
+      "vdd_V": 0.25,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.11613613665103971,
+      "pass": false
+    },
+    {
+      "run": "vdd_refine_0.300",
+      "vdd_V": 0.3,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.22783961430239877,
+      "pass": false
+    },
+    {
+      "run": "vdd_refine_0.310",
+      "vdd_V": 0.31,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.33058009073754546,
+      "pass": false
+    },
+    {
+      "run": "vdd_refine_0.320",
+      "vdd_V": 0.32,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.5416075783818706,
+      "pass": false
+    },
+    {
+      "run": "vdd_refine_0.330",
+      "vdd_V": 0.33,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.8002616922252943,
+      "pass": false
+    },
+    {
+      "run": "vdd_refine_0.340",
+      "vdd_V": 0.34,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9771433890919887,
+      "pass": true
+    },
+    {
+      "run": "vdd_refine_0.350",
+      "vdd_V": 0.35,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9994517365131076,
+      "pass": true
+    },
+    {
+      "run": "vdd_refine_0.400",
+      "vdd_V": 0.4,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9999925076939165,
+      "pass": true
+    },
+    {
+      "run": "vdd_refine_0.450",
+      "vdd_V": 0.45,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9999968060307621,
+      "pass": true
+    },
+    {
+      "run": "vdd_refine_0.500",
+      "vdd_V": 0.5,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9999984963612985,
+      "pass": true
+    },
+    {
+      "run": "vdd_refine_0.600",
+      "vdd_V": 0.6,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9999995420356073,
+      "pass": true
+    },
+    {
+      "run": "vdd_refine_0.700",
+      "vdd_V": 0.7,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9999997677002166,
+      "pass": true
+    },
+    {
+      "run": "vdd_refine_0.800",
+      "vdd_V": 0.8,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9999998260472451,
+      "pass": true
+    },
+    {
+      "run": "vdd_refine_0.900",
+      "vdd_V": 0.9,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.9999998394402245,
+      "pass": true
+    },
+    {
+      "run": "vdd_refine_1.000",
+      "vdd_V": 1.0,
+      "offset_V": 0,
+      "minimum_rail_fraction": 0.999999834314626,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.1_0.2",
+      "vdd_V": 0.2,
+      "offset_V": 0.1,
+      "minimum_rail_fraction": 0.05489743344182382,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.1_0.3",
+      "vdd_V": 0.3,
+      "offset_V": 0.1,
+      "minimum_rail_fraction": 0.16968773453492095,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.1_0.4",
+      "vdd_V": 0.4,
+      "offset_V": 0.1,
+      "minimum_rail_fraction": 0.8435962201923132,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.1_0.5",
+      "vdd_V": 0.5,
+      "offset_V": 0.1,
+      "minimum_rail_fraction": 0.999895906884163,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.1_0.6",
+      "vdd_V": 0.6,
+      "offset_V": 0.1,
+      "minimum_rail_fraction": 0.9999812658396146,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.1_0.7",
+      "vdd_V": 0.7,
+      "offset_V": 0.1,
+      "minimum_rail_fraction": 0.9999950043765522,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.1_0.8",
+      "vdd_V": 0.8,
+      "offset_V": 0.1,
+      "minimum_rail_fraction": 0.9999978246507479,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.1_0.9",
+      "vdd_V": 0.9,
+      "offset_V": 0.1,
+      "minimum_rail_fraction": 0.9999986277570708,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.1_1.0",
+      "vdd_V": 1.0,
+      "offset_V": 0.1,
+      "minimum_rail_fraction": 0.9999989475945874,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.1_1.1",
+      "vdd_V": 1.1,
+      "offset_V": 0.1,
+      "minimum_rail_fraction": 0.9999991034101944,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.2_0.2",
+      "vdd_V": 0.2,
+      "offset_V": 0.2,
+      "minimum_rail_fraction": 0.001323684032704352,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.2_0.3",
+      "vdd_V": 0.3,
+      "offset_V": 0.2,
+      "minimum_rail_fraction": 0.04614969787156929,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.2_0.4",
+      "vdd_V": 0.4,
+      "offset_V": 0.2,
+      "minimum_rail_fraction": 0.40604199861052737,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.2_0.5",
+      "vdd_V": 0.5,
+      "offset_V": 0.2,
+      "minimum_rail_fraction": 0.8502490206205996,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.2_0.6",
+      "vdd_V": 0.6,
+      "offset_V": 0.2,
+      "minimum_rail_fraction": 0.9981829226586546,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.2_0.7",
+      "vdd_V": 0.7,
+      "offset_V": 0.2,
+      "minimum_rail_fraction": 0.9996767955755873,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.2_0.8",
+      "vdd_V": 0.8,
+      "offset_V": 0.2,
+      "minimum_rail_fraction": 0.9999146814333113,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.2_0.9",
+      "vdd_V": 0.9,
+      "offset_V": 0.2,
+      "minimum_rail_fraction": 0.9999633999820476,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.2_1.0",
+      "vdd_V": 1.0,
+      "offset_V": 0.2,
+      "minimum_rail_fraction": 0.9999774194169454,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.2_1.1",
+      "vdd_V": 1.1,
+      "offset_V": 0.2,
+      "minimum_rail_fraction": 0.9999832150375754,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.3_0.2",
+      "vdd_V": 0.2,
+      "offset_V": 0.3,
+      "minimum_rail_fraction": 0.00016904134750164455,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.3_0.3",
+      "vdd_V": 0.3,
+      "offset_V": 0.3,
+      "minimum_rail_fraction": 0.004827977054818392,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.3_0.4",
+      "vdd_V": 0.4,
+      "offset_V": 0.3,
+      "minimum_rail_fraction": 0.23153749200636814,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.3_0.5",
+      "vdd_V": 0.5,
+      "offset_V": 0.3,
+      "minimum_rail_fraction": 0.3546581774570319,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.3_0.6",
+      "vdd_V": 0.6,
+      "offset_V": 0.3,
+      "minimum_rail_fraction": 0.47179724578726306,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.3_0.7",
+      "vdd_V": 0.7,
+      "offset_V": 0.3,
+      "minimum_rail_fraction": 0.9648280014909149,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.3_0.8",
+      "vdd_V": 0.8,
+      "offset_V": 0.3,
+      "minimum_rail_fraction": 0.9949140845490295,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.3_0.9",
+      "vdd_V": 0.9,
+      "offset_V": 0.3,
+      "minimum_rail_fraction": 0.9986888666257157,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.3_1.0",
+      "vdd_V": 1.0,
+      "offset_V": 0.3,
+      "minimum_rail_fraction": 0.9994387294861933,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.3_1.1",
+      "vdd_V": 1.1,
+      "offset_V": 0.3,
+      "minimum_rail_fraction": 0.9996535367543836,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.4_0.2",
+      "vdd_V": 0.2,
+      "offset_V": 0.4,
+      "minimum_rail_fraction": 4.143160277151161e-05,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.4_0.3",
+      "vdd_V": 0.3,
+      "offset_V": 0.4,
+      "minimum_rail_fraction": 0.0009536049647541696,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.4_0.4",
+      "vdd_V": 0.4,
+      "offset_V": 0.4,
+      "minimum_rail_fraction": 0.04582387488246372,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.4_0.5",
+      "vdd_V": 0.5,
+      "offset_V": 0.4,
+      "minimum_rail_fraction": 0.19120758605889904,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.4_0.6",
+      "vdd_V": 0.6,
+      "offset_V": 0.4,
+      "minimum_rail_fraction": 0.2976558727438546,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.4_0.7",
+      "vdd_V": 0.7,
+      "offset_V": 0.4,
+      "minimum_rail_fraction": 0.37583075415219463,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.4_0.8",
+      "vdd_V": 0.8,
+      "offset_V": 0.4,
+      "minimum_rail_fraction": 0.4560576054294994,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.4_0.9",
+      "vdd_V": 0.9,
+      "offset_V": 0.4,
+      "minimum_rail_fraction": 0.8880611408794864,
+      "pass": false
+    },
+    {
+      "run": "mismatch_0.4_1.0",
+      "vdd_V": 1.0,
+      "offset_V": 0.4,
+      "minimum_rail_fraction": 0.9857619797854115,
+      "pass": true
+    },
+    {
+      "run": "mismatch_0.4_1.1",
+      "vdd_V": 1.1,
+      "offset_V": 0.4,
+      "minimum_rail_fraction": 0.9942170679950199,
+      "pass": true
+    }
+  ],
+  "physical_50pct": {
+    "write_1": {
+      "trigger_s": 2.0499999999999997e-09,
+      "response_s": 2.0972527327596064e-09,
+      "delay_ps": 47.252732759606644,
+      "response": "Q"
+    },
+    "read_1": {
+      "trigger_s": 1.2050000000000002e-08,
+      "response_s": 1.2261569039368494e-08,
+      "delay_ps": 211.56903936849204,
+      "response": "BL_bar"
+    },
+    "write_0": {
+      "trigger_s": 2.205e-08,
+      "response_s": 2.208533636884149e-08,
+      "delay_ps": 35.33636884149071,
+      "response": "Q"
+    },
+    "read_0": {
+      "trigger_s": 3.205e-08,
+      "response_s": 3.226156848166343e-08,
+      "delay_ps": 211.56848166342937,
+      "response": "BL"
+    }
+  }
+}

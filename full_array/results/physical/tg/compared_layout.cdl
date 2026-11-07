@@ -1,0 +1,9 @@
+** Layout Netlist, pegasus precompare
+** 
+
+.subckt tg GND VDD A B EN ENB 
+MM0 A EN B GND G45N1SVT L=4.5e-08 W=1.08e-06 AD=1.512e-13 AS=1.512e-13 PD=2.44e-06 PS=2.44e-06 m=1 
+MM1 A ENB B VDD G45P1SVT L=4.5e-08 W=1.08e-06 AD=1.512e-13 AS=1.512e-13 PD=2.44e-06 PS=2.44e-06 m=1 
+.ends
+
+

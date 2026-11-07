@@ -1,0 +1,12 @@
+SIMULATOR PASS array_sf_27
+SIMULATOR PASS array_fs_27
+SIMULATOR PASS array_tt_-40
+SIMULATOR PASS array_tt_125
+SIMULATOR PASS array_ff_27
+SIMULATOR PASS array_ss_27
+array_fs_27 PASS 76 operations; 0 failures
+array_sf_27 PASS 76 operations; 0 failures
+array_tt_-40 PASS 76 operations; 0 failures
+array_tt_125 PASS 76 operations; 0 failures
+array_ff_27 PASS 76 operations; 0 failures
+array_ss_27 PASS 76 operations; 0 failures

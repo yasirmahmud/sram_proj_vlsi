@@ -1,0 +1,182 @@
+\# Program start time:     UTC 2026.11.07 07:36:16.267
+\# Local time: EST (UTC-05:00) 2026.11.07 02:36:16.267
+\o Program:		@(#)$CDS: virtuoso version 6.1.8-64b 09/03/2024 19:11 (sjfhw316) $
+\o Hierarchy:		/apps/cds/IC618/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.8-64b.500.36  (64-bit addresses)
+\# Command line:	/apps/cds/IC618/tools/dfII/bin/64bit/virtuoso -nocdsinit -replay scripts/screenshots.il -log results/screenshots.cds.log
+\# Host name (type):	ece-lnx-07 (x86_64)
+\# Operating system:	Linux 4.18.0-553.180.1.el8_10.x86_64 #1 SMP Tue Oct 27 22:01:38 EDT 2026
+\# Linux /etc/issue:	\S
+\# Linux /etc/issue:	Kernel \r on an \m
+\# X display name (WxH):	:99 (1920x1200)
+\# Available geometry:			TL(0:0) BR(1919:1199)
+\# X server:			The X.Org Foundation
+\# Depth of Visual (Root):	24 (24)
+\# Number of Planes Used:	24
+\# X version:		11.0 (vendor release 12011000)
+\# X resource pool:	base 0x400000, mask 0x1fffff (2097151), shift 0
+\# 			current id 0x0, current max 0x1ffffa (2097146)
+\# Max data seg size:	     unlimited
+\# Max process size:	     unlimited
+\# Initial sbrk value:	        636 MB
+\# Available memory:	    603,474 MB
+\# System memory:	    646,255 MB
+\# Maximum memory size:	    645,740 MB
+\# Max mem available:	    603,594 MB
+\# Initial memory used:	        120 MB
+\#        process size:	      1,732 MB
+\# Thread usage limits (effective/default):	maxthreads 2060485/2060485 maxload 64.00/64.00
+\# Qt version:		5.9.1
+\# Window Manager:	other
+\# User Name:		ymahmud
+\o Working Directory:	ece-lnx-07:/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell
+\# Process Id:		1745045
+\o 
+\o COPYRIGHT (C) 1992-2024  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           (C) 1992-2024  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading wireEdit.cxt 
+\o Loading pte2.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Loading adexlDM.cxt 
+\o Loading cpf.cxt 
+\o Loading cli.cxt 
+\o Loading lp.cxt 
+\# [02:36:16.075153] Configured Lic search path (22.01-s002): 5280@ece-itop-licsvr.ece.ufl.edu
+\o Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.01s.
+\# Memory report: using         231 MB, process size 1,923 MB at UTC 2026.11.07 07:36:18.329
+\p > 
+\i w=deOpenCellView("sram_cell" "sram_cell" "schematic" "schematic" nil "r")
+\# [02:36:18.384897] Periodic Lic check successful
+\# [02:36:18.384912] Feature usage summary:
+\# [02:36:18.384913] 111
+\# Current Window: window(2)
+\o Loading gpdk045/libInit.il ...
+\o 	Loading gpdk045/loadCxt.ile ... done!
+\o 	Loading context 'gpdk045' from library 'gpdk045' ... done!
+\o 	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+\o 	Loading gpdk045/gpdk045_customFilter.il ... done!
+\o 	Loading gpdk045/libInitCustomExit.il ... 
+\o 	Loading Environment Settings ...
+\o 	Loading Model Management File ...
+\o Loading oasis.cxt 
+\o Loading analog.cxt 
+\o Loading asimenv.cxt 
+\o Loading spectrei.cxt 
+\o Loading dal.cxt 
+\o Loading awv.cxt 
+\# Memory report: using         334 MB, process size 2,025 MB at UTC 2026.11.07 07:36:19.048
+\o Loading socket.cxt 
+\o Loading par.cxt 
+\o Loading alvs.cxt 
+\o Loading caa.cxt 
+\o Loading amps.cxt 
+\o Loading adexlCore.cxt 
+\o Loading adexl.cxt 
+\o Loading vdsil.cxt 
+\o Loading lx.cxt 
+\o Loading lce.cxt 
+\o Loading le.cxt 
+\o Loading drdEdit.cxt 
+\o Loading rte.cxt 
+\o Loading te.cxt 
+\o Loading schHDL.cxt 
+\o Loading devCheck.cxt 
+\o Loading relXpert.cxt 
+\o Loading hspiceD.cxt 
+\o Loading spectreinl.cxt 
+\o Loading UltraSim.cxt 
+\o Loading msgHandler.cxt 
+\o Loading AMSOSS.cxt 
+\o Loading AMS.cxt 
+\o 	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+\o 
+\o   *************************************************************           
+\o   *              Cadence Design Systems, Inc.                 *           
+\o   *                                                           *           
+\o   *                    Generic 45nm PDK                       *           
+\o   *                        (gpdk045)                          *           
+\o   *                                                           *           
+\o   *************************************************************           
+\o 	
+\o 
+\o 	VERSION: 6.0 (09-September-2019)
+\o 
+\o done!
+\o Loaded gpdk045/libInit.il successfully!
+\o Loading schematic.cxt 
+\o Loading vb.cxt 
+\o Loading nt.cxt 
+\o Loading oi.cxt 
+\o Loading see.cxt 
+\o Loading treeAssistant.cxt 
+\o Loading asst.cxt 
+\o Loading simui.cxt 
+\o Loading hsm.cxt 
+\t window:2
+\p > 
+\i hiZoomIn(w w~>cellView~>bBox)
+\t t
+\p > 
+\i hiExportImage(?fileName "results/figures/schematic_cadence.png" ?window w ?exportRegion 'entireDesign ?width 1800)
+\o Saved to 'results/figures/schematic_cadence.png'
+\t t
+\p > 
+\i w2=deOpenCellView("sram_cell" "sram_cell" "layout" "maskLayout" nil "r")
+\# Current Window: window(3)
+\o Loading soi.cxt 
+\o Loading vfoCmd.cxt 
+\o Loading wsp.cxt 
+\o Loading mpt.cxt 
+\o Loading ia.cxt 
+\o Loading vca.cxt 
+\o Loading atd.cxt 
+\t window:3
+\p > 
+\i geSetAreaViewLevel(w2 w2~>cellView~>bBox 0 32)
+\t t
+\p > 
+\i hiExportImage(?fileName "results/figures/layout_cadence.png" ?window w2 ?exportRegion 'entireDesign ?width 1600)
+\o Saved to 'results/figures/layout_cadence.png'
+\t t
+\p > 
+\i foreach(layer '("Metal1" "Metal2" "Metal3")
+\i  leSetLayerVisible(list(layer "pin") nil)
+\i  leSetLayerVisible(list(layer "label") nil))
+\t ("Metal1" "Metal2" "Metal3")
+\p > 
+\i hiExportImage(?fileName "results/figures/layout_compact.png" ?window w2 ?exportRegion 'entireDesign ?width 1800)
+\o Saved to 'results/figures/layout_compact.png'
+\t t
+\p > 
+\i printf("SCREENSHOTS_COMPLETE\n")
+\o SCREENSHOTS_COMPLETE
+\t t
+\p > 
+\i exit()
+\# Memory report: using         444 MB, process size 2,255 MB at UTC 2026.11.07 07:36:22.517
+\o 
+\# Current Window: window(2) Window cellview: sram_cell:sram_cell:schematic  Application: Schematics
+\# Lic Summary:
+\# [02:36:23.040433] Cdslmd servers: ece-itop-licsvr
+\# [02:36:23.040443] Feature usage summary:
+\# [02:36:23.040443] 111
+\# Memory report: on exit            444 MB, process size 2,255 MB at UTC 2026.11.07 07:36:23.564
+\# Memory report: peak usage         444 MB, process size 2,255 MB

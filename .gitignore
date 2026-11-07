@@ -1,0 +1,41 @@
+# Local Python packages and bytecode
+**/.python_packages/
+**/.venv/
+**/__pycache__/
+*.py[cod]
+
+# Cadence sessions, locks, compiled simulator caches and working databases
+**/.cadence/
+**/*.cdslck*
+**/*.lock
+**/*.ahdlSimDB/
+**/pegasus-*/
+**/svdb/
+**/CDS.log*
+**/*.oa-
+
+# Transient top-level physical verification output; final reports live in results/
+sram_cell/.drcSummaryReport
+sram_cell/.run.reg
+sram_cell/result.sum
+sram_cell/run.pvl.rsf
+sram_cell/*.lmap
+sram_cell/*.softchk
+sram_cell/pvs_control_file
+sram_cell/results/**/run.pvl
+sram_cell/results/**/pvl.log
+sram_cell/results/license_features.log
+sram_cell/results/python_packages.log
+sram_cell/results/reportlab_install.log
+sram_cell/results/previous_layout/
+# Pegasus database symlinks and hidden per-run working files
+sram_cell/results/**/.*
+
+# Full-array exploratory data and regenerated caches/vendor decks
+full_array/results/exploration/
+full_array/results/**/waveforms.npz
+full_array/results/**/psf/tran.tran.tran
+full_array/results/**/.*
+full_array/results/physical/**/drc.pvl
+full_array/results/physical/**/lvs.pvl.rsf
+full_array/netlists/tune_sense.scs

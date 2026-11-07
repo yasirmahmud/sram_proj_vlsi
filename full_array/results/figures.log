@@ -1,0 +1,4 @@
+Timing ns: {'write_1': 0.41524355468014634, 'write_0': 0.2186931577895143, 'read_1': 0.36925017521488146, 'read_0': 0.38590806429771324}
+Precharge 10-90 ns: 0.11812406133971856
+All-line precharge minimum V: 1.0999998810287033
+Nominal coverage: 244 operations, all pass

@@ -1,0 +1,12 @@
+simulator lang=spectre
+include "/ecel/UFAD/ymahmud/vlsi_sram_project/Project Instruction Files/gpdk045_mos.scs" section=tt
+include "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/netlists/design.scs"
+parameters vdd=1.1
+VDD (VDD 0) vsource dc=vdd
+simOptions options reltol=1e-3 temp=27
+VA (A 0) vsource type=pwl wave=[0n (0*vdd) 20n (0*vdd) 20.1n (1*vdd) 40n (1*vdd)]
+VB (B 0) vsource type=pwl wave=[0n (0*vdd) 10n (0*vdd) 10.1n (1*vdd) 20n (1*vdd) 20.1n (0*vdd) 30n (0*vdd) 30.1n (1*vdd) 40n (1*vdd)]
+Xunit (A B Y VDD 0) nand2
+CLY (Y 0) capacitor c=5f
+tran tran stop=40n maxstep=100p errpreset=moderate strobeperiod=100p
+save A B Y

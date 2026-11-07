@@ -1,0 +1,102 @@
+COPYRIGHT (C) 1992-2024  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+          (C) 1992-2024  UNIX SYSTEMS Laboratories INC.,
+                         Reproduced with permission.
+
+This Cadence Design Systems program and online documentation are
+proprietary/confidential information and may be disclosed/used only
+as authorized in a license agreement controlling such use and disclosure.
+
+          RESTRICTED RIGHTS NOTICE (SHORT FORM)
+Use/reproduction/disclosure is subject to restriction
+set forth at FAR 1252.227-19 or its equivalent.
+Loading geView.cxt 
+Loading menuBuilder.cxt 
+Loading schView.cxt 
+Loading selectSv.cxt 
+Loading wireEdit.cxt 
+Loading pte2.cxt 
+Loading xlUI.cxt 
+Loading auCore.cxt 
+Loading vhdl.cxt 
+Loading seismic.cxt 
+Loading ci.cxt 
+Loading ams.cxt 
+Loading adexlDM.cxt 
+Loading cpf.cxt 
+Loading cli.cxt 
+Loading lp.cxt 
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.01s.
+*WARNING* LIB sram_cell from File /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/cds.lib Line 5 redefines
+LIB sram_cell from the same file (defined earlier.)
+Loading oasis.cxt 
+Loading dal.cxt 
+Loading awv.cxt 
+Loading vdsil.cxt 
+Loading analog.cxt 
+Loading asimenv.cxt 
+Loading spectrei.cxt 
+Loading socket.cxt 
+Loading par.cxt 
+Loading alvs.cxt 
+Loading caa.cxt 
+Loading amps.cxt 
+Loading adexlCore.cxt 
+Loading adexl.cxt 
+Loading lx.cxt 
+Loading lce.cxt 
+Loading le.cxt 
+Loading drdEdit.cxt 
+Loading rte.cxt 
+Loading te.cxt 
+Loading schHDL.cxt 
+Loading devCheck.cxt 
+Loading relXpert.cxt 
+Loading simui.cxt 
+*WARNING* LIB sram_cell from File /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/cds.lib Line 5 redefines
+LIB sram_cell from the same file (defined earlier.)
+Loading gpdk045/libInit.il ...
+	Loading gpdk045/loadCxt.ile ... done!
+	Loading context 'gpdk045' from library 'gpdk045' ... done!
+	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+	Loading gpdk045/gpdk045_customFilter.il ... done!
+	Loading gpdk045/libInitCustomExit.il ... 
+	Loading Environment Settings ...
+	Loading Model Management File ...
+Loading hspiceD.cxt 
+Loading spectreinl.cxt 
+Loading UltraSim.cxt 
+Loading msgHandler.cxt 
+Loading AMSOSS.cxt 
+Loading AMS.cxt 
+	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 45nm PDK                       *           
+  *                        (gpdk045)                          *           
+  *                                                           *           
+  *************************************************************           
+	
+
+	VERSION: 6.0 (09-September-2019)
+
+done!
+Loaded gpdk045/libInit.il successfully!
+generate netlist...
+Loading hnlInit.cxt 
+Loading seCore.cxt 
+Begin Incremental Netlisting Nov  7 02:12:35 2026
+Loading json.cxt 
+End netlisting Nov  7 02:12:35 2026
+Loading monte.cxt 
+
+Netlisting Statistics:
+	Number of components:    6
+
+	Elapsed time:          0.0s
+Errors: 0	Warnings: 0
+      ...successful.
+compose simulator input file...
+      ...successful.
+

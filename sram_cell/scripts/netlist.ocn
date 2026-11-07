@@ -1,0 +1,6 @@
+simulator('spectre)
+design("sram_cell" "sram_cell" "schematic")
+resultsDir("./results/ocean")
+modelFile(list("/apps/cds/local/GPDK045/models/spectre/gpdk045.scs" "tt"))
+createNetlist(?recreateAll t)
+exit()

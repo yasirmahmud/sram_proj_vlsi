@@ -1,0 +1,34 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.03s.
+*WARNING* The directory: '/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/cadence' does not exist
+	but was defined in libFile '/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/cds.lib' for Lib 'sram_cell'.
+*WARNING* LIB sram_cell from File /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/cds.lib Line 5 redefines
+LIB sram_cell from the same file (defined earlier.)
+Loading gpdk045/libInit.il ...
+	Loading gpdk045/loadCxt.ile ... done!
+	Loading context 'gpdk045' from library 'gpdk045' ... done!
+	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+	Loading gpdk045/gpdk045_customFilter.il ... done!
+	Loading gpdk045/libInitCustomExit.il ... 
+	Loading Environment Settings ...
+	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 45nm PDK                       *           
+  *                        (gpdk045)                          *           
+  *                                                           *           
+  *************************************************************           
+	
+
+	VERSION: 6.0 (09-September-2019)
+
+done!
+Loaded gpdk045/libInit.il successfully!
+INFO (TECH-1000002): Attaching default techfile (cdsDefTechLib) to library reference.
+Loading techComp.cxt 
+COPY_LAYOUT db:0x05a5ca9a
+*WARNING* LIB sram_cell from File /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/cds.lib Line 5 redefines
+LIB sram_cell from the same file (defined earlier.)
+BUILD_COMPLETE
+

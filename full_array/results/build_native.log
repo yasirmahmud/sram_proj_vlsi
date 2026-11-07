@@ -1,0 +1,5267 @@
+\# Program start time:     UTC 2026.11.07 08:29:01.798
+\# Local time: EST (UTC-05:00) 2026.11.07 03:29:01.798
+\o Program:		@(#)$CDS: virtuoso version 6.1.8-64b 09/03/2024 19:11 (sjfhw316) $
+\o Hierarchy:		/apps/cds/IC618/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.8-64b.500.36  (64-bit addresses)
+\# Command line:	/apps/cds/IC618/tools/dfII/bin/64bit/virtuoso -nographE -nocdsinit -replay scripts/build_native_generated.il -log results/build_native.log
+\# Host name (type):	ece-lnx-07 (x86_64)
+\# Operating system:	Linux 4.18.0-553.180.1.el8_10.x86_64 #1 SMP Tue Oct 27 22:01:38 EDT 2026
+\# Linux /etc/issue:	\S
+\# Linux /etc/issue:	Kernel \r on an \m
+\# X display name (WxH):	:8849 (1024x868)
+\# Available geometry:			TL(0:0) BR(1023:867)
+\# X server:			The X.Org Foundation
+\# Depth of Visual (Root):	24 (24)
+\# Number of Planes Used:	24
+\# X version:		11.0 (vendor release 12011000)
+\# X resource pool:	base 0x400000, mask 0x1fffff (2097151), shift 0
+\# 			current id 0x0, current max 0x1ffffa (2097146)
+\# Max data seg size:	     unlimited
+\# Max process size:	     unlimited
+\# Initial sbrk value:	        626 MB
+\# Available memory:	    603,399 MB
+\# System memory:	    646,255 MB
+\# Maximum memory size:	    645,750 MB
+\# Max mem available:	    603,519 MB
+\# Initial memory used:	        120 MB
+\#        process size:	      1,707 MB
+\# Thread usage limits (effective/default):	maxthreads 2060485/2060485 maxload 64.00/64.00
+\# Qt version:		5.9.1
+\# Window Manager:	other
+\# User Name:		ymahmud
+\o Working Directory:	ece-lnx-07:/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array
+\# Process Id:		1758435
+\o 
+\o COPYRIGHT (C) 1992-2024  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           (C) 1992-2024  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading wireEdit.cxt 
+\o Loading pte2.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Loading adexlDM.cxt 
+\o Loading cpf.cxt 
+\o Loading cli.cxt 
+\o Loading lp.cxt 
+\# [03:29:01.075129] Configured Lic search path (22.01-s002): 5280@ece-itop-licsvr.ece.ufl.edu
+\o Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.01s.
+\# Memory report: using         231 MB, process size 1,897 MB at UTC 2026.11.07 08:29:03.886
+\p > 
+\i procedure(stub(cv inst pinName netName)
+\# [03:29:03.415825] Periodic Lic check successful
+\# [03:29:03.415890] Feature usage summary:
+\# [03:29:03.415890] 111
+\i  let((te pos end delta wires)
+\i  te=dbFindTermByName(inst~>master pinName)
+\i  unless(te error("Missing pin %s/%s" inst~>cellName pinName))
+\i  pos=dbTransformPoint(centerBox(car(te~>pins)~>fig~>bBox) inst~>transform)
+\i  delta=cond((pinName=="D" list(0.0 .35)) (pinName=="S" list(0.0 -.35)) (pinName=="B" list(.40 0.0)) (t list(-.40 0.0)))
+\i  when(inst~>cellName=="pmos1v"
+\i   when(pinName=="D" delta=list(0.0 -.35))
+\i   when(pinName=="S" delta=list(0.0 .35)))
+\i  when(inst~>libName=="sram_project"
+\i    delta=if(te~>direction=="output" || member(pinName '("Q" "Q_bar")) then list(.40 0.0) else list(-.40 0.0))
+\i    when(pinName=="VDD" delta=list(0.0 .40))
+\i    when(pinName=="GND" delta=list(0.0 -.40)))
+\i  end=list(car(pos)+car(delta) cadr(pos)+cadr(delta))
+\i  wires=schCreateWire(cv "draw" "direct" list(pos end) .0625 .0625 0.0)
+\i  schCreateWireLabel(cv car(dbGetOverlaps(cv list(end end) '("wire" "drawing"))) end netName "lowerLeft" "R0" "stick" .10 nil) end))
+\t stub
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "inv" "symbol" "schematicSymbol" "w")
+\o Loading gpdk045/libInit.il ...
+\o 	Loading gpdk045/loadCxt.ile ... done!
+\o 	Loading context 'gpdk045' from library 'gpdk045' ... done!
+\o 	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+\o 	Loading gpdk045/gpdk045_customFilter.il ... done!
+\o 	Loading gpdk045/libInitCustomExit.il ... 
+\o 	Loading Environment Settings ...
+\o 	Loading Model Management File ...
+\o Loading oasis.cxt 
+\o Loading analog.cxt 
+\o Loading asimenv.cxt 
+\o Loading spectrei.cxt 
+\o Loading dal.cxt 
+\o Loading awv.cxt 
+\o Loading socket.cxt 
+\o Loading par.cxt 
+\o Loading alvs.cxt 
+\o Loading caa.cxt 
+\o Loading amps.cxt 
+\o Loading adexlCore.cxt 
+\o Loading adexl.cxt 
+\o Loading vdsil.cxt 
+\o Loading lx.cxt 
+\o Loading lce.cxt 
+\o Loading le.cxt 
+\o Loading drdEdit.cxt 
+\o Loading rte.cxt 
+\o Loading te.cxt 
+\o Loading schHDL.cxt 
+\o Loading devCheck.cxt 
+\# Memory report: using         378 MB, process size 2,159 MB at UTC 2026.11.07 08:29:05.031
+\o Loading relXpert.cxt 
+\o Loading hspiceD.cxt 
+\o Loading spectreinl.cxt 
+\o Loading UltraSim.cxt 
+\o Loading msgHandler.cxt 
+\o Loading AMSOSS.cxt 
+\o Loading AMS.cxt 
+\o 	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+\o 
+\o   *************************************************************           
+\o   *              Cadence Design Systems, Inc.                 *           
+\o   *                                                           *           
+\o   *                    Generic 45nm PDK                       *           
+\o   *                        (gpdk045)                          *           
+\o   *                                                           *           
+\o   *************************************************************           
+\o 	
+\o 
+\o 	VERSION: 6.0 (09-September-2019)
+\o 
+\o done!
+\o Loaded gpdk045/libInit.il successfully!
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 2.0)))
+\t db:0x2752cc1a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.0) "inv" "centerCenter" "R0" "roman" .18)
+\t db:0x2752cc1b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "IN" "input" list(-0.25 1.5) "R0" t nil nil "signal")
+\o Loading schematic.cxt 
+\t db:0x2752cc1c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752cc1d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "IN" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc1e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "OUT" "output" list(4.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752cc1f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 1.5) list(4 1.5)))
+\t db:0x2752cc20
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 1.5) "OUT" "centerRight" "R0" "roman" .14)
+\t db:0x2752cc21
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 2.25) "R0" t nil nil "power")
+\t db:0x2752cc22
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 2.25) list(2 2.0)))
+\t db:0x2752cc23
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 1.8) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752cc24
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752cc25
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752cc26
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752cc27
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "nand3" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 2.5)))
+\t db:0x2752c31a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.25) "nand3" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c31b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "A" "input" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c31c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c31d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "A" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c31e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "B" "input" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c31f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c320
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "B" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c321
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "E" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c322
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c323
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "E" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c324
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "Y" "output" list(4.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c325
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.0) list(4 2.0)))
+\t db:0x2752c326
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.0) "Y" "centerRight" "R0" "roman" .14)
+\t db:0x2752c327
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 2.75) "R0" t nil nil "power")
+\t db:0x2752c328
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 2.75) list(2 2.5)))
+\t db:0x2752c329
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 2.3) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c32a
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c32b
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c32c
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c32d
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "and3" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 2.5)))
+\t db:0x2752c39a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.25) "and3" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c39b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "A" "input" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c39c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c39d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "A" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c39e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "B" "input" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c39f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c3a0
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "B" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c3a1
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "E" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c3a2
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c3a3
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "E" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c3a4
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "Y" "output" list(4.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c3a5
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.0) list(4 2.0)))
+\t db:0x2752c3a6
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.0) "Y" "centerRight" "R0" "roman" .14)
+\t db:0x2752c3a7
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 2.75) "R0" t nil nil "power")
+\t db:0x2752c3a8
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 2.75) list(2 2.5)))
+\t db:0x2752c3a9
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 2.3) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c3aa
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c3ab
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c3ac
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c3ad
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "nand2" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 2.0)))
+\t db:0x2752c19a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.0) "nand2" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c19b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "A" "input" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c19c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c19d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "A" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c19e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "B" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c19f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c1a0
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "B" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1a1
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "Y" "output" list(4.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c1a2
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 1.5) list(4 1.5)))
+\t db:0x2752c1a3
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 1.5) "Y" "centerRight" "R0" "roman" .14)
+\t db:0x2752c1a4
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 2.25) "R0" t nil nil "power")
+\t db:0x2752c1a5
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 2.25) list(2 2.0)))
+\t db:0x2752c1a6
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 1.8) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c1a7
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c1a8
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c1a9
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c1aa
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "tg" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 3.0)))
+\t db:0x2752c29a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.5) "tg" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c29b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "A" "inputOutput" list(-0.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c29c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.5) list(0 2.5)))
+\t db:0x2752c29d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.5) "A" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c29e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "B" "inputOutput" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c29f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c2a0
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "B" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2a1
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "EN" "input" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c2a2
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c2a3
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "EN" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2a4
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "ENB" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c2a5
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c2a6
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "ENB" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2a7
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 3.25) "R0" t nil nil "power")
+\t db:0x2752c2a8
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 3.25) list(2 3.0)))
+\t db:0x2752c2a9
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 2.8) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c2aa
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c2ab
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c2ac
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c2ad
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "precharge_unit" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 2.5)))
+\t db:0x2752c41a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.25) "precharge_unit" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c41b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL" "inputOutput" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c41c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c41d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "BL" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c41e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB" "inputOutput" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c41f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c420
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "BLB" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c421
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "PCB" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c422
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c423
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "PCB" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c424
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 2.75) "R0" t nil nil "power")
+\t db:0x2752c425
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 2.75) list(2 2.5)))
+\t db:0x2752c426
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 2.3) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c427
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c428
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c429
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c42a
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "sense_amp" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 2.5)))
+\t db:0x2752cc1a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.25) "sense_amp" "centerCenter" "R0" "roman" .18)
+\t db:0x2752cc1b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BIT" "input" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752cc1c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752cc1d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "BIT" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc1e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BIT_bar" "input" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752cc1f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752cc20
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "BIT_bar" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc21
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "RE" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752cc22
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752cc23
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "RE" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc24
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "AMP_OUT" "output" list(4.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752cc25
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.0) list(4 2.0)))
+\t db:0x2752cc26
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.0) "AMP_OUT" "centerRight" "R0" "roman" .14)
+\t db:0x2752cc27
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 2.75) "R0" t nil nil "power")
+\t db:0x2752cc28
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 2.75) list(2 2.5)))
+\t db:0x2752cc29
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 2.3) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752cc2a
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752cc2b
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752cc2c
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752cc2d
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "read_latch" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 2.5)))
+\t db:0x2752c31a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.25) "read_latch" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c31b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "D" "input" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c31c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c31d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "D" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c31e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "EN" "input" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c31f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c320
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "EN" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c321
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "ENB" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c322
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c323
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "ENB" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c324
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "Q" "output" list(4.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c325
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.0) list(4 2.0)))
+\t db:0x2752c326
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.0) "Q" "centerRight" "R0" "roman" .14)
+\t db:0x2752c327
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 2.75) "R0" t nil nil "power")
+\t db:0x2752c328
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 2.75) list(2 2.5)))
+\t db:0x2752c329
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 2.3) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c32a
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c32b
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c32c
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c32d
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "row_decoder" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 3.0)))
+\t db:0x2752c39a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.5) "row_decoder" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c39b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "R1" "input" list(-0.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c39c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.5) list(0 2.5)))
+\t db:0x2752c39d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.5) "R1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c39e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "R0" "input" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c39f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c3a0
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "R0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c3a1
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "EN" "input" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c3a2
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c3a3
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "EN" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c3a4
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WL0" "output" list(4.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c3a5
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.5) list(4 2.5)))
+\t db:0x2752c3a6
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.5) "WL0" "centerRight" "R0" "roman" .14)
+\t db:0x2752c3a7
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WL1" "output" list(4.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c3a8
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.0) list(4 2.0)))
+\t db:0x2752c3a9
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.0) "WL1" "centerRight" "R0" "roman" .14)
+\t db:0x2752c3aa
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WL2" "output" list(4.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c3ab
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 1.5) list(4 1.5)))
+\t db:0x2752c3ac
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 1.5) "WL2" "centerRight" "R0" "roman" .14)
+\t db:0x2752c3ad
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WL3" "output" list(4.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c3ae
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 1.0) list(4 1.0)))
+\t db:0x2752c3af
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 1.0) "WL3" "centerRight" "R0" "roman" .14)
+\t db:0x2752c3b0
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 3.25) "R0" t nil nil "power")
+\t db:0x2752c3b1
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 3.25) list(2 3.0)))
+\t db:0x2752c3b2
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 2.8) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c3b3
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c3b4
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c3b5
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c3b6
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "column_decoder" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 4.0)))
+\t db:0x2752c19a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 2.0) "column_decoder" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c19b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "C2" "input" list(-0.25 3.5) "R0" t nil nil "signal")
+\t db:0x2752c19c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.5) list(0 3.5)))
+\t db:0x2752c19d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.5) "C2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c19e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "C1" "input" list(-0.25 3.0) "R0" t nil nil "signal")
+\t db:0x2752c19f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.0) list(0 3.0)))
+\t db:0x2752c1a0
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.0) "C1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1a1
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "C0" "input" list(-0.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c1a2
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.5) list(0 2.5)))
+\t db:0x2752c1a3
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.5) "C0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1a4
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS0" "output" list(4.25 3.5) "R0" t nil nil "signal")
+\t db:0x2752c1a5
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 3.5) list(4 3.5)))
+\t db:0x2752c1a6
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 3.5) "CS0" "centerRight" "R0" "roman" .14)
+\t db:0x2752c1a7
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS1" "output" list(4.25 3.0) "R0" t nil nil "signal")
+\t db:0x2752c1a8
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 3.0) list(4 3.0)))
+\t db:0x2752c1a9
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 3.0) "CS1" "centerRight" "R0" "roman" .14)
+\t db:0x2752c1aa
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS2" "output" list(4.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c1ab
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.5) list(4 2.5)))
+\t db:0x2752c1ac
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.5) "CS2" "centerRight" "R0" "roman" .14)
+\t db:0x2752c1ad
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS3" "output" list(4.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c1ae
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.0) list(4 2.0)))
+\t db:0x2752c1af
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.0) "CS3" "centerRight" "R0" "roman" .14)
+\t db:0x2752c1b0
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS4" "output" list(4.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c1b1
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 1.5) list(4 1.5)))
+\t db:0x2752c1b2
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 1.5) "CS4" "centerRight" "R0" "roman" .14)
+\t db:0x2752c1b3
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS5" "output" list(4.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c1b4
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 1.0) list(4 1.0)))
+\t db:0x2752c1b5
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 1.0) "CS5" "centerRight" "R0" "roman" .14)
+\t db:0x2752c1b6
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 4.25) "R0" t nil nil "power")
+\t db:0x2752c1b7
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 4.25) list(2 4.0)))
+\t db:0x2752c1b8
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 3.8) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c1b9
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c1ba
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c1bb
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c1bc
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "rw_control" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 4.0)))
+\t db:0x2752c29a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 2.0) "rw_control" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c29b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CLK1" "input" list(-0.25 3.5) "R0" t nil nil "signal")
+\t db:0x2752c29c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.5) list(0 3.5)))
+\t db:0x2752c29d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.5) "CLK1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c29e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CLK2" "input" list(-0.25 3.0) "R0" t nil nil "signal")
+\t db:0x2752c29f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.0) list(0 3.0)))
+\t db:0x2752c2a0
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.0) "CLK2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2a1
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WR" "input" list(-0.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c2a2
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.5) list(0 2.5)))
+\t db:0x2752c2a3
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.5) "WR" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2a4
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "RD" "input" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c2a5
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c2a6
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "RD" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2a7
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "C2" "input" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c2a8
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c2a9
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "C2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2aa
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "C1" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c2ab
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c2ac
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "C1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2ad
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WEN" "output" list(4.25 3.5) "R0" t nil nil "signal")
+\t db:0x2752c2ae
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 3.5) list(4 3.5)))
+\t db:0x2752c2af
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 3.5) "WEN" "centerRight" "R0" "roman" .14)
+\t db:0x2752c2b0
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WENB" "output" list(4.25 3.0) "R0" t nil nil "signal")
+\t db:0x2752c2b1
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 3.0) list(4 3.0)))
+\t db:0x2752c2b2
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 3.0) "WENB" "centerRight" "R0" "roman" .14)
+\t db:0x2752c2b3
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "REN" "output" list(4.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c2b4
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.5) list(4 2.5)))
+\t db:0x2752c2b5
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.5) "REN" "centerRight" "R0" "roman" .14)
+\t db:0x2752c2b6
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "RENB" "output" list(4.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c2b7
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.0) list(4 2.0)))
+\t db:0x2752c2b8
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.0) "RENB" "centerRight" "R0" "roman" .14)
+\t db:0x2752c2b9
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "ROWEN" "output" list(4.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c2ba
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 1.5) list(4 1.5)))
+\t db:0x2752c2bb
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 1.5) "ROWEN" "centerRight" "R0" "roman" .14)
+\t db:0x2752c2bc
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "PCB" "output" list(4.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c2bd
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 1.0) list(4 1.0)))
+\t db:0x2752c2be
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 1.0) "PCB" "centerRight" "R0" "roman" .14)
+\t db:0x2752c2bf
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 4.25) "R0" t nil nil "power")
+\t db:0x2752c2c0
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 4.25) list(2 4.0)))
+\t db:0x2752c2c1
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 3.8) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c2c2
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c2c3
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c2c4
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c2c5
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "write_driver" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 3.5)))
+\t db:0x2752c41a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.75) "write_driver" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c41b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "DIN" "input" list(-0.25 3.0) "R0" t nil nil "signal")
+\t db:0x2752c41c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.0) list(0 3.0)))
+\t db:0x2752c41d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.0) "DIN" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c41e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WEN" "input" list(-0.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c41f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.5) list(0 2.5)))
+\t db:0x2752c420
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.5) "WEN" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c421
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WENB" "input" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c422
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c423
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "WENB" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c424
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GBL" "inputOutput" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c425
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c426
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "GBL" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c427
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GBLB" "inputOutput" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c428
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c429
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "GBLB" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c42a
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 3.75) "R0" t nil nil "power")
+\t db:0x2752c42b
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 3.75) list(2 3.5)))
+\t db:0x2752c42c
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 3.3) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c42d
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c42e
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c42f
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c430
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "column_mux" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 11.0)))
+\t db:0x2752cc1a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 5.5) "column_mux" "centerCenter" "R0" "roman" .18)
+\t db:0x2752cc1b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS0" "input" list(-0.25 10.5) "R0" t nil nil "signal")
+\t db:0x2752cc1c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 10.5) list(0 10.5)))
+\t db:0x2752cc1d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 10.5) "CS0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc1e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS1" "input" list(-0.25 10.0) "R0" t nil nil "signal")
+\t db:0x2752cc1f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 10.0) list(0 10.0)))
+\t db:0x2752cc20
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 10.0) "CS1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc21
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS2" "input" list(-0.25 9.5) "R0" t nil nil "signal")
+\t db:0x2752cc22
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 9.5) list(0 9.5)))
+\t db:0x2752cc23
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 9.5) "CS2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc24
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS3" "input" list(-0.25 9.0) "R0" t nil nil "signal")
+\t db:0x2752cc25
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 9.0) list(0 9.0)))
+\t db:0x2752cc26
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 9.0) "CS3" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc27
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS4" "input" list(-0.25 8.5) "R0" t nil nil "signal")
+\t db:0x2752cc28
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 8.5) list(0 8.5)))
+\t db:0x2752cc29
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 8.5) "CS4" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc2a
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CS5" "input" list(-0.25 8.0) "R0" t nil nil "signal")
+\t db:0x2752cc2b
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 8.0) list(0 8.0)))
+\t db:0x2752cc2c
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 8.0) "CS5" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc2d
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL0" "inputOutput" list(-0.25 7.5) "R0" t nil nil "signal")
+\t db:0x2752cc2e
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 7.5) list(0 7.5)))
+\t db:0x2752cc2f
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 7.5) "BL0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc30
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL1" "inputOutput" list(-0.25 7.0) "R0" t nil nil "signal")
+\t db:0x2752cc31
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 7.0) list(0 7.0)))
+\t db:0x2752cc32
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 7.0) "BL1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc33
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL2" "inputOutput" list(-0.25 6.5) "R0" t nil nil "signal")
+\t db:0x2752cc34
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 6.5) list(0 6.5)))
+\t db:0x2752cc35
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 6.5) "BL2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc36
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL3" "inputOutput" list(-0.25 6.0) "R0" t nil nil "signal")
+\t db:0x2752cc37
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 6.0) list(0 6.0)))
+\t db:0x2752cc38
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 6.0) "BL3" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc39
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL4" "inputOutput" list(-0.25 5.5) "R0" t nil nil "signal")
+\t db:0x2752cc3a
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 5.5) list(0 5.5)))
+\t db:0x2752cc3b
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 5.5) "BL4" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc3c
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL5" "inputOutput" list(-0.25 5.0) "R0" t nil nil "signal")
+\t db:0x2752cc3d
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 5.0) list(0 5.0)))
+\t db:0x2752cc3e
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 5.0) "BL5" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc3f
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB0" "inputOutput" list(-0.25 4.5) "R0" t nil nil "signal")
+\t db:0x2752cc40
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 4.5) list(0 4.5)))
+\t db:0x2752cc41
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 4.5) "BLB0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc42
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB1" "inputOutput" list(-0.25 4.0) "R0" t nil nil "signal")
+\t db:0x2752cc43
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 4.0) list(0 4.0)))
+\t db:0x2752cc44
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 4.0) "BLB1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc45
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB2" "inputOutput" list(-0.25 3.5) "R0" t nil nil "signal")
+\t db:0x2752cc46
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.5) list(0 3.5)))
+\t db:0x2752cc47
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.5) "BLB2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc48
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB3" "inputOutput" list(-0.25 3.0) "R0" t nil nil "signal")
+\t db:0x2752cc49
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.0) list(0 3.0)))
+\t db:0x2752cc4a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.0) "BLB3" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc4b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB4" "inputOutput" list(-0.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752cc4c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.5) list(0 2.5)))
+\t db:0x2752cc4d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.5) "BLB4" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc4e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB5" "inputOutput" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752cc4f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752cc50
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "BLB5" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc51
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GBL" "inputOutput" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752cc52
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752cc53
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "GBL" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc54
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GBLB" "inputOutput" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752cc55
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752cc56
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "GBLB" "centerLeft" "R0" "roman" .14)
+\t db:0x2752cc57
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 11.25) "R0" t nil nil "power")
+\t db:0x2752cc58
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 11.25) list(2 11.0)))
+\t db:0x2752cc59
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 10.8) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752cc5a
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752cc5b
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752cc5c
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752cc5d
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "precharge" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 7.5)))
+\t db:0x2752c31a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 3.75) "precharge" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c31b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL0" "inputOutput" list(-0.25 7.0) "R0" t nil nil "signal")
+\t db:0x2752c31c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 7.0) list(0 7.0)))
+\t db:0x2752c31d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 7.0) "BL0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c31e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL1" "inputOutput" list(-0.25 6.5) "R0" t nil nil "signal")
+\t db:0x2752c31f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 6.5) list(0 6.5)))
+\t db:0x2752c320
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 6.5) "BL1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c321
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL2" "inputOutput" list(-0.25 6.0) "R0" t nil nil "signal")
+\t db:0x2752c322
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 6.0) list(0 6.0)))
+\t db:0x2752c323
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 6.0) "BL2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c324
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL3" "inputOutput" list(-0.25 5.5) "R0" t nil nil "signal")
+\t db:0x2752c325
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 5.5) list(0 5.5)))
+\t db:0x2752c326
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 5.5) "BL3" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c327
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL4" "inputOutput" list(-0.25 5.0) "R0" t nil nil "signal")
+\t db:0x2752c328
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 5.0) list(0 5.0)))
+\t db:0x2752c329
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 5.0) "BL4" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c32a
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL5" "inputOutput" list(-0.25 4.5) "R0" t nil nil "signal")
+\t db:0x2752c32b
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 4.5) list(0 4.5)))
+\t db:0x2752c32c
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 4.5) "BL5" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c32d
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB0" "inputOutput" list(-0.25 4.0) "R0" t nil nil "signal")
+\t db:0x2752c32e
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 4.0) list(0 4.0)))
+\t db:0x2752c32f
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 4.0) "BLB0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c330
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB1" "inputOutput" list(-0.25 3.5) "R0" t nil nil "signal")
+\t db:0x2752c331
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.5) list(0 3.5)))
+\t db:0x2752c332
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.5) "BLB1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c333
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB2" "inputOutput" list(-0.25 3.0) "R0" t nil nil "signal")
+\t db:0x2752c334
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.0) list(0 3.0)))
+\t db:0x2752c335
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.0) "BLB2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c336
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB3" "inputOutput" list(-0.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c337
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.5) list(0 2.5)))
+\t db:0x2752c338
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.5) "BLB3" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c339
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB4" "inputOutput" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c33a
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c33b
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "BLB4" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c33c
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB5" "inputOutput" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c33d
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c33e
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "BLB5" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c33f
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "PCB" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c340
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c341
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "PCB" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c342
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 7.75) "R0" t nil nil "power")
+\t db:0x2752c343
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 7.75) list(2 7.5)))
+\t db:0x2752c344
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 7.3) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c345
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c346
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c347
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c348
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "bitcell" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 2.5)))
+\t db:0x2752c11a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 1.25) "bitcell" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c11b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL" "inputOutput" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c11c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c11d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "BL" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c11e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL_bar" "inputOutput" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c11f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c120
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "BL_bar" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c121
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WL" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c122
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c123
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "WL" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c124
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "Q" "inputOutput" list(4.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c125
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 2.0) list(4 2.0)))
+\t db:0x2752c126
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 2.0) "Q" "centerRight" "R0" "roman" .14)
+\t db:0x2752c127
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "Q_bar" "inputOutput" list(4.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c128
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 1.5) list(4 1.5)))
+\t db:0x2752c129
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 1.5) "Q_bar" "centerRight" "R0" "roman" .14)
+\t db:0x2752c12a
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 2.75) "R0" t nil nil "power")
+\t db:0x2752c12b
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 2.75) list(2 2.5)))
+\t db:0x2752c12c
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 2.3) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c12d
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c12e
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c12f
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c130
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "bit_array" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 9.0)))
+\t db:0x2752c19a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 4.5) "bit_array" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c19b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WL0" "input" list(-0.25 8.5) "R0" t nil nil "signal")
+\t db:0x2752c19c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 8.5) list(0 8.5)))
+\t db:0x2752c19d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 8.5) "WL0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c19e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WL1" "input" list(-0.25 8.0) "R0" t nil nil "signal")
+\t db:0x2752c19f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 8.0) list(0 8.0)))
+\t db:0x2752c1a0
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 8.0) "WL1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1a1
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WL2" "input" list(-0.25 7.5) "R0" t nil nil "signal")
+\t db:0x2752c1a2
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 7.5) list(0 7.5)))
+\t db:0x2752c1a3
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 7.5) "WL2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1a4
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WL3" "input" list(-0.25 7.0) "R0" t nil nil "signal")
+\t db:0x2752c1a5
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 7.0) list(0 7.0)))
+\t db:0x2752c1a6
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 7.0) "WL3" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1a7
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL0" "inputOutput" list(-0.25 6.5) "R0" t nil nil "signal")
+\t db:0x2752c1a8
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 6.5) list(0 6.5)))
+\t db:0x2752c1a9
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 6.5) "BL0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1aa
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL1" "inputOutput" list(-0.25 6.0) "R0" t nil nil "signal")
+\t db:0x2752c1ab
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 6.0) list(0 6.0)))
+\t db:0x2752c1ac
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 6.0) "BL1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1ad
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL2" "inputOutput" list(-0.25 5.5) "R0" t nil nil "signal")
+\t db:0x2752c1ae
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 5.5) list(0 5.5)))
+\t db:0x2752c1af
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 5.5) "BL2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1b0
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL3" "inputOutput" list(-0.25 5.0) "R0" t nil nil "signal")
+\t db:0x2752c1b1
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 5.0) list(0 5.0)))
+\t db:0x2752c1b2
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 5.0) "BL3" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1b3
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL4" "inputOutput" list(-0.25 4.5) "R0" t nil nil "signal")
+\t db:0x2752c1b4
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 4.5) list(0 4.5)))
+\t db:0x2752c1b5
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 4.5) "BL4" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1b6
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BL5" "inputOutput" list(-0.25 4.0) "R0" t nil nil "signal")
+\t db:0x2752c1b7
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 4.0) list(0 4.0)))
+\t db:0x2752c1b8
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 4.0) "BL5" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1b9
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB0" "inputOutput" list(-0.25 3.5) "R0" t nil nil "signal")
+\t db:0x2752c1ba
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.5) list(0 3.5)))
+\t db:0x2752c1bb
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.5) "BLB0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1bc
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB1" "inputOutput" list(-0.25 3.0) "R0" t nil nil "signal")
+\t db:0x2752c1bd
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.0) list(0 3.0)))
+\t db:0x2752c1be
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.0) "BLB1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1bf
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB2" "inputOutput" list(-0.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c1c0
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.5) list(0 2.5)))
+\t db:0x2752c1c1
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.5) "BLB2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1c2
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB3" "inputOutput" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c1c3
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c1c4
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "BLB3" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1c5
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB4" "inputOutput" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c1c6
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c1c7
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "BLB4" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1c8
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "BLB5" "inputOutput" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c1c9
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c1ca
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "BLB5" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c1cb
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 9.25) "R0" t nil nil "power")
+\t db:0x2752c1cc
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 9.25) list(2 9.0)))
+\t db:0x2752c1cd
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 8.8) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c1ce
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c1cf
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c1d0
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c1d1
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i s=dbOpenCellViewByType("sram_project" "sram_4x6" "symbol" "schematicSymbol" "w")
+\t db:0x2752cd1a
+\p > 
+\i dbCreateRect(s '("device" "drawing") list(list(0.0 0.0) list(4.0 6.0)))
+\t db:0x2752c29a
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2.0 3.0) "sram_4x6" "centerCenter" "R0" "roman" .18)
+\t db:0x2752c29b
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "R1" "input" list(-0.25 5.5) "R0" t nil nil "signal")
+\t db:0x2752c29c
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 5.5) list(0 5.5)))
+\t db:0x2752c29d
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 5.5) "R1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c29e
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "R0" "input" list(-0.25 5.0) "R0" t nil nil "signal")
+\t db:0x2752c29f
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 5.0) list(0 5.0)))
+\t db:0x2752c2a0
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 5.0) "R0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2a1
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "C2" "input" list(-0.25 4.5) "R0" t nil nil "signal")
+\t db:0x2752c2a2
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 4.5) list(0 4.5)))
+\t db:0x2752c2a3
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 4.5) "C2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2a4
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "C1" "input" list(-0.25 4.0) "R0" t nil nil "signal")
+\t db:0x2752c2a5
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 4.0) list(0 4.0)))
+\t db:0x2752c2a6
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 4.0) "C1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2a7
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "C0" "input" list(-0.25 3.5) "R0" t nil nil "signal")
+\t db:0x2752c2a8
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.5) list(0 3.5)))
+\t db:0x2752c2a9
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.5) "C0" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2aa
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CLK1" "input" list(-0.25 3.0) "R0" t nil nil "signal")
+\t db:0x2752c2ab
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 3.0) list(0 3.0)))
+\t db:0x2752c2ac
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 3.0) "CLK1" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2ad
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "CLK2" "input" list(-0.25 2.5) "R0" t nil nil "signal")
+\t db:0x2752c2ae
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.5) list(0 2.5)))
+\t db:0x2752c2af
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.5) "CLK2" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2b0
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "WR" "input" list(-0.25 2.0) "R0" t nil nil "signal")
+\t db:0x2752c2b1
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 2.0) list(0 2.0)))
+\t db:0x2752c2b2
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 2.0) "WR" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2b3
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "RD" "input" list(-0.25 1.5) "R0" t nil nil "signal")
+\t db:0x2752c2b4
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.5) list(0 1.5)))
+\t db:0x2752c2b5
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.5) "RD" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2b6
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "DIN" "input" list(-0.25 1.0) "R0" t nil nil "signal")
+\t db:0x2752c2b7
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(-0.25 1.0) list(0 1.0)))
+\t db:0x2752c2b8
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(0.1 1.0) "DIN" "centerLeft" "R0" "roman" .14)
+\t db:0x2752c2b9
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "DOUT" "output" list(4.25 5.5) "R0" t nil nil "signal")
+\t db:0x2752c2ba
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(4.25 5.5) list(4 5.5)))
+\t db:0x2752c2bb
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(3.9 5.5) "DOUT" "centerRight" "R0" "roman" .14)
+\t db:0x2752c2bc
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "VDD" "input" list(2 6.25) "R0" t nil nil "power")
+\t db:0x2752c2bd
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 6.25) list(2 6.0)))
+\t db:0x2752c2be
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 5.8) "VDD" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c2bf
+\p > 
+\i schCreateSymbolPin(s dbOpenCellViewByType("basic" "sympin" "symbol" "" "r") "GND" "input" list(2 -0.25) "R0" t nil nil "ground")
+\t db:0x2752c2c0
+\p > 
+\i dbCreateLine(s '("device" "drawing") list(list(2 -0.25) list(2 0)))
+\t db:0x2752c2c1
+\p > 
+\i dbCreateLabel(s '("device" "drawing") list(2 0.2) "GND" "centerCenter" "R0" "roman" .14)
+\t db:0x2752c2c2
+\p > 
+\i dbSave(s) dbClose(s)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "inv" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM0" list(4 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752c19a)
+\t db:0x2752c19a
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752be9b
+\p > 
+\i stub(cv i "D" "OUT")
+\t (4.25 -2.4625)
+\p > 
+\i stub(cv i "G" "IN")
+\t (3.6 -3.0)
+\p > 
+\i stub(cv i "S" "GND")
+\t (4.25 -3.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (4.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "PM0" list(9 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752c19b)
+\t db:0x2752c19b
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752be9d
+\p > 
+\i stub(cv i "D" "OUT")
+\t (9.25 -3.5375)
+\p > 
+\i stub(cv i "G" "IN")
+\t (8.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (9.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (9.65 -3.0)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "IN" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752c19c
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "OUT" "output" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752c19d
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 1.0) "R0" nil nil "power")
+\t db:0x2752c19e
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 0.5) "R0" nil nil "ground")
+\t db:0x2752c19f
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "nand3" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM0" list(4 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1a)
+\t db:0x2752be1a
+\p > 
+\i dbReplaceProp(i "w" "string" "1080n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752c09b
+\p > 
+\i stub(cv i "D" "Y")
+\t (4.25 -2.4625)
+\p > 
+\i stub(cv i "G" "A")
+\t (3.6 -3.0)
+\p > 
+\i stub(cv i "S" "n1")
+\t (4.25 -3.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (4.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM1" list(9 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1b)
+\t db:0x2752be1b
+\p > 
+\i dbReplaceProp(i "w" "string" "1080n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752c09d
+\p > 
+\i stub(cv i "D" "n1")
+\t (9.25 -2.4625)
+\p > 
+\i stub(cv i "G" "B")
+\t (8.6 -3.0)
+\p > 
+\i stub(cv i "S" "n2")
+\t (9.25 -3.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (9.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM2" list(14 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1c)
+\t db:0x2752be1c
+\p > 
+\i dbReplaceProp(i "w" "string" "1080n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752c09f
+\p > 
+\i stub(cv i "D" "n2")
+\t (14.25 -2.4625)
+\p > 
+\i stub(cv i "G" "E")
+\t (13.6 -3.0)
+\p > 
+\i stub(cv i "S" "GND")
+\t (14.25 -3.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (14.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "PM0" list(19 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1d)
+\t db:0x2752be1d
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752c0a1
+\p > 
+\i stub(cv i "D" "Y")
+\t (19.25 -3.5375)
+\p > 
+\i stub(cv i "G" "A")
+\t (18.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (19.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (19.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "PM1" list(4 -8) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1e)
+\t db:0x2752be1e
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752c0a3
+\p > 
+\i stub(cv i "D" "Y")
+\t (4.25 -8.5375)
+\p > 
+\i stub(cv i "G" "B")
+\t (3.6 -8.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (4.25 -7.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (4.65 -8.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "PM2" list(9 -8) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1f)
+\t db:0x2752be1f
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752c0a5
+\p > 
+\i stub(cv i "D" "Y")
+\t (9.25 -8.5375)
+\p > 
+\i stub(cv i "G" "E")
+\t (8.6 -8.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (9.25 -7.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (9.65 -8.0)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "A" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752be20
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "B" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752be21
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "E" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752be22
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "Y" "output" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x2752be23
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 0.0) "R0" nil nil "power")
+\t db:0x2752be24
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -0.5) "R0" nil nil "ground")
+\t db:0x2752be25
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "and3" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "nand3" "symbol" "" "r") "XNAND" list(5 -5.5) "R0")
+\t db:0x2752be1a
+\p > 
+\i end=stub(cv i "A" "A")
+\t (4.35 -3.5)
+\p > 
+\i end=stub(cv i "B" "B")
+\t (4.35 -4.0)
+\p > 
+\i end=stub(cv i "E" "E")
+\t (4.35 -4.5)
+\p > 
+\i end=stub(cv i "Y" "nb")
+\t (9.65 -3.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -6.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XBUF" list(15 -5.5) "R0")
+\t db:0x2752be1b
+\p > 
+\i end=stub(cv i "IN" "nb")
+\t (14.35 -4.0)
+\p > 
+\i end=stub(cv i "OUT" "Y")
+\t (19.65 -4.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -2.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -6.15)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "A" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752be1c
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "B" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752be1d
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "E" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752be1e
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "Y" "output" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x2752be1f
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 0.0) "R0" nil nil "power")
+\t db:0x2752be20
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -0.5) "R0" nil nil "ground")
+\t db:0x2752be21
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "nand2" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "N0" list(4 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752b61a)
+\t db:0x2752b61a
+\p > 
+\i dbReplaceProp(i "w" "string" "720n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752bd1b
+\p > 
+\i stub(cv i "D" "Y")
+\t (4.25 -2.4625)
+\p > 
+\i stub(cv i "G" "A")
+\t (3.6 -3.0)
+\p > 
+\i stub(cv i "S" "n0")
+\t (4.25 -3.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (4.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "N1" list(9 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752b61b)
+\t db:0x2752b61b
+\p > 
+\i dbReplaceProp(i "w" "string" "720n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752bd1d
+\p > 
+\i stub(cv i "D" "n0")
+\t (9.25 -2.4625)
+\p > 
+\i stub(cv i "G" "B")
+\t (8.6 -3.0)
+\p > 
+\i stub(cv i "S" "GND")
+\t (9.25 -3.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (9.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "P0" list(14 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752b61c)
+\t db:0x2752b61c
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752bd1f
+\p > 
+\i stub(cv i "D" "Y")
+\t (14.25 -3.5375)
+\p > 
+\i stub(cv i "G" "A")
+\t (13.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (14.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (14.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "P1" list(19 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752b61d)
+\t db:0x2752b61d
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752bd21
+\p > 
+\i stub(cv i "D" "Y")
+\t (19.25 -3.5375)
+\p > 
+\i stub(cv i "G" "B")
+\t (18.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (19.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (19.65 -3.0)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "A" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752b61e
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "B" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752b61f
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "Y" "output" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752b620
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 0.5) "R0" nil nil "power")
+\t db:0x2752b621
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 0.0) "R0" nil nil "ground")
+\t db:0x2752b622
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "tg" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "N" list(4 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1a)
+\t db:0x2752be1a
+\p > 
+\i dbReplaceProp(i "w" "string" "1080n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752c09b
+\p > 
+\i stub(cv i "D" "B")
+\t (4.25 -2.4625)
+\p > 
+\i stub(cv i "G" "EN")
+\t (3.6 -3.0)
+\p > 
+\i stub(cv i "S" "A")
+\t (4.25 -3.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (4.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "P" list(9 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1b)
+\t db:0x2752be1b
+\p > 
+\i dbReplaceProp(i "w" "string" "1080n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752c09d
+\p > 
+\i stub(cv i "D" "B")
+\t (9.25 -3.5375)
+\p > 
+\i stub(cv i "G" "ENB")
+\t (8.6 -3.0)
+\p > 
+\i stub(cv i "S" "A")
+\t (9.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (9.65 -3.0)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "A" "inputOutput" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752be1c
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "B" "inputOutput" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752be1d
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "EN" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752be1e
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "ENB" "input" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x2752be1f
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 0.0) "R0" nil nil "power")
+\t db:0x2752be20
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -0.5) "R0" nil nil "ground")
+\t db:0x2752be21
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "precharge_unit" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "P0" list(4 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752b61a)
+\t db:0x2752b61a
+\p > 
+\i dbReplaceProp(i "w" "string" "1080n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752bd9b
+\p > 
+\i stub(cv i "D" "BL")
+\t (4.25 -3.5375)
+\p > 
+\i stub(cv i "G" "PCB")
+\t (3.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (4.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (4.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "P1" list(9 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752b61b)
+\t db:0x2752b61b
+\p > 
+\i dbReplaceProp(i "w" "string" "1080n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752bd9d
+\p > 
+\i stub(cv i "D" "BLB")
+\t (9.25 -3.5375)
+\p > 
+\i stub(cv i "G" "PCB")
+\t (8.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (9.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (9.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "PEQ" list(14 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752b61c)
+\t db:0x2752b61c
+\p > 
+\i dbReplaceProp(i "w" "string" "1080n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752bd9f
+\p > 
+\i stub(cv i "D" "BL")
+\t (14.25 -3.5375)
+\p > 
+\i stub(cv i "G" "PCB")
+\t (13.6 -3.0)
+\p > 
+\i stub(cv i "S" "BLB")
+\t (14.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (14.65 -3.0)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL" "inputOutput" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752b61d
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB" "inputOutput" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752b61e
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "PCB" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752b61f
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 0.5) "R0" nil nil "power")
+\t db:0x2752b620
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 0.0) "R0" nil nil "ground")
+\t db:0x2752b621
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_GND" list(-3.0 0.0) "R0")
+\t db:0x2752b622
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "sense_amp" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "PM6" list(4 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1a)
+\t db:0x2752be1a
+\p > 
+\i dbReplaceProp(i "w" "string" "1440n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752ab9b
+\p > 
+\i stub(cv i "D" "nd")
+\t (4.25 -3.5375)
+\p > 
+\i stub(cv i "G" "nd")
+\t (3.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (4.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (4.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "PM5" list(9 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1b)
+\t db:0x2752be1b
+\p > 
+\i dbReplaceProp(i "w" "string" "1440n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752ab9d
+\p > 
+\i stub(cv i "D" "ns")
+\t (9.25 -3.5375)
+\p > 
+\i stub(cv i "G" "nd")
+\t (8.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (9.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (9.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "PM7" list(14 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1c)
+\t db:0x2752be1c
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752ab9f
+\p > 
+\i stub(cv i "D" "AMP_OUT")
+\t (14.25 -3.5375)
+\p > 
+\i stub(cv i "G" "ns")
+\t (13.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (14.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (14.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM41" list(19 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1d)
+\t db:0x2752be1d
+\p > 
+\i dbReplaceProp(i "w" "string" "240n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752aba1
+\p > 
+\i stub(cv i "D" "ns")
+\t (19.25 -2.4625)
+\p > 
+\i stub(cv i "G" "BIT")
+\t (18.6 -3.0)
+\p > 
+\i stub(cv i "S" "tail")
+\t (19.25 -3.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (19.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM40" list(4 -8) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1e)
+\t db:0x2752be1e
+\p > 
+\i dbReplaceProp(i "w" "string" "240n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752aba3
+\p > 
+\i stub(cv i "D" "nd")
+\t (4.25 -7.4625)
+\p > 
+\i stub(cv i "G" "BIT_bar")
+\t (3.6 -8.0)
+\p > 
+\i stub(cv i "S" "tail")
+\t (4.25 -8.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (4.65 -8.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM39" list(9 -8) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be1f)
+\t db:0x2752be1f
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752aba5
+\p > 
+\i stub(cv i "D" "AMP_OUT")
+\t (9.25 -7.4625)
+\p > 
+\i stub(cv i "G" "ns")
+\t (8.6 -8.0)
+\p > 
+\i stub(cv i "S" "GND")
+\t (9.25 -8.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (9.65 -8.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM38" list(14 -8) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x2752be20)
+\t db:0x2752be20
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752aba7
+\p > 
+\i stub(cv i "D" "tail")
+\t (14.25 -7.4625)
+\p > 
+\i stub(cv i "G" "RE")
+\t (13.6 -8.0)
+\p > 
+\i stub(cv i "S" "GND")
+\t (14.25 -8.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (14.65 -8.0)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "BIT" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752be21
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "BIT_bar" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752be22
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "RE" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752be23
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 0.5) "R0" nil nil "power")
+\t db:0x2752be24
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 0.0) "R0" nil nil "ground")
+\t db:0x2752be25
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "AMP_OUT" "output" nil list(-3 -0.5) "R0" nil nil "signal")
+\t db:0x2752be26
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "read_latch" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XINPUT" list(5 -6.0) "R0")
+\t db:0x2752be1a
+\p > 
+\i end=stub(cv i "A" "D")
+\t (4.35 -3.5)
+\p > 
+\i end=stub(cv i "B" "n0")
+\t (4.35 -4.0)
+\p > 
+\i end=stub(cv i "EN" "EN")
+\t (4.35 -4.5)
+\p > 
+\i end=stub(cv i "ENB" "ENB")
+\t (4.35 -5.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -6.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI0" list(15 -6.0) "R0")
+\t db:0x2752be1b
+\p > 
+\i end=stub(cv i "IN" "n0")
+\t (14.35 -4.5)
+\p > 
+\i end=stub(cv i "OUT" "nb")
+\t (19.65 -4.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -3.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -6.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI1" list(25 -6.0) "R0")
+\t db:0x2752be1c
+\p > 
+\i end=stub(cv i "IN" "nb")
+\t (24.35 -4.5)
+\p > 
+\i end=stub(cv i "OUT" "Q")
+\t (29.65 -4.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -3.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -6.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XFEEDBACK" list(5 -12.0) "R0")
+\t db:0x2752be1d
+\p > 
+\i end=stub(cv i "A" "Q")
+\t (4.35 -9.5)
+\p > 
+\i end=stub(cv i "B" "n0")
+\t (4.35 -10.0)
+\p > 
+\i end=stub(cv i "EN" "ENB")
+\t (4.35 -10.5)
+\p > 
+\i end=stub(cv i "ENB" "EN")
+\t (4.35 -11.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -8.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -12.65)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "D" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752be1e
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "EN" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752be1f
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "ENB" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752be20
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "Q" "output" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x2752be21
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 0.0) "R0" nil nil "power")
+\t db:0x2752be22
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -0.5) "R0" nil nil "ground")
+\t db:0x2752be23
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "row_decoder" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI0" list(5 -5.5) "R0")
+\t db:0x2752af9a
+\p > 
+\i end=stub(cv i "IN" "R0")
+\t (4.35 -4.0)
+\p > 
+\i end=stub(cv i "OUT" "R0B")
+\t (9.65 -4.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -2.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -6.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI1" list(15 -5.5) "R0")
+\t db:0x2752af9b
+\p > 
+\i end=stub(cv i "IN" "R1")
+\t (14.35 -4.0)
+\p > 
+\i end=stub(cv i "OUT" "R1B")
+\t (19.65 -4.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -2.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -6.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XR0" list(25 -5.5) "R0")
+\t db:0x2752af9c
+\p > 
+\i end=stub(cv i "A" "R1B")
+\t (24.35 -3.5)
+\p > 
+\i end=stub(cv i "B" "R0B")
+\t (24.35 -4.0)
+\p > 
+\i end=stub(cv i "E" "EN")
+\t (24.35 -4.5)
+\p > 
+\i end=stub(cv i "Y" "WL0")
+\t (29.65 -3.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -6.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XR1" list(5 -11.0) "R0")
+\t db:0x2752af9d
+\p > 
+\i end=stub(cv i "A" "R1B")
+\t (4.35 -9.0)
+\p > 
+\i end=stub(cv i "B" "R0")
+\t (4.35 -9.5)
+\p > 
+\i end=stub(cv i "E" "EN")
+\t (4.35 -10.0)
+\p > 
+\i end=stub(cv i "Y" "WL1")
+\t (9.65 -9.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -7.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -11.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XR2" list(15 -11.0) "R0")
+\t db:0x2752af9e
+\p > 
+\i end=stub(cv i "A" "R1")
+\t (14.35 -9.0)
+\p > 
+\i end=stub(cv i "B" "R0B")
+\t (14.35 -9.5)
+\p > 
+\i end=stub(cv i "E" "EN")
+\t (14.35 -10.0)
+\p > 
+\i end=stub(cv i "Y" "WL2")
+\t (19.65 -9.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -7.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -11.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XR3" list(25 -11.0) "R0")
+\t db:0x2752af9f
+\p > 
+\i end=stub(cv i "A" "R1")
+\t (24.35 -9.0)
+\p > 
+\i end=stub(cv i "B" "R0")
+\t (24.35 -9.5)
+\p > 
+\i end=stub(cv i "E" "EN")
+\t (24.35 -10.0)
+\p > 
+\i end=stub(cv i "Y" "WL3")
+\t (29.65 -9.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -7.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -11.65)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "R1" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752afa0
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "R0" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752afa1
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "EN" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752afa2
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "WL0" "output" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x2752afa3
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "WL1" "output" nil list(-3 0.0) "R0" nil nil "signal")
+\t db:0x2752afa4
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "WL2" "output" nil list(-3 -0.5) "R0" nil nil "signal")
+\t db:0x2752afa5
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "WL3" "output" nil list(-3 -1.0) "R0" nil nil "signal")
+\t db:0x2752afa6
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 -1.5) "R0" nil nil "power")
+\t db:0x2752afa7
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -2.0) "R0" nil nil "ground")
+\t db:0x2752afa8
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "column_decoder" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI0" list(5 -5.0) "R0")
+\t db:0x2752c09a
+\p > 
+\i end=stub(cv i "IN" "C0")
+\t (4.35 -3.5)
+\p > 
+\i end=stub(cv i "OUT" "C0B")
+\t (9.65 -3.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -5.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI1" list(15 -5.0) "R0")
+\t db:0x2752c09b
+\p > 
+\i end=stub(cv i "IN" "C1")
+\t (14.35 -3.5)
+\p > 
+\i end=stub(cv i "OUT" "C1B")
+\t (19.65 -3.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -5.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI2" list(25 -5.0) "R0")
+\t db:0x2752c09c
+\p > 
+\i end=stub(cv i "IN" "C2")
+\t (24.35 -3.5)
+\p > 
+\i end=stub(cv i "OUT" "C2B")
+\t (29.65 -3.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -5.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XC0" list(5 -10.5) "R0")
+\t db:0x2752c09d
+\p > 
+\i end=stub(cv i "A" "C2B")
+\t (4.35 -8.5)
+\p > 
+\i end=stub(cv i "B" "C1B")
+\t (4.35 -9.0)
+\p > 
+\i end=stub(cv i "E" "C0B")
+\t (4.35 -9.5)
+\p > 
+\i end=stub(cv i "Y" "CS0")
+\t (9.65 -8.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -7.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -11.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XC1" list(15 -10.5) "R0")
+\t db:0x2752c09e
+\p > 
+\i end=stub(cv i "A" "C2B")
+\t (14.35 -8.5)
+\p > 
+\i end=stub(cv i "B" "C1B")
+\t (14.35 -9.0)
+\p > 
+\i end=stub(cv i "E" "C0")
+\t (14.35 -9.5)
+\p > 
+\i end=stub(cv i "Y" "CS1")
+\t (19.65 -8.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -7.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -11.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XC2" list(25 -10.5) "R0")
+\t db:0x2752c09f
+\p > 
+\i end=stub(cv i "A" "C2B")
+\t (24.35 -8.5)
+\p > 
+\i end=stub(cv i "B" "C1")
+\t (24.35 -9.0)
+\p > 
+\i end=stub(cv i "E" "C0B")
+\t (24.35 -9.5)
+\p > 
+\i end=stub(cv i "Y" "CS2")
+\t (29.65 -8.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -7.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -11.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XC3" list(5 -16.0) "R0")
+\t db:0x2752c0a0
+\p > 
+\i end=stub(cv i "A" "C2B")
+\t (4.35 -14.0)
+\p > 
+\i end=stub(cv i "B" "C1")
+\t (4.35 -14.5)
+\p > 
+\i end=stub(cv i "E" "C0")
+\t (4.35 -15.0)
+\p > 
+\i end=stub(cv i "Y" "CS3")
+\t (9.65 -14.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -12.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -16.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XC4" list(15 -16.0) "R0")
+\t db:0x2752c0a1
+\p > 
+\i end=stub(cv i "A" "C2")
+\t (14.35 -14.0)
+\p > 
+\i end=stub(cv i "B" "C1B")
+\t (14.35 -14.5)
+\p > 
+\i end=stub(cv i "E" "C0B")
+\t (14.35 -15.0)
+\p > 
+\i end=stub(cv i "Y" "CS4")
+\t (19.65 -14.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -12.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -16.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XC5" list(25 -16.0) "R0")
+\t db:0x2752c0a2
+\p > 
+\i end=stub(cv i "A" "C2")
+\t (24.35 -14.0)
+\p > 
+\i end=stub(cv i "B" "C1B")
+\t (24.35 -14.5)
+\p > 
+\i end=stub(cv i "E" "C0")
+\t (24.35 -15.0)
+\p > 
+\i end=stub(cv i "Y" "CS5")
+\t (29.65 -14.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -12.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -16.65)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "C2" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752c0a3
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "C1" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752c0a4
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "C0" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752c0a5
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "CS0" "output" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x2752c0a6
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "CS1" "output" nil list(-3 0.0) "R0" nil nil "signal")
+\t db:0x2752c0a7
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "CS2" "output" nil list(-3 -0.5) "R0" nil nil "signal")
+\t db:0x2752c0a8
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "CS3" "output" nil list(-3 -1.0) "R0" nil nil "signal")
+\t db:0x2752c0a9
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "CS4" "output" nil list(-3 -1.5) "R0" nil nil "signal")
+\t db:0x2752c0aa
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "CS5" "output" nil list(-3 -2.0) "R0" nil nil "signal")
+\t db:0x2752c0ab
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 -2.5) "R0" nil nil "power")
+\t db:0x2752c0ac
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -3.0) "R0" nil nil "ground")
+\t db:0x2752c0ad
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "rw_control" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XIRD" list(5 -5.0) "R0")
+\t db:0x27529e1a
+\p > 
+\i end=stub(cv i "IN" "RD")
+\t (4.35 -3.5)
+\p > 
+\i end=stub(cv i "OUT" "NRD")
+\t (9.65 -3.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -5.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XIWR" list(15 -5.0) "R0")
+\t db:0x27529e1b
+\p > 
+\i end=stub(cv i "IN" "WR")
+\t (14.35 -3.5)
+\p > 
+\i end=stub(cv i "OUT" "NWR")
+\t (19.65 -3.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -5.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XIPRE" list(25 -5.0) "R0")
+\t db:0x27529e1c
+\p > 
+\i end=stub(cv i "IN" "CLK2")
+\t (24.35 -3.5)
+\p > 
+\i end=stub(cv i "OUT" "PCB")
+\t (29.65 -3.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -5.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XBAD" list(5 -10.5) "R0")
+\t db:0x27529e1d
+\p > 
+\i end=stub(cv i "A" "C2")
+\t (4.35 -8.5)
+\p > 
+\i end=stub(cv i "B" "C1")
+\t (4.35 -9.0)
+\p > 
+\i end=stub(cv i "E" "VDD")
+\t (4.35 -9.5)
+\p > 
+\i end=stub(cv i "Y" "BADCOL")
+\t (9.65 -8.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -7.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -11.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XVALID" list(15 -10.5) "R0")
+\t db:0x27529e1e
+\p > 
+\i end=stub(cv i "IN" "BADCOL")
+\t (14.35 -9.0)
+\p > 
+\i end=stub(cv i "OUT" "VALID")
+\t (19.65 -9.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -7.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -11.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XWA" list(25 -10.5) "R0")
+\t db:0x27529e1f
+\p > 
+\i end=stub(cv i "A" "WR")
+\t (24.35 -8.5)
+\p > 
+\i end=stub(cv i "B" "NRD")
+\t (24.35 -9.0)
+\p > 
+\i end=stub(cv i "E" "CLK1")
+\t (24.35 -9.5)
+\p > 
+\i end=stub(cv i "Y" "WA")
+\t (29.65 -8.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -7.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -11.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XRA" list(5 -16.0) "R0")
+\t db:0x27529e20
+\p > 
+\i end=stub(cv i "A" "RD")
+\t (4.35 -14.0)
+\p > 
+\i end=stub(cv i "B" "NWR")
+\t (4.35 -14.5)
+\p > 
+\i end=stub(cv i "E" "CLK1")
+\t (4.35 -15.0)
+\p > 
+\i end=stub(cv i "Y" "RA")
+\t (9.65 -14.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -12.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -16.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XWE" list(15 -16.0) "R0")
+\t db:0x27529e21
+\p > 
+\i end=stub(cv i "A" "WA")
+\t (14.35 -14.0)
+\p > 
+\i end=stub(cv i "B" "VALID")
+\t (14.35 -14.5)
+\p > 
+\i end=stub(cv i "E" "PCB")
+\t (14.35 -15.0)
+\p > 
+\i end=stub(cv i "Y" "WEN")
+\t (19.65 -14.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -12.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -16.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XRE" list(25 -16.0) "R0")
+\t db:0x27529e22
+\p > 
+\i end=stub(cv i "A" "RA")
+\t (24.35 -14.0)
+\p > 
+\i end=stub(cv i "B" "VALID")
+\t (24.35 -14.5)
+\p > 
+\i end=stub(cv i "E" "PCB")
+\t (24.35 -15.0)
+\p > 
+\i end=stub(cv i "Y" "REN")
+\t (29.65 -14.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -12.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -16.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XIWE" list(5 -21.5) "R0")
+\t db:0x27529e23
+\p > 
+\i end=stub(cv i "IN" "WEN")
+\t (4.35 -20.0)
+\p > 
+\i end=stub(cv i "OUT" "WENB")
+\t (9.65 -20.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -18.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -22.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XIRE" list(15 -21.5) "R0")
+\t db:0x27529e24
+\p > 
+\i end=stub(cv i "IN" "REN")
+\t (14.35 -20.0)
+\p > 
+\i end=stub(cv i "OUT" "RENB")
+\t (19.65 -20.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -18.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -22.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "and3" "symbol" "" "r") "XIDLE" list(25 -21.5) "R0")
+\t db:0x27529e25
+\p > 
+\i end=stub(cv i "A" "WENB")
+\t (24.35 -19.5)
+\p > 
+\i end=stub(cv i "B" "RENB")
+\t (24.35 -20.0)
+\p > 
+\i end=stub(cv i "E" "VDD")
+\t (24.35 -20.5)
+\p > 
+\i end=stub(cv i "Y" "IDLE")
+\t (29.65 -19.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -18.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -22.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XACTIVE" list(5 -26.5) "R0")
+\t db:0x27529e26
+\p > 
+\i end=stub(cv i "IN" "IDLE")
+\t (4.35 -25.0)
+\p > 
+\i end=stub(cv i "OUT" "ROWEN")
+\t (9.65 -25.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -23.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -27.15)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "CLK1" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x27529e27
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "CLK2" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x27529e28
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "WR" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x27529e29
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "RD" "input" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x27529e2a
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "C2" "input" nil list(-3 0.0) "R0" nil nil "signal")
+\t db:0x27529e2b
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "C1" "input" nil list(-3 -0.5) "R0" nil nil "signal")
+\t db:0x27529e2c
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "WEN" "output" nil list(-3 -1.0) "R0" nil nil "signal")
+\t db:0x27529e2d
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "WENB" "output" nil list(-3 -1.5) "R0" nil nil "signal")
+\t db:0x27529e2e
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "REN" "output" nil list(-3 -2.0) "R0" nil nil "signal")
+\t db:0x27529e2f
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "RENB" "output" nil list(-3 -2.5) "R0" nil nil "signal")
+\t db:0x27529e30
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "ROWEN" "output" nil list(-3 -3.0) "R0" nil nil "signal")
+\t db:0x27529e31
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "PCB" "output" nil list(-3 -3.5) "R0" nil nil "signal")
+\t db:0x27529e32
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 -4.0) "R0" nil nil "power")
+\t db:0x27529e33
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -4.5) "R0" nil nil "ground")
+\t db:0x27529e34
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "write_driver" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XID" list(5 -6.0) "R0")
+\t db:0x2752a29a
+\p > 
+\i end=stub(cv i "IN" "DIN")
+\t (4.35 -4.5)
+\p > 
+\i end=stub(cv i "OUT" "DINB")
+\t (9.65 -4.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -3.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -6.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XW0" list(15 -6.0) "R0")
+\t db:0x2752a29b
+\p > 
+\i end=stub(cv i "A" "DIN")
+\t (14.35 -3.5)
+\p > 
+\i end=stub(cv i "B" "GBL")
+\t (14.35 -4.0)
+\p > 
+\i end=stub(cv i "EN" "WEN")
+\t (14.35 -4.5)
+\p > 
+\i end=stub(cv i "ENB" "WENB")
+\t (14.35 -5.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -6.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XW1" list(25 -6.0) "R0")
+\t db:0x2752a29c
+\p > 
+\i end=stub(cv i "A" "DINB")
+\t (24.35 -3.5)
+\p > 
+\i end=stub(cv i "B" "GBLB")
+\t (24.35 -4.0)
+\p > 
+\i end=stub(cv i "EN" "WEN")
+\t (24.35 -4.5)
+\p > 
+\i end=stub(cv i "ENB" "WENB")
+\t (24.35 -5.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -6.65)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "DIN" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752a29d
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "WEN" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752a29e
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "WENB" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752a29f
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "GBL" "inputOutput" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x2752a2a0
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "GBLB" "inputOutput" nil list(-3 0.0) "R0" nil nil "signal")
+\t db:0x2752a2a1
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 -0.5) "R0" nil nil "power")
+\t db:0x2752a2a2
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -1.0) "R0" nil nil "ground")
+\t db:0x2752a2a3
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "column_mux" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI0" list(5 -6.0) "R0")
+\t db:0x2752be1a
+\p > 
+\i end=stub(cv i "IN" "CS0")
+\t (4.35 -4.5)
+\p > 
+\i end=stub(cv i "OUT" "CSB0")
+\t (9.65 -4.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -3.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -6.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM0P" list(15 -6.0) "R0")
+\t db:0x2752be1b
+\p > 
+\i end=stub(cv i "A" "BL0")
+\t (14.35 -3.5)
+\p > 
+\i end=stub(cv i "B" "GBL")
+\t (14.35 -4.0)
+\p > 
+\i end=stub(cv i "EN" "CS0")
+\t (14.35 -4.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB0")
+\t (14.35 -5.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -6.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM0N" list(25 -6.0) "R0")
+\t db:0x2752be1c
+\p > 
+\i end=stub(cv i "A" "BLB0")
+\t (24.35 -3.5)
+\p > 
+\i end=stub(cv i "B" "GBLB")
+\t (24.35 -4.0)
+\p > 
+\i end=stub(cv i "EN" "CS0")
+\t (24.35 -4.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB0")
+\t (24.35 -5.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -6.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI1" list(5 -12.0) "R0")
+\t db:0x2752be1d
+\p > 
+\i end=stub(cv i "IN" "CS1")
+\t (4.35 -10.5)
+\p > 
+\i end=stub(cv i "OUT" "CSB1")
+\t (9.65 -10.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -9.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -12.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM1P" list(15 -12.0) "R0")
+\t db:0x2752be1e
+\p > 
+\i end=stub(cv i "A" "BL1")
+\t (14.35 -9.5)
+\p > 
+\i end=stub(cv i "B" "GBL")
+\t (14.35 -10.0)
+\p > 
+\i end=stub(cv i "EN" "CS1")
+\t (14.35 -10.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB1")
+\t (14.35 -11.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -8.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -12.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM1N" list(25 -12.0) "R0")
+\t db:0x2752be1f
+\p > 
+\i end=stub(cv i "A" "BLB1")
+\t (24.35 -9.5)
+\p > 
+\i end=stub(cv i "B" "GBLB")
+\t (24.35 -10.0)
+\p > 
+\i end=stub(cv i "EN" "CS1")
+\t (24.35 -10.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB1")
+\t (24.35 -11.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -8.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -12.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI2" list(5 -18.0) "R0")
+\t db:0x2752be20
+\p > 
+\i end=stub(cv i "IN" "CS2")
+\t (4.35 -16.5)
+\p > 
+\i end=stub(cv i "OUT" "CSB2")
+\t (9.65 -16.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -15.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -18.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM2P" list(15 -18.0) "R0")
+\t db:0x2752be21
+\p > 
+\i end=stub(cv i "A" "BL2")
+\t (14.35 -15.5)
+\p > 
+\i end=stub(cv i "B" "GBL")
+\t (14.35 -16.0)
+\p > 
+\i end=stub(cv i "EN" "CS2")
+\t (14.35 -16.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB2")
+\t (14.35 -17.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -14.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -18.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM2N" list(25 -18.0) "R0")
+\t db:0x2752be22
+\p > 
+\i end=stub(cv i "A" "BLB2")
+\t (24.35 -15.5)
+\p > 
+\i end=stub(cv i "B" "GBLB")
+\t (24.35 -16.0)
+\p > 
+\i end=stub(cv i "EN" "CS2")
+\t (24.35 -16.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB2")
+\t (24.35 -17.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -14.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -18.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI3" list(5 -24.0) "R0")
+\t db:0x2752be23
+\p > 
+\i end=stub(cv i "IN" "CS3")
+\t (4.35 -22.5)
+\p > 
+\i end=stub(cv i "OUT" "CSB3")
+\t (9.65 -22.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -21.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -24.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM3P" list(15 -24.0) "R0")
+\t db:0x2752be24
+\p > 
+\i end=stub(cv i "A" "BL3")
+\t (14.35 -21.5)
+\p > 
+\i end=stub(cv i "B" "GBL")
+\t (14.35 -22.0)
+\p > 
+\i end=stub(cv i "EN" "CS3")
+\t (14.35 -22.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB3")
+\t (14.35 -23.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -20.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -24.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM3N" list(25 -24.0) "R0")
+\t db:0x2752be25
+\p > 
+\i end=stub(cv i "A" "BLB3")
+\t (24.35 -21.5)
+\p > 
+\i end=stub(cv i "B" "GBLB")
+\t (24.35 -22.0)
+\p > 
+\i end=stub(cv i "EN" "CS3")
+\t (24.35 -22.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB3")
+\t (24.35 -23.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -20.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -24.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI4" list(5 -30.0) "R0")
+\t db:0x2752be26
+\p > 
+\i end=stub(cv i "IN" "CS4")
+\t (4.35 -28.5)
+\p > 
+\i end=stub(cv i "OUT" "CSB4")
+\t (9.65 -28.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -27.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -30.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM4P" list(15 -30.0) "R0")
+\t db:0x2752be27
+\p > 
+\i end=stub(cv i "A" "BL4")
+\t (14.35 -27.5)
+\p > 
+\i end=stub(cv i "B" "GBL")
+\t (14.35 -28.0)
+\p > 
+\i end=stub(cv i "EN" "CS4")
+\t (14.35 -28.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB4")
+\t (14.35 -29.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -26.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -30.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM4N" list(25 -30.0) "R0")
+\t db:0x2752be28
+\p > 
+\i end=stub(cv i "A" "BLB4")
+\t (24.35 -27.5)
+\p > 
+\i end=stub(cv i "B" "GBLB")
+\t (24.35 -28.0)
+\p > 
+\i end=stub(cv i "EN" "CS4")
+\t (24.35 -28.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB4")
+\t (24.35 -29.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -26.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -30.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "inv" "symbol" "" "r") "XI5" list(5 -36.0) "R0")
+\t db:0x2752be29
+\p > 
+\i end=stub(cv i "IN" "CS5")
+\t (4.35 -34.5)
+\p > 
+\i end=stub(cv i "OUT" "CSB5")
+\t (9.65 -34.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -33.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -36.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM5P" list(15 -36.0) "R0")
+\t db:0x2752be2a
+\p > 
+\i end=stub(cv i "A" "BL5")
+\t (14.35 -33.5)
+\p > 
+\i end=stub(cv i "B" "GBL")
+\t (14.35 -34.0)
+\p > 
+\i end=stub(cv i "EN" "CS5")
+\t (14.35 -34.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB5")
+\t (14.35 -35.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -32.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -36.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "tg" "symbol" "" "r") "XM5N" list(25 -36.0) "R0")
+\t db:0x2752be2b
+\p > 
+\i end=stub(cv i "A" "BLB5")
+\t (24.35 -33.5)
+\p > 
+\i end=stub(cv i "B" "GBLB")
+\t (24.35 -34.0)
+\p > 
+\i end=stub(cv i "EN" "CS5")
+\t (24.35 -34.5)
+\p > 
+\i end=stub(cv i "ENB" "CSB5")
+\t (24.35 -35.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -32.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -36.65)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "CS0" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752be2c
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "CS1" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752be2d
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "CS2" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752be2e
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "CS3" "input" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x2752be2f
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "CS4" "input" nil list(-3 0.0) "R0" nil nil "signal")
+\t db:0x2752be30
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "CS5" "input" nil list(-3 -0.5) "R0" nil nil "signal")
+\t db:0x2752be31
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL0" "inputOutput" nil list(-3 -1.0) "R0" nil nil "signal")
+\t db:0x2752be32
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL1" "inputOutput" nil list(-3 -1.5) "R0" nil nil "signal")
+\t db:0x2752be33
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL2" "inputOutput" nil list(-3 -2.0) "R0" nil nil "signal")
+\t db:0x2752be34
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL3" "inputOutput" nil list(-3 -2.5) "R0" nil nil "signal")
+\t db:0x2752be35
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL4" "inputOutput" nil list(-3 -3.0) "R0" nil nil "signal")
+\t db:0x2752be36
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL5" "inputOutput" nil list(-3 -3.5) "R0" nil nil "signal")
+\t db:0x2752be37
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB0" "inputOutput" nil list(-3 -4.0) "R0" nil nil "signal")
+\t db:0x2752be38
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB1" "inputOutput" nil list(-3 -4.5) "R0" nil nil "signal")
+\t db:0x2752be39
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB2" "inputOutput" nil list(-3 -5.0) "R0" nil nil "signal")
+\t db:0x2752be3a
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB3" "inputOutput" nil list(-3 -5.5) "R0" nil nil "signal")
+\t db:0x2752be3b
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB4" "inputOutput" nil list(-3 -6.0) "R0" nil nil "signal")
+\t db:0x2752be3c
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB5" "inputOutput" nil list(-3 -6.5) "R0" nil nil "signal")
+\t db:0x2752be3d
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "GBL" "inputOutput" nil list(-3 -7.0) "R0" nil nil "signal")
+\t db:0x2752be3e
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "GBLB" "inputOutput" nil list(-3 -7.5) "R0" nil nil "signal")
+\t db:0x2752be3f
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 -8.0) "R0" nil nil "power")
+\t db:0x2752be40
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -8.5) "R0" nil nil "ground")
+\t db:0x2752be41
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "precharge" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "precharge_unit" "symbol" "" "r") "XP0" list(5 -5.5) "R0")
+\t db:0x2752a29a
+\p > 
+\i end=stub(cv i "BL" "BL0")
+\t (4.35 -3.5)
+\p > 
+\i end=stub(cv i "BLB" "BLB0")
+\t (4.35 -4.0)
+\p > 
+\i end=stub(cv i "PCB" "PCB")
+\t (4.35 -4.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -6.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "precharge_unit" "symbol" "" "r") "XP1" list(15 -5.5) "R0")
+\t db:0x2752a29b
+\p > 
+\i end=stub(cv i "BL" "BL1")
+\t (14.35 -3.5)
+\p > 
+\i end=stub(cv i "BLB" "BLB1")
+\t (14.35 -4.0)
+\p > 
+\i end=stub(cv i "PCB" "PCB")
+\t (14.35 -4.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -6.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "precharge_unit" "symbol" "" "r") "XP2" list(25 -5.5) "R0")
+\t db:0x2752a29c
+\p > 
+\i end=stub(cv i "BL" "BL2")
+\t (24.35 -3.5)
+\p > 
+\i end=stub(cv i "BLB" "BLB2")
+\t (24.35 -4.0)
+\p > 
+\i end=stub(cv i "PCB" "PCB")
+\t (24.35 -4.5)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -6.15)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "precharge_unit" "symbol" "" "r") "XP3" list(5 -11.0) "R0")
+\t db:0x2752a29d
+\p > 
+\i end=stub(cv i "BL" "BL3")
+\t (4.35 -9.0)
+\p > 
+\i end=stub(cv i "BLB" "BLB3")
+\t (4.35 -9.5)
+\p > 
+\i end=stub(cv i "PCB" "PCB")
+\t (4.35 -10.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -7.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -11.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "precharge_unit" "symbol" "" "r") "XP4" list(15 -11.0) "R0")
+\t db:0x2752a29e
+\p > 
+\i end=stub(cv i "BL" "BL4")
+\t (14.35 -9.0)
+\p > 
+\i end=stub(cv i "BLB" "BLB4")
+\t (14.35 -9.5)
+\p > 
+\i end=stub(cv i "PCB" "PCB")
+\t (14.35 -10.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -7.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -11.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "precharge_unit" "symbol" "" "r") "XP5" list(25 -11.0) "R0")
+\t db:0x2752a29f
+\p > 
+\i end=stub(cv i "BL" "BL5")
+\t (24.35 -9.0)
+\p > 
+\i end=stub(cv i "BLB" "BLB5")
+\t (24.35 -9.5)
+\p > 
+\i end=stub(cv i "PCB" "PCB")
+\t (24.35 -10.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -7.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -11.65)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL0" "inputOutput" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x2752a2a0
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL1" "inputOutput" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x2752a2a1
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL2" "inputOutput" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x2752a2a2
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL3" "inputOutput" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x2752a2a3
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL4" "inputOutput" nil list(-3 0.0) "R0" nil nil "signal")
+\t db:0x2752a2a4
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL5" "inputOutput" nil list(-3 -0.5) "R0" nil nil "signal")
+\t db:0x2752a2a5
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB0" "inputOutput" nil list(-3 -1.0) "R0" nil nil "signal")
+\t db:0x2752a2a6
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB1" "inputOutput" nil list(-3 -1.5) "R0" nil nil "signal")
+\t db:0x2752a2a7
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB2" "inputOutput" nil list(-3 -2.0) "R0" nil nil "signal")
+\t db:0x2752a2a8
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB3" "inputOutput" nil list(-3 -2.5) "R0" nil nil "signal")
+\t db:0x2752a2a9
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB4" "inputOutput" nil list(-3 -3.0) "R0" nil nil "signal")
+\t db:0x2752a2aa
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB5" "inputOutput" nil list(-3 -3.5) "R0" nil nil "signal")
+\t db:0x2752a2ab
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "PCB" "input" nil list(-3 -4.0) "R0" nil nil "signal")
+\t db:0x2752a2ac
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 -4.5) "R0" nil nil "power")
+\t db:0x2752a2ad
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -5.0) "R0" nil nil "ground")
+\t db:0x2752a2ae
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "bitcell" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "PM0" list(4 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x27529f9a)
+\t db:0x27529f9a
+\p > 
+\i dbReplaceProp(i "w" "string" "120n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752b01b
+\p > 
+\i stub(cv i "D" "Q_bar")
+\t (4.25 -3.5375)
+\p > 
+\i stub(cv i "G" "Q")
+\t (3.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (4.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (4.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "pmos1v" "symbol" "" "r") "PM1" list(9 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x27529f9b)
+\t db:0x27529f9b
+\p > 
+\i dbReplaceProp(i "w" "string" "120n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752b01d
+\p > 
+\i stub(cv i "D" "Q")
+\t (9.25 -3.5375)
+\p > 
+\i stub(cv i "G" "Q_bar")
+\t (8.6 -3.0)
+\p > 
+\i stub(cv i "S" "VDD")
+\t (9.25 -2.4625)
+\p > 
+\i stub(cv i "B" "VDD")
+\t (9.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM0" list(14 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x27529f9c)
+\t db:0x27529f9c
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752b01f
+\p > 
+\i stub(cv i "D" "Q_bar")
+\t (14.25 -2.4625)
+\p > 
+\i stub(cv i "G" "Q")
+\t (13.6 -3.0)
+\p > 
+\i stub(cv i "S" "GND")
+\t (14.25 -3.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (14.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM1" list(19 -3) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x27529f9d)
+\t db:0x27529f9d
+\p > 
+\i dbReplaceProp(i "w" "string" "360n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752b021
+\p > 
+\i stub(cv i "D" "Q")
+\t (19.25 -2.4625)
+\p > 
+\i stub(cv i "G" "Q_bar")
+\t (18.6 -3.0)
+\p > 
+\i stub(cv i "S" "GND")
+\t (19.25 -3.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (19.65 -3.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM2" list(4 -8) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x27529f9e)
+\t db:0x27529f9e
+\p > 
+\i dbReplaceProp(i "w" "string" "240n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752b023
+\p > 
+\i stub(cv i "D" "Q_bar")
+\t (4.25 -7.4625)
+\p > 
+\i stub(cv i "G" "WL")
+\t (3.6 -8.0)
+\p > 
+\i stub(cv i "S" "BL_bar")
+\t (4.25 -8.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (4.65 -8.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("gpdk045" "nmos1v" "symbol" "" "r") "NM3" list(9 -8) "R0")
+\w *WARNING* An error occurred while applying the CDF doneProc 'PasCdfDone' to 
+\o (db:0x27529f9f)
+\t db:0x27529f9f
+\p > 
+\i dbReplaceProp(i "w" "string" "240n") dbReplaceProp(i "l" "string" "45n")
+\t db:0x2752b025
+\p > 
+\i stub(cv i "D" "BL")
+\t (9.25 -7.4625)
+\p > 
+\i stub(cv i "G" "WL")
+\t (8.6 -8.0)
+\p > 
+\i stub(cv i "S" "Q")
+\t (9.25 -8.5375)
+\p > 
+\i stub(cv i "B" "GND")
+\t (9.65 -8.0)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL" "inputOutput" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x27529fa0
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL_bar" "inputOutput" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x27529fa1
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "WL" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x27529fa2
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "Q" "inputOutput" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x27529fa3
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "Q_bar" "inputOutput" nil list(-3 0.0) "R0" nil nil "signal")
+\t db:0x27529fa4
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 -0.5) "R0" nil nil "power")
+\t db:0x27529fa5
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -1.0) "R0" nil nil "ground")
+\t db:0x27529fa6
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "bit_array" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB0_0" list(5 -4) "R0")
+\t db:0x27529f9a
+\p > 
+\i end=stub(cv i "BL" "BL0")
+\t (4.35 -2.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB0")
+\t (4.35 -2.5)
+\p > 
+\i end=stub(cv i "WL" "WL0")
+\t (4.35 -3.0)
+\p > 
+\i end=stub(cv i "Q" "Q0_0")
+\t (9.65 -2.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_0_Q" end "R0")
+\t db:0x27529f9b
+\p > 
+\i end=stub(cv i "Q_bar" "QB0_0")
+\t (9.65 -2.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_0_Q_bar" end "R0")
+\t db:0x27529f9c
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -0.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -4.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB0_1" list(13 -4) "R0")
+\t db:0x27529f9d
+\p > 
+\i end=stub(cv i "BL" "BL1")
+\t (12.35 -2.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB1")
+\t (12.35 -2.5)
+\p > 
+\i end=stub(cv i "WL" "WL0")
+\t (12.35 -3.0)
+\p > 
+\i end=stub(cv i "Q" "Q0_1")
+\t (17.65 -2.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_1_Q" end "R0")
+\t db:0x27529f9e
+\p > 
+\i end=stub(cv i "Q_bar" "QB0_1")
+\t (17.65 -2.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_1_Q_bar" end "R0")
+\t db:0x27529f9f
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (15.0 -0.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (15.0 -4.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB0_2" list(21 -4) "R0")
+\t db:0x27529fa0
+\p > 
+\i end=stub(cv i "BL" "BL2")
+\t (20.35 -2.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB2")
+\t (20.35 -2.5)
+\p > 
+\i end=stub(cv i "WL" "WL0")
+\t (20.35 -3.0)
+\p > 
+\i end=stub(cv i "Q" "Q0_2")
+\t (25.65 -2.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_2_Q" end "R0")
+\t db:0x27529fa1
+\p > 
+\i end=stub(cv i "Q_bar" "QB0_2")
+\t (25.65 -2.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_2_Q_bar" end "R0")
+\t db:0x27529fa2
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (23.0 -0.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (23.0 -4.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB0_3" list(29 -4) "R0")
+\t db:0x27529fa3
+\p > 
+\i end=stub(cv i "BL" "BL3")
+\t (28.35 -2.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB3")
+\t (28.35 -2.5)
+\p > 
+\i end=stub(cv i "WL" "WL0")
+\t (28.35 -3.0)
+\p > 
+\i end=stub(cv i "Q" "Q0_3")
+\t (33.65 -2.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_3_Q" end "R0")
+\t db:0x27529fa4
+\p > 
+\i end=stub(cv i "Q_bar" "QB0_3")
+\t (33.65 -2.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_3_Q_bar" end "R0")
+\t db:0x27529fa5
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (31.0 -0.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (31.0 -4.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB0_4" list(37 -4) "R0")
+\t db:0x27529fa6
+\p > 
+\i end=stub(cv i "BL" "BL4")
+\t (36.35 -2.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB4")
+\t (36.35 -2.5)
+\p > 
+\i end=stub(cv i "WL" "WL0")
+\t (36.35 -3.0)
+\p > 
+\i end=stub(cv i "Q" "Q0_4")
+\t (41.65 -2.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_4_Q" end "R0")
+\t db:0x27529fa7
+\p > 
+\i end=stub(cv i "Q_bar" "QB0_4")
+\t (41.65 -2.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_4_Q_bar" end "R0")
+\t db:0x27529fa8
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (39.0 -0.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (39.0 -4.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB0_5" list(45 -4) "R0")
+\t db:0x27529fa9
+\p > 
+\i end=stub(cv i "BL" "BL5")
+\t (44.35 -2.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB5")
+\t (44.35 -2.5)
+\p > 
+\i end=stub(cv i "WL" "WL0")
+\t (44.35 -3.0)
+\p > 
+\i end=stub(cv i "Q" "Q0_5")
+\t (49.65 -2.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_5_Q" end "R0")
+\t db:0x27529faa
+\p > 
+\i end=stub(cv i "Q_bar" "QB0_5")
+\t (49.65 -2.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B0_5_Q_bar" end "R0")
+\t db:0x27529fab
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (47.0 -0.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (47.0 -4.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB1_0" list(5 -12) "R0")
+\t db:0x27529fac
+\p > 
+\i end=stub(cv i "BL" "BL0")
+\t (4.35 -10.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB0")
+\t (4.35 -10.5)
+\p > 
+\i end=stub(cv i "WL" "WL1")
+\t (4.35 -11.0)
+\p > 
+\i end=stub(cv i "Q" "Q1_0")
+\t (9.65 -10.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_0_Q" end "R0")
+\t db:0x27529fad
+\p > 
+\i end=stub(cv i "Q_bar" "QB1_0")
+\t (9.65 -10.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_0_Q_bar" end "R0")
+\t db:0x27529fae
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -8.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -12.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB1_1" list(13 -12) "R0")
+\t db:0x27529faf
+\p > 
+\i end=stub(cv i "BL" "BL1")
+\t (12.35 -10.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB1")
+\t (12.35 -10.5)
+\p > 
+\i end=stub(cv i "WL" "WL1")
+\t (12.35 -11.0)
+\p > 
+\i end=stub(cv i "Q" "Q1_1")
+\t (17.65 -10.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_1_Q" end "R0")
+\t db:0x27529fb0
+\p > 
+\i end=stub(cv i "Q_bar" "QB1_1")
+\t (17.65 -10.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_1_Q_bar" end "R0")
+\t db:0x27529fb1
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (15.0 -8.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (15.0 -12.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB1_2" list(21 -12) "R0")
+\t db:0x27529fb2
+\p > 
+\i end=stub(cv i "BL" "BL2")
+\t (20.35 -10.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB2")
+\t (20.35 -10.5)
+\p > 
+\i end=stub(cv i "WL" "WL1")
+\t (20.35 -11.0)
+\p > 
+\i end=stub(cv i "Q" "Q1_2")
+\t (25.65 -10.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_2_Q" end "R0")
+\t db:0x27529fb3
+\p > 
+\i end=stub(cv i "Q_bar" "QB1_2")
+\t (25.65 -10.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_2_Q_bar" end "R0")
+\t db:0x27529fb4
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (23.0 -8.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (23.0 -12.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB1_3" list(29 -12) "R0")
+\t db:0x27529fb5
+\p > 
+\i end=stub(cv i "BL" "BL3")
+\t (28.35 -10.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB3")
+\t (28.35 -10.5)
+\p > 
+\i end=stub(cv i "WL" "WL1")
+\t (28.35 -11.0)
+\p > 
+\i end=stub(cv i "Q" "Q1_3")
+\t (33.65 -10.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_3_Q" end "R0")
+\t db:0x27529fb6
+\p > 
+\i end=stub(cv i "Q_bar" "QB1_3")
+\t (33.65 -10.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_3_Q_bar" end "R0")
+\t db:0x27529fb7
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (31.0 -8.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (31.0 -12.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB1_4" list(37 -12) "R0")
+\t db:0x27529fb8
+\p > 
+\i end=stub(cv i "BL" "BL4")
+\t (36.35 -10.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB4")
+\t (36.35 -10.5)
+\p > 
+\i end=stub(cv i "WL" "WL1")
+\t (36.35 -11.0)
+\p > 
+\i end=stub(cv i "Q" "Q1_4")
+\t (41.65 -10.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_4_Q" end "R0")
+\t db:0x27529fb9
+\p > 
+\i end=stub(cv i "Q_bar" "QB1_4")
+\t (41.65 -10.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_4_Q_bar" end "R0")
+\t db:0x27529fba
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (39.0 -8.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (39.0 -12.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB1_5" list(45 -12) "R0")
+\t db:0x27529fbb
+\p > 
+\i end=stub(cv i "BL" "BL5")
+\t (44.35 -10.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB5")
+\t (44.35 -10.5)
+\p > 
+\i end=stub(cv i "WL" "WL1")
+\t (44.35 -11.0)
+\p > 
+\i end=stub(cv i "Q" "Q1_5")
+\t (49.65 -10.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_5_Q" end "R0")
+\t db:0x27529fbc
+\p > 
+\i end=stub(cv i "Q_bar" "QB1_5")
+\t (49.65 -10.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B1_5_Q_bar" end "R0")
+\t db:0x27529fbd
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (47.0 -8.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (47.0 -12.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB2_0" list(5 -20) "R0")
+\t db:0x27529fbe
+\p > 
+\i end=stub(cv i "BL" "BL0")
+\t (4.35 -18.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB0")
+\t (4.35 -18.5)
+\p > 
+\i end=stub(cv i "WL" "WL2")
+\t (4.35 -19.0)
+\p > 
+\i end=stub(cv i "Q" "Q2_0")
+\t (9.65 -18.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_0_Q" end "R0")
+\t db:0x27529fbf
+\p > 
+\i end=stub(cv i "Q_bar" "QB2_0")
+\t (9.65 -18.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_0_Q_bar" end "R0")
+\t db:0x27529fc0
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -16.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -20.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB2_1" list(13 -20) "R0")
+\t db:0x27529fc1
+\p > 
+\i end=stub(cv i "BL" "BL1")
+\t (12.35 -18.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB1")
+\t (12.35 -18.5)
+\p > 
+\i end=stub(cv i "WL" "WL2")
+\t (12.35 -19.0)
+\p > 
+\i end=stub(cv i "Q" "Q2_1")
+\t (17.65 -18.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_1_Q" end "R0")
+\t db:0x27529fc2
+\p > 
+\i end=stub(cv i "Q_bar" "QB2_1")
+\t (17.65 -18.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_1_Q_bar" end "R0")
+\t db:0x27529fc3
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (15.0 -16.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (15.0 -20.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB2_2" list(21 -20) "R0")
+\t db:0x27529fc4
+\p > 
+\i end=stub(cv i "BL" "BL2")
+\t (20.35 -18.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB2")
+\t (20.35 -18.5)
+\p > 
+\i end=stub(cv i "WL" "WL2")
+\t (20.35 -19.0)
+\p > 
+\i end=stub(cv i "Q" "Q2_2")
+\t (25.65 -18.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_2_Q" end "R0")
+\t db:0x27529fc5
+\p > 
+\i end=stub(cv i "Q_bar" "QB2_2")
+\t (25.65 -18.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_2_Q_bar" end "R0")
+\t db:0x27529fc6
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (23.0 -16.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (23.0 -20.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB2_3" list(29 -20) "R0")
+\t db:0x27529fc7
+\p > 
+\i end=stub(cv i "BL" "BL3")
+\t (28.35 -18.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB3")
+\t (28.35 -18.5)
+\p > 
+\i end=stub(cv i "WL" "WL2")
+\t (28.35 -19.0)
+\p > 
+\i end=stub(cv i "Q" "Q2_3")
+\t (33.65 -18.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_3_Q" end "R0")
+\t db:0x27529fc8
+\p > 
+\i end=stub(cv i "Q_bar" "QB2_3")
+\t (33.65 -18.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_3_Q_bar" end "R0")
+\t db:0x27529fc9
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (31.0 -16.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (31.0 -20.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB2_4" list(37 -20) "R0")
+\t db:0x27529fca
+\p > 
+\i end=stub(cv i "BL" "BL4")
+\t (36.35 -18.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB4")
+\t (36.35 -18.5)
+\p > 
+\i end=stub(cv i "WL" "WL2")
+\t (36.35 -19.0)
+\p > 
+\i end=stub(cv i "Q" "Q2_4")
+\t (41.65 -18.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_4_Q" end "R0")
+\t db:0x27529fcb
+\p > 
+\i end=stub(cv i "Q_bar" "QB2_4")
+\t (41.65 -18.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_4_Q_bar" end "R0")
+\t db:0x27529fcc
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (39.0 -16.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (39.0 -20.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB2_5" list(45 -20) "R0")
+\t db:0x27529fcd
+\p > 
+\i end=stub(cv i "BL" "BL5")
+\t (44.35 -18.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB5")
+\t (44.35 -18.5)
+\p > 
+\i end=stub(cv i "WL" "WL2")
+\t (44.35 -19.0)
+\p > 
+\i end=stub(cv i "Q" "Q2_5")
+\t (49.65 -18.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_5_Q" end "R0")
+\t db:0x27529fce
+\p > 
+\i end=stub(cv i "Q_bar" "QB2_5")
+\t (49.65 -18.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B2_5_Q_bar" end "R0")
+\t db:0x27529fcf
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (47.0 -16.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (47.0 -20.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB3_0" list(5 -28) "R0")
+\t db:0x27529fd0
+\p > 
+\i end=stub(cv i "BL" "BL0")
+\t (4.35 -26.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB0")
+\t (4.35 -26.5)
+\p > 
+\i end=stub(cv i "WL" "WL3")
+\t (4.35 -27.0)
+\p > 
+\i end=stub(cv i "Q" "Q3_0")
+\t (9.65 -26.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_0_Q" end "R0")
+\t db:0x27529fd1
+\p > 
+\i end=stub(cv i "Q_bar" "QB3_0")
+\t (9.65 -26.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_0_Q_bar" end "R0")
+\t db:0x27529fd2
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -24.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -28.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB3_1" list(13 -28) "R0")
+\t db:0x27529fd3
+\p > 
+\i end=stub(cv i "BL" "BL1")
+\t (12.35 -26.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB1")
+\t (12.35 -26.5)
+\p > 
+\i end=stub(cv i "WL" "WL3")
+\t (12.35 -27.0)
+\p > 
+\i end=stub(cv i "Q" "Q3_1")
+\t (17.65 -26.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_1_Q" end "R0")
+\t db:0x27529fd4
+\p > 
+\i end=stub(cv i "Q_bar" "QB3_1")
+\t (17.65 -26.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_1_Q_bar" end "R0")
+\t db:0x27529fd5
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (15.0 -24.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (15.0 -28.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB3_2" list(21 -28) "R0")
+\t db:0x27529fd6
+\p > 
+\i end=stub(cv i "BL" "BL2")
+\t (20.35 -26.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB2")
+\t (20.35 -26.5)
+\p > 
+\i end=stub(cv i "WL" "WL3")
+\t (20.35 -27.0)
+\p > 
+\i end=stub(cv i "Q" "Q3_2")
+\t (25.65 -26.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_2_Q" end "R0")
+\t db:0x27529fd7
+\p > 
+\i end=stub(cv i "Q_bar" "QB3_2")
+\t (25.65 -26.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_2_Q_bar" end "R0")
+\t db:0x27529fd8
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (23.0 -24.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (23.0 -28.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB3_3" list(29 -28) "R0")
+\t db:0x27529fd9
+\p > 
+\i end=stub(cv i "BL" "BL3")
+\t (28.35 -26.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB3")
+\t (28.35 -26.5)
+\p > 
+\i end=stub(cv i "WL" "WL3")
+\t (28.35 -27.0)
+\p > 
+\i end=stub(cv i "Q" "Q3_3")
+\t (33.65 -26.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_3_Q" end "R0")
+\t db:0x27529fda
+\p > 
+\i end=stub(cv i "Q_bar" "QB3_3")
+\t (33.65 -26.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_3_Q_bar" end "R0")
+\t db:0x27529fdb
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (31.0 -24.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (31.0 -28.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB3_4" list(37 -28) "R0")
+\t db:0x27529fdc
+\p > 
+\i end=stub(cv i "BL" "BL4")
+\t (36.35 -26.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB4")
+\t (36.35 -26.5)
+\p > 
+\i end=stub(cv i "WL" "WL3")
+\t (36.35 -27.0)
+\p > 
+\i end=stub(cv i "Q" "Q3_4")
+\t (41.65 -26.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_4_Q" end "R0")
+\t db:0x27529fdd
+\p > 
+\i end=stub(cv i "Q_bar" "QB3_4")
+\t (41.65 -26.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_4_Q_bar" end "R0")
+\t db:0x27529fde
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (39.0 -24.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (39.0 -28.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bitcell" "symbol" "" "r") "XB3_5" list(45 -28) "R0")
+\t db:0x27529fdf
+\p > 
+\i end=stub(cv i "BL" "BL5")
+\t (44.35 -26.0)
+\p > 
+\i end=stub(cv i "BL_bar" "BLB5")
+\t (44.35 -26.5)
+\p > 
+\i end=stub(cv i "WL" "WL3")
+\t (44.35 -27.0)
+\p > 
+\i end=stub(cv i "Q" "Q3_5")
+\t (49.65 -26.0)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_5_Q" end "R0")
+\t db:0x27529fe0
+\p > 
+\i end=stub(cv i "Q_bar" "QB3_5")
+\t (49.65 -26.5)
+\p > 
+\i schCreateInst(cv dbOpenCellViewByType("basic" "noConn" "symbol" "" "r") "NC_B3_5_Q_bar" end "R0")
+\t db:0x27529fe1
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (47.0 -24.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (47.0 -28.65)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "WL0" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x27529fe2
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "WL1" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x27529fe3
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "WL2" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x27529fe4
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "WL3" "input" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x27529fe5
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL0" "inputOutput" nil list(-3 0.0) "R0" nil nil "signal")
+\t db:0x27529fe6
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL1" "inputOutput" nil list(-3 -0.5) "R0" nil nil "signal")
+\t db:0x27529fe7
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL2" "inputOutput" nil list(-3 -1.0) "R0" nil nil "signal")
+\t db:0x27529fe8
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL3" "inputOutput" nil list(-3 -1.5) "R0" nil nil "signal")
+\t db:0x27529fe9
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL4" "inputOutput" nil list(-3 -2.0) "R0" nil nil "signal")
+\t db:0x27529fea
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BL5" "inputOutput" nil list(-3 -2.5) "R0" nil nil "signal")
+\t db:0x27529feb
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB0" "inputOutput" nil list(-3 -3.0) "R0" nil nil "signal")
+\t db:0x27529fec
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB1" "inputOutput" nil list(-3 -3.5) "R0" nil nil "signal")
+\t db:0x27529fed
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB2" "inputOutput" nil list(-3 -4.0) "R0" nil nil "signal")
+\t db:0x27529fee
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB3" "inputOutput" nil list(-3 -4.5) "R0" nil nil "signal")
+\t db:0x27529fef
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB4" "inputOutput" nil list(-3 -5.0) "R0" nil nil "signal")
+\t db:0x27529ff0
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "iopin" "symbol" "" "r") "BLB5" "inputOutput" nil list(-3 -5.5) "R0" nil nil "signal")
+\t db:0x27529ff1
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 -6.0) "R0" nil nil "power")
+\t db:0x27529ff2
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -6.5) "R0" nil nil "ground")
+\t db:0x27529ff3
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "sram_4x6" "schematic" "schematic" "w")
+\t db:0x2752cd1a
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "rw_control" "symbol" "" "r") "XCTRL" list(5 -7.0) "R0")
+\t db:0x27529e9a
+\p > 
+\i end=stub(cv i "CLK1" "CLK1")
+\t (4.35 -3.5)
+\p > 
+\i end=stub(cv i "CLK2" "CLK2")
+\t (4.35 -4.0)
+\p > 
+\i end=stub(cv i "WR" "WR")
+\t (4.35 -4.5)
+\p > 
+\i end=stub(cv i "RD" "RD")
+\t (4.35 -5.0)
+\p > 
+\i end=stub(cv i "C2" "C2")
+\t (4.35 -5.5)
+\p > 
+\i end=stub(cv i "C1" "C1")
+\t (4.35 -6.0)
+\p > 
+\i end=stub(cv i "WEN" "WEN")
+\t (9.65 -3.5)
+\p > 
+\i end=stub(cv i "WENB" "WENB")
+\t (9.65 -4.0)
+\p > 
+\i end=stub(cv i "REN" "REN")
+\t (9.65 -4.5)
+\p > 
+\i end=stub(cv i "RENB" "RENB")
+\t (9.65 -5.0)
+\p > 
+\i end=stub(cv i "ROWEN" "ROWEN")
+\t (9.65 -5.5)
+\p > 
+\i end=stub(cv i "PCB" "PCB")
+\t (9.65 -6.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -7.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "row_decoder" "symbol" "" "r") "XROW" list(15 -7.0) "R0")
+\t db:0x27529e9b
+\p > 
+\i end=stub(cv i "R1" "R1")
+\t (14.35 -4.5)
+\p > 
+\i end=stub(cv i "R0" "R0")
+\t (14.35 -5.0)
+\p > 
+\i end=stub(cv i "EN" "ROWEN")
+\t (14.35 -5.5)
+\p > 
+\i end=stub(cv i "WL0" "WL0")
+\t (19.65 -4.5)
+\p > 
+\i end=stub(cv i "WL1" "WL1")
+\t (19.65 -5.0)
+\p > 
+\i end=stub(cv i "WL2" "WL2")
+\t (19.65 -5.5)
+\p > 
+\i end=stub(cv i "WL3" "WL3")
+\t (19.65 -6.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -3.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -7.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "column_decoder" "symbol" "" "r") "XCOL" list(25 -7.0) "R0")
+\t db:0x27529e9c
+\p > 
+\i end=stub(cv i "C2" "C2")
+\t (24.35 -3.5)
+\p > 
+\i end=stub(cv i "C1" "C1")
+\t (24.35 -4.0)
+\p > 
+\i end=stub(cv i "C0" "C0")
+\t (24.35 -4.5)
+\p > 
+\i end=stub(cv i "CS0" "CS0")
+\t (29.65 -3.5)
+\p > 
+\i end=stub(cv i "CS1" "CS1")
+\t (29.65 -4.0)
+\p > 
+\i end=stub(cv i "CS2" "CS2")
+\t (29.65 -4.5)
+\p > 
+\i end=stub(cv i "CS3" "CS3")
+\t (29.65 -5.0)
+\p > 
+\i end=stub(cv i "CS4" "CS4")
+\t (29.65 -5.5)
+\p > 
+\i end=stub(cv i "CS5" "CS5")
+\t (29.65 -6.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -2.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -7.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "precharge" "symbol" "" "r") "XPRE" list(5 -21.0) "R0")
+\t db:0x27529e9d
+\p > 
+\i end=stub(cv i "BL0" "BL0")
+\t (4.35 -14.0)
+\p > 
+\i end=stub(cv i "BL1" "BL1")
+\t (4.35 -14.5)
+\p > 
+\i end=stub(cv i "BL2" "BL2")
+\t (4.35 -15.0)
+\p > 
+\i end=stub(cv i "BL3" "BL3")
+\t (4.35 -15.5)
+\p > 
+\i end=stub(cv i "BL4" "BL4")
+\t (4.35 -16.0)
+\p > 
+\i end=stub(cv i "BL5" "BL5")
+\t (4.35 -16.5)
+\p > 
+\i end=stub(cv i "BLB0" "BLB0")
+\t (4.35 -17.0)
+\p > 
+\i end=stub(cv i "BLB1" "BLB1")
+\t (4.35 -17.5)
+\p > 
+\i end=stub(cv i "BLB2" "BLB2")
+\t (4.35 -18.0)
+\p > 
+\i end=stub(cv i "BLB3" "BLB3")
+\t (4.35 -18.5)
+\p > 
+\i end=stub(cv i "BLB4" "BLB4")
+\t (4.35 -19.0)
+\p > 
+\i end=stub(cv i "BLB5" "BLB5")
+\t (4.35 -19.5)
+\p > 
+\i end=stub(cv i "PCB" "PCB")
+\t (4.35 -20.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -12.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -21.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "column_mux" "symbol" "" "r") "XMUX" list(15 -21.0) "R0")
+\t db:0x27529e9e
+\p > 
+\i end=stub(cv i "CS0" "CS0")
+\t (14.35 -10.5)
+\p > 
+\i end=stub(cv i "CS1" "CS1")
+\t (14.35 -11.0)
+\p > 
+\i end=stub(cv i "CS2" "CS2")
+\t (14.35 -11.5)
+\p > 
+\i end=stub(cv i "CS3" "CS3")
+\t (14.35 -12.0)
+\p > 
+\i end=stub(cv i "CS4" "CS4")
+\t (14.35 -12.5)
+\p > 
+\i end=stub(cv i "CS5" "CS5")
+\t (14.35 -13.0)
+\p > 
+\i end=stub(cv i "BL0" "BL0")
+\t (14.35 -13.5)
+\p > 
+\i end=stub(cv i "BL1" "BL1")
+\t (14.35 -14.0)
+\p > 
+\i end=stub(cv i "BL2" "BL2")
+\t (14.35 -14.5)
+\p > 
+\i end=stub(cv i "BL3" "BL3")
+\t (14.35 -15.0)
+\p > 
+\i end=stub(cv i "BL4" "BL4")
+\t (14.35 -15.5)
+\p > 
+\i end=stub(cv i "BL5" "BL5")
+\t (14.35 -16.0)
+\p > 
+\i end=stub(cv i "BLB0" "BLB0")
+\t (14.35 -16.5)
+\p > 
+\i end=stub(cv i "BLB1" "BLB1")
+\t (14.35 -17.0)
+\p > 
+\i end=stub(cv i "BLB2" "BLB2")
+\t (14.35 -17.5)
+\p > 
+\i end=stub(cv i "BLB3" "BLB3")
+\t (14.35 -18.0)
+\p > 
+\i end=stub(cv i "BLB4" "BLB4")
+\t (14.35 -18.5)
+\p > 
+\i end=stub(cv i "BLB5" "BLB5")
+\t (14.35 -19.0)
+\p > 
+\i end=stub(cv i "GBL" "GBL")
+\t (14.35 -19.5)
+\p > 
+\i end=stub(cv i "GBLB" "GBLB")
+\t (14.35 -20.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -9.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -21.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "write_driver" "symbol" "" "r") "XWRITE" list(25 -21.0) "R0")
+\t db:0x27529e9f
+\p > 
+\i end=stub(cv i "DIN" "DIN")
+\t (24.35 -18.0)
+\p > 
+\i end=stub(cv i "WEN" "WEN")
+\t (24.35 -18.5)
+\p > 
+\i end=stub(cv i "WENB" "WENB")
+\t (24.35 -19.0)
+\p > 
+\i end=stub(cv i "GBL" "GBL")
+\t (24.35 -19.5)
+\p > 
+\i end=stub(cv i "GBLB" "GBLB")
+\t (24.35 -20.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -16.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -21.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "bit_array" "symbol" "" "r") "XMEM" list(5 -33.0) "R0")
+\t db:0x27529ea0
+\p > 
+\i end=stub(cv i "WL0" "WL0")
+\t (4.35 -24.5)
+\p > 
+\i end=stub(cv i "WL1" "WL1")
+\t (4.35 -25.0)
+\p > 
+\i end=stub(cv i "WL2" "WL2")
+\t (4.35 -25.5)
+\p > 
+\i end=stub(cv i "WL3" "WL3")
+\t (4.35 -26.0)
+\p > 
+\i end=stub(cv i "BL0" "BL0")
+\t (4.35 -26.5)
+\p > 
+\i end=stub(cv i "BL1" "BL1")
+\t (4.35 -27.0)
+\p > 
+\i end=stub(cv i "BL2" "BL2")
+\t (4.35 -27.5)
+\p > 
+\i end=stub(cv i "BL3" "BL3")
+\t (4.35 -28.0)
+\p > 
+\i end=stub(cv i "BL4" "BL4")
+\t (4.35 -28.5)
+\p > 
+\i end=stub(cv i "BL5" "BL5")
+\t (4.35 -29.0)
+\p > 
+\i end=stub(cv i "BLB0" "BLB0")
+\t (4.35 -29.5)
+\p > 
+\i end=stub(cv i "BLB1" "BLB1")
+\t (4.35 -30.0)
+\p > 
+\i end=stub(cv i "BLB2" "BLB2")
+\t (4.35 -30.5)
+\p > 
+\i end=stub(cv i "BLB3" "BLB3")
+\t (4.35 -31.0)
+\p > 
+\i end=stub(cv i "BLB4" "BLB4")
+\t (4.35 -31.5)
+\p > 
+\i end=stub(cv i "BLB5" "BLB5")
+\t (4.35 -32.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (7.0 -23.35)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (7.0 -33.65)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "sense_amp" "symbol" "" "r") "XSENSE" list(15 -33.0) "R0")
+\t db:0x27529ea1
+\p > 
+\i end=stub(cv i "BIT" "GBL")
+\t (14.35 -31.0)
+\p > 
+\i end=stub(cv i "BIT_bar" "GBLB")
+\t (14.35 -31.5)
+\p > 
+\i end=stub(cv i "RE" "REN")
+\t (14.35 -32.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (17.0 -29.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (17.0 -33.65)
+\p > 
+\i end=stub(cv i "AMP_OUT" "SENSE")
+\t (19.65 -31.0)
+\p > 
+\i i=schCreateInst(cv dbOpenCellViewByType("sram_project" "read_latch" "symbol" "" "r") "XLATCH" list(25 -33.0) "R0")
+\t db:0x27529ea2
+\p > 
+\i end=stub(cv i "D" "SENSE")
+\t (24.35 -31.0)
+\p > 
+\i end=stub(cv i "EN" "REN")
+\t (24.35 -31.5)
+\p > 
+\i end=stub(cv i "ENB" "RENB")
+\t (24.35 -32.0)
+\p > 
+\i end=stub(cv i "Q" "DOUT")
+\t (29.65 -31.0)
+\p > 
+\i end=stub(cv i "VDD" "VDD")
+\t (27.0 -29.85)
+\p > 
+\i end=stub(cv i "GND" "GND")
+\t (27.0 -33.65)
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "R1" "input" nil list(-3 2.0) "R0" nil nil "signal")
+\t db:0x27529ea3
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "R0" "input" nil list(-3 1.5) "R0" nil nil "signal")
+\t db:0x27529ea4
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "C2" "input" nil list(-3 1.0) "R0" nil nil "signal")
+\t db:0x27529ea5
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "C1" "input" nil list(-3 0.5) "R0" nil nil "signal")
+\t db:0x27529ea6
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "C0" "input" nil list(-3 0.0) "R0" nil nil "signal")
+\t db:0x27529ea7
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "CLK1" "input" nil list(-3 -0.5) "R0" nil nil "signal")
+\t db:0x27529ea8
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "CLK2" "input" nil list(-3 -1.0) "R0" nil nil "signal")
+\t db:0x27529ea9
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "WR" "input" nil list(-3 -1.5) "R0" nil nil "signal")
+\t db:0x27529eaa
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "RD" "input" nil list(-3 -2.0) "R0" nil nil "signal")
+\t db:0x27529eab
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "DIN" "input" nil list(-3 -2.5) "R0" nil nil "signal")
+\t db:0x27529eac
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "opin" "symbol" "" "r") "DOUT" "output" nil list(-3 -3.0) "R0" nil nil "signal")
+\t db:0x27529ead
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "VDD" "input" nil list(-3 -3.5) "R0" nil nil "power")
+\t db:0x27529eae
+\p > 
+\i schCreatePin(cv dbOpenCellViewByType("basic" "ipin" "symbol" "" "r") "GND" "input" nil list(-3 -4.0) "R0" nil nil "ground")
+\t db:0x27529eaf
+\p > 
+\i dbSave(cv) dbClose(cv)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "inv" "schematic" "" "a") printf("CHECK inv %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "inv schematic"
+\o CHECK inv (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "nand3" "schematic" "" "a") printf("CHECK nand3 %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "nand3 schematic"
+\o CHECK nand3 (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "and3" "schematic" "" "a") printf("CHECK and3 %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "and3 schematic"
+\o CHECK and3 (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "nand2" "schematic" "" "a") printf("CHECK nand2 %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "nand2 schematic"
+\o CHECK nand2 (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "tg" "schematic" "" "a") printf("CHECK tg %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "tg schematic"
+\o CHECK tg (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "precharge_unit" "schematic" "" "a") printf("CHECK precharge_unit %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "precharge_unit schematic"
+\o CHECK precharge_unit (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "sense_amp" "schematic" "" "a") printf("CHECK sense_amp %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "sense_amp schematic"
+\o CHECK sense_amp (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "read_latch" "schematic" "" "a") printf("CHECK read_latch %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "read_latch schematic"
+\o CHECK read_latch (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "row_decoder" "schematic" "" "a") printf("CHECK row_decoder %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "row_decoder schematic"
+\o CHECK row_decoder (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "column_decoder" "schematic" "" "a") printf("CHECK column_decoder %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "column_decoder schematic"
+\o CHECK column_decoder (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "rw_control" "schematic" "" "a") printf("CHECK rw_control %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "rw_control schematic"
+\o CHECK rw_control (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "write_driver" "schematic" "" "a") printf("CHECK write_driver %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "write_driver schematic"
+\o CHECK write_driver (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "column_mux" "schematic" "" "a") printf("CHECK column_mux %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "column_mux schematic"
+\o CHECK column_mux (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "precharge" "schematic" "" "a") printf("CHECK precharge %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "precharge schematic"
+\o CHECK precharge (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "bitcell" "schematic" "" "a") printf("CHECK bitcell %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "bitcell schematic"
+\o CHECK bitcell (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "bit_array" "schematic" "" "a") printf("CHECK bit_array %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\# Available memory:        603,056 MB at UTC 2026.11.07 08:29:12.046
+\# Memory report: Maximum memory size now 603,467 MB at UTC 2026.11.07 08:29:12.046
+\# Thread usage report: 69 active threads, active load 1.40 at UTC 2026.11.07 08:29:12.046
+\o INFO (SCH-1170): Extracting "bit_array schematic"
+\o CHECK bit_array (0 0)
+\t t
+\p > 
+\i cv=dbOpenCellViewByType("sram_project" "sram_4x6" "schematic" "" "a") printf("CHECK sram_4x6 %L\n" schCheck(cv)) dbSave(cv) dbClose(cv)
+\o INFO (SCH-1170): Extracting "sram_4x6 schematic"
+\o CHECK sram_4x6 (0 0)
+\t t
+\p > 
+\i exit()
+\o 
+\# Lic Summary:
+\# [03:29:13.258368] Cdslmd servers: ece-itop-licsvr
+\# [03:29:13.258377] Feature usage summary:
+\# [03:29:13.258378] 111
+\# Memory report: on exit            411 MB, process size 2,193 MB at UTC 2026.11.07 08:29:13.258
+\# Memory report: peak usage         411 MB, process size 2,193 MB

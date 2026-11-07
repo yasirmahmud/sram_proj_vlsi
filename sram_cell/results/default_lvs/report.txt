@@ -1,0 +1,30 @@
+                     *****************************************************
+                     **                                                 **
+                     **                L V S  R E P O R T               **
+                     **                                                 **
+                     *****************************************************
+
+
+Report File Name         : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/results/default_lvs/report.txt
+ERC Summary File         : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/result.sum
+LVS Comparison Report    : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/results/default_lvs/report.txt.cls
+LVS Softchk Report       : sram_cell_default.softchk
+Layout Name              : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/results/sram_cell_default.gds ("sram_cell_default")
+User Name                : ymahmud
+Creation Time            : Sat Nov  7 02:35:44 2026
+Current directory        : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell
+Pegasus version          : 25.14-s010
+
+
+                     *****************************************************
+                     **                                                 **
+                     **            D E V E X T  R E P O R T             **
+                     **                                                 **
+                     *****************************************************
+
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+

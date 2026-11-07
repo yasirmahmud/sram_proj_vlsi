@@ -1,0 +1,90 @@
+{
+  "cell": "sense_amp",
+  "pass": true,
+  "checks": [
+    {
+      "inputs": {
+        "BIT": 1.0,
+        "BIT_bar": 0.0,
+        "RE": 1
+      },
+      "expected": {
+        "AMP_OUT": 1
+      },
+      "measured_V": {
+        "AMP_OUT": 1.099999950021819
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "BIT": 0.0,
+        "BIT_bar": 1.0,
+        "RE": 1
+      },
+      "expected": {
+        "AMP_OUT": 0
+      },
+      "measured_V": {
+        "AMP_OUT": 3.018205401783278e-07
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "BIT": 1.0,
+        "BIT_bar": 0.9090909090909091,
+        "RE": 1
+      },
+      "expected": {
+        "AMP_OUT": 1
+      },
+      "measured_V": {
+        "AMP_OUT": 1.099871840209646
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "BIT": 0.9090909090909091,
+        "BIT_bar": 1.0,
+        "RE": 1
+      },
+      "expected": {
+        "AMP_OUT": 0
+      },
+      "measured_V": {
+        "AMP_OUT": 0.00016132866650077967
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "BIT": 0.7272727272727273,
+        "BIT_bar": 0.6363636363636362,
+        "RE": 1
+      },
+      "expected": {
+        "AMP_OUT": 1
+      },
+      "measured_V": {
+        "AMP_OUT": 1.099998939215351
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "BIT": 0.6363636363636362,
+        "BIT_bar": 0.7272727272727273,
+        "RE": 1
+      },
+      "expected": {
+        "AMP_OUT": 0
+      },
+      "measured_V": {
+        "AMP_OUT": 1.5353844168660376e-08
+      },
+      "pass": true
+    }
+  ]
+}

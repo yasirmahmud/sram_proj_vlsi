@@ -1,0 +1,18 @@
+simulator lang=spectre
+include "/ecel/UFAD/ymahmud/vlsi_sram_project/Project Instruction Files/gpdk045_mos.scs" section=tt
+include "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/netlists/design.scs"
+parameters vdd=1.1
+VDD (VDD 0) vsource dc=vdd
+simOptions options reltol=1e-3 temp=27
+VC2 (C2 0) vsource type=pwl wave=[0n (0*vdd) 40n (0*vdd) 40.1n (1*vdd) 80n (1*vdd)]
+VC1 (C1 0) vsource type=pwl wave=[0n (0*vdd) 20n (0*vdd) 20.1n (1*vdd) 40n (1*vdd) 40.1n (0*vdd) 60n (0*vdd) 60.1n (1*vdd) 80n (1*vdd)]
+VC0 (C0 0) vsource type=pwl wave=[0n (0*vdd) 10n (0*vdd) 10.1n (1*vdd) 20n (1*vdd) 20.1n (0*vdd) 30n (0*vdd) 30.1n (1*vdd) 40n (1*vdd) 40.1n (0*vdd) 50n (0*vdd) 50.1n (1*vdd) 60n (1*vdd) 60.1n (0*vdd) 70n (0*vdd) 70.1n (1*vdd) 80n (1*vdd)]
+Xunit (C2 C1 C0 CS0 CS1 CS2 CS3 CS4 CS5 VDD 0) column_decoder
+CLCS0 (CS0 0) capacitor c=5f
+CLCS1 (CS1 0) capacitor c=5f
+CLCS2 (CS2 0) capacitor c=5f
+CLCS3 (CS3 0) capacitor c=5f
+CLCS4 (CS4 0) capacitor c=5f
+CLCS5 (CS5 0) capacitor c=5f
+tran tran stop=80n maxstep=100p errpreset=moderate strobeperiod=100p
+save C2 C1 C0 CS0 CS1 CS2 CS3 CS4 CS5

@@ -1,0 +1,179 @@
+   Design, Simulation, and Layout of a 4×4 SRAM
+         Array in 45 nm CMOS Technology
+           Tanvir Ahmed                 Alexis D. Villegas               Nusra A. Takia                Tanvir Rahman
+        University of Florida          University of Florida          University of Florida          University of Florida
+
+
+
+   Abstract—This work presents the complete design flow of a                           III. I MPLEMENTATION
+4×4 static random-access memory (SRAM) array, implemented
+using a 45 nm CMOS process in Cadence Virtuoso. The objective       A. SRAM Bitcell
+was to design all building blocks of the memory—decoders,
+read/write control, sense amplifier, precharge circuitry, and the      A standard 6-transistor (6T) bitcell was designed with
+6T SRAM bitcell—followed by functional simulation and physical      careful sizing of pull-up, pull-down, and access transistors
+layout verification. The individual SRAM bitcell area was opti-
+mized to 2.11 × 1.415 µm2 . Full-array simulations demonstrate      to ensure read stability and adequate write margin. The
+correct read and write behavior with a read time of 6.76 ns, a      layout uses a single poly orientation and consistent metal-
+write time of 6.35 ns, and a precharge time of 6.49 ns. The final   routing directions. The final area of the single bitcell is
+top-level SRAM array occupies an area of 10.085 × 6.585 µm2 .       2.11 × 1.415 µm2 .
+The layouts successfully passed both design rule check (DRC)
+and layout-versus-schematic (LVS) verification.
+   Index Terms—SRAM, 6T Bitcell, CMOS, Sense Amplifier,             B. Row Decoder
+Decoder, Cadence Virtuoso, DRC, LVS.
+                                                                      The row decoder was constructed using schematic-level
+                      I. I NTRODUCTION                              NAND and inverter gates. It maps the two address lines onto
+   Static RAM (SRAM) remains an essential embedded mem-             four mutually exclusive wordlines (WL0–WL3). The area of
+ory component across digital systems due to its fast access         the row decoder layout is 11.255 × 16.99 µm2 .
+time and compatibility with standard CMOS logic. Each
+SRAM cell stores a single bit using a pair of cross-coupled         C. Column Decoder
+inverters and access transistors, making it both simple and fast
+at the expense of larger area than DRAM.                               The column decoder follows a similar 2-to-4 structure and
+   Modern System-on-Chip (SoC) designs devote significant           drives column-select lines that gate the connection between
+silicon area to SRAM blocks, making the ability to design           the selected bitline pair and the read/write circuitry. The area
+and verify small SRAM macros an important educational               of the column decoder layout is 11.285 × 16.99 µm2 .
+exercise. The project requirements call for designing a 4×4
+array including row and column decoders, precharge circuitry,       D. Precharge Circuit
+read/write control paths, a sense amplifier, and a 6T SRAM
+bitcell. The design must be fully simulated at the schematic           Project specifications require both bitlines to be precharged
+level and verified through layout checks.                           to VDD . This was implemented using PMOS transistors con-
+                                                                    trolled by the precharge clock. When asserted, both BL and
+                   II. D ESIGN OVERVIEW
+                                                                    BL are driven to VDD .
+   The 4×4 SRAM stores a total of 16 bits, organized into
+four wordlines and four bitline pairs. Each memory cell is a
+conventionally sized 6T bitcell, arranged in a grid with shared     E. Read/Write Circuitry & Sense Amplifier
+wordlines and vertically routed bitline pairs (BL and BL).            The read/write circuitry includes tri-state buffers enabled by
+   The major components of the architecture are:                    the clock. The control scheme guarantees that WR and RD are
+   • 2-to-4 row decoder for wordline selection.                     never active at the same time. A differential sense amplifier
+   • 2-to-4 column decoder for column selection.                    was implemented to detect small voltage differences between
+   • 6T SRAM bitcell for data storage.                              BL and BL.
+   • Precharge circuit that raises both bitlines to VDD .
+   • Read/write control circuitry including tri-state buffers.
+                                                                    F. Top Level Array
+   • Differential sense amplifier for high-speed readout.
+
+   A top-level schematic integrates all blocks with address            The top-level SRAM macro instantiates 16 bitcells arranged
+inputs (A, B, C, D), control inputs (RE, WE), and clock             in a 4×4 grid. The total area of the SRAM array is 10.085 ×
+signals.                                                            6.585 µm2 .
+               (a) SRAM Bitcell Schematic                                                (b) SRAM Bitcell Layout
+
+
+
+
+                (c) SRAM Array Schematic                                                 (d) SRAM Array Layout
+Fig. 1: Design implementation showing the (a) Bitcell Schematic, (b) Bitcell Layout, (c) Full Array Schematic, and (d) Full
+Array Layout.
+
+
+  IV. W ORK D ISTRIBUTION AND D ESIGN C HALLENGES                 to identify the issue through a rigorous iterative process involv-
+  The design and verification tasks were distributed among        ing adjustments to simulation timing and multiple architectural
+the team members as follows:                                      redesigns of the sense amplifier. However, the issue was
+                                                                  ultimately solved simply by increasing the width of the writing
+  • Tanvir Ahmed: Designed the schematics for the Row
+                                                                  transistors, which provided the necessary drive strength to
+     Decoder, Column Decoder, Sense Amplifier, Precharge
+                                                                  overwrite the bitcell data reliably.
+     Circuit, Read/Write Circuit, and the Top Module. Per-
+     formed the Top Module integration, simulation, and com-
+                                                                                    V. S IMULATION R ESULTS
+     pleted the Top Module layout. Wrote the project report.
+  • Alexis D. Villegas: Designed the SRAM bitcell schematic         Full-array simulations were performed to verify correct
+     and layout, and handled the SRAM array bitcell arrange-      functionality.
+     ment and layout.                                               •   Precharge Time: The simulation indicates a precharge
+  • Nusra A. Takia: Completed the physical layouts for the
+                                                                        time of 6.49 ns to raise bitlines to VDD .
+     Row Decoder and Column Decoder.                                •   Read/Write Access Time: The read access time was
+  • Tanvir Rahman: Completed the Sense Amplifier layout
+                                                                        measured at 6.76 ns, and the write access time was
+     and compiled the project report.                                   measured at 6.35 ns.
+  Design Challenge: A significant challenge encountered             The simulation waveforms confirm that data can be written
+during this project was a failure in the write operation, which   to any of the 16 addresses and correctly read back via the
+subsequently resulted in incorrect readout data. We attempted     sense amplifiers.
+               (a) Row Decoder Schematic                                           (b) Row Decoder Block Symbol
+
+
+
+
+                 (c) Row Decoder Layout                                        (d) Row Decoder Simulation Waveform
+Fig. 2: Row Decoder design results: (a) Transistor-level schematic, (b) Block symbol, (c) Physical layout (11.255×16.99 µm2 ),
+and (d) Simulation verification verifying correct wordline selection.
+             (a) Column Decoder Schematic                                      (b) Column Decoder Block Symbol
+
+
+
+
+               (c) Column Decoder Layout                                    (d) Column Decoder Simulation Waveform
+Fig. 3: Column Decoder implementation: (a) Transistor-level schematic, (b) Block symbol used in top hierarchy, (c) Physical
+layout (11.285 × 16.99 µm2 ), and (d) Simulation results demonstrating column selection logic.
+         (a) Precharge Schematic                   (b) Precharge Operation                  (c) Precharge Time (6.49 ns)
+Fig. 4: Precharge circuit verification: (a) Transistor-level schematic using PMOS devices, (b) Simulation waveform showing
+bitlines charging to VDD , and (c) Detailed measurement of the precharge time.
+
+
+
+
+             (a) Read/Write Circuit Schematic                                      (b) Read/Write Delay Analysis
+
+
+
+
+                (c) Sense Amplifier Layout                                        (d) Sense Amplifier Simulation
+Fig. 5: Read/Write and Sensing verification: (a) Transistor-level schematic of the R/W logic, (b) Critical path delay
+measurements showing read time 6.76 ns and write time 6.35 ns, (c) Physical layout of the Sense Amplifier, and (d) Simulation
+waveform demonstrating differential sensing.
+                  (a) Top Level Schematic                                                        (b) Top Level Layout
+Fig. 6: Complete 4×4 SRAM Array integration: (a) Schematic view showing decoders, control logic, and the bitcell array, and
+(b) Final physical layout occupying 10.085 × 6.585 µm2 .
+
+
+             VI. DRC AND LVS V ERIFICATION                            sense amplifiers, and control logic, was kept compact with a
+   Each block—row decoder, column decoder, bitcell, sense             final footprint of 27.705 × 35.625 µm2 .
+amplifier, read/write circuitry, and the full array—was laid out         Performance simulations demonstrate that the design is both
+and checked using design rule checking (DRC) and layout-              fast and efficient. The array achieved a write time of 6.35 ns
+versus-schematic (LVS) tools.                                         and a read time of 6.76 ns. These results confirm that the
+   All individual blocks (Row Decoder, Column Decoder,                SRAM operates correctly at high speeds while maintaining
+Sense Amplifier, and SRAM Array) passed both DRC and                  the necessary read/write stability and area efficiency required
+LVS verifications cleanly. The Top Level design also passed           for embedded memory applications.
+DRC without errors.                                                                              R EFERENCES
+   During the Top Level LVS check, the tool reported a single
+                                                                      [1] O. Thomas et al., “Compact 6T SRAM cell with enhanced read/write
+“short” error connecting the global ground (gnd!) and the                 stability in 45 nm monolithic 3D ICs,” in Proc. IEEE Int. Conf. on IC
+local GND pin. As these nodes are intended to be at the                   Design and Technology, 2009.
+same electrical potential, the design is logically and electrically   [2] G. Ravikishore and N. Nandhitha, “Delay-optimized 6T SRAM in
+                                                                          FinFET technology,” in Proc. Int. Conf. on Intelligent Communication
+correct. However, the Cadence verification tool flagged them              Technologies and Virtual Mobile Networks, 2021.
+as distinct nodes due to the hierarchy definitions, resulting in      [3] V. K. Joshi and S. Borkar, “Comparative study of SRAM cells in 45 nm
+a false-positive LVS mismatch.                                            CMOS,” in Proc. Int. Conf. on Advances in Electrical, Electronic and
+                                                                          Systems Engineering, 2016.
+                      VII. C ONCLUSION
+   In this project, we successfully designed, simulated, and
+verified a 4×4 SRAM array in 45 nm CMOS technology. The
+work was distributed among team members to handle specific
+blocks, resulting in a modular and integrated final design.
+   A key achievement of this work is the highly optimized
+layout. The single SRAM bitcell occupies an area of only
+2.99 µm2 , designed with a pull-up ratio of 0.5 and a cell
+(pull-down) ratio of 1.5 to ensure stability and robust noise
+margins. The total top-module layout, inclusive of decoders,
+                                        (a) Top Module General Simulation (Transient Response)
+
+
+
+
+          (b) Verification: Writing ‘0’ to All Cells                                (c) Verification: Writing ‘1’ to All Cells
+Fig. 7: Top-level Simulation Results: (a) Overall transient simulation showing successful read/write operations, (b) Validating
+the capability to write Logic ‘0’ to every address, and (c) Validating the capability to write Logic ‘1’ to every address.
+         (a) Row Decoder DRC                      (b) Row Decoder LVS                    (c) Column Decoder DRC
+
+
+
+
+        (d) Column Decoder LVS                   (e) Sense Amplifier DRC                  (f) Sense Amplifier LVS
+
+
+
+
+         (g) SRAM Array LVS                        (h) Top Level DRC                (i) Top Level LVS (Note: gnd! short)
+Fig. 8: Physical Verification Reports. All sub-blocks passed DRC/LVS cleanly. The Top Level LVS indicates a connectivity
+mismatch due to a tool interpretation difference between global gnd! and local GND.
+

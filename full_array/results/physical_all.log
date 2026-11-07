@@ -1,0 +1,139 @@
+Native CDL exported
+nand3 DRC 0
+and3 DRC 0
+inv DRC 0
+inv LVS True
+nand3 LVS True
+and3 LVS True
+tg DRC 0
+nand2 DRC 0
+precharge_unit DRC 0
+nand2 LVS True
+tg LVS True
+precharge_unit LVS True
+sense_amp DRC 0
+row_decoder DRC 0
+read_latch DRC 0
+read_latch LVS True
+sense_amp LVS True
+row_decoder LVS True
+column_decoder DRC 0
+rw_control DRC 0
+write_driver DRC 0
+column_decoder LVS True
+rw_control LVS True
+write_driver LVS True
+column_mux DRC 0
+precharge DRC 0
+bitcell DRC 0
+column_mux LVS True
+precharge LVS True
+bitcell LVS True
+sram_4x6 DRC 0
+bit_array DRC 0
+sram_4x6 LVS True
+bit_array LVS True
+[
+  {
+    "cell": "inv",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "nand3",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "and3",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "nand2",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "tg",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "precharge_unit",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "sense_amp",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "read_latch",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "row_decoder",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "column_decoder",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "rw_control",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "write_driver",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "column_mux",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "precharge",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "bitcell",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "bit_array",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  },
+  {
+    "cell": "sram_4x6",
+    "drc_results": 0,
+    "drc_pass": true,
+    "lvs_pass": true
+  }
+]

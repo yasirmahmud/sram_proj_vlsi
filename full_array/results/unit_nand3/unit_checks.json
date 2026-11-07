@@ -1,0 +1,118 @@
+{
+  "cell": "nand3",
+  "pass": true,
+  "checks": [
+    {
+      "inputs": {
+        "A": 0,
+        "B": 0,
+        "E": 0
+      },
+      "expected": {
+        "Y": 1
+      },
+      "measured_V": {
+        "Y": 1.099999967570278
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 0,
+        "E": 1
+      },
+      "expected": {
+        "Y": 1
+      },
+      "measured_V": {
+        "Y": 1.100000181877977
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 1,
+        "E": 0
+      },
+      "expected": {
+        "Y": 1
+      },
+      "measured_V": {
+        "Y": 1.100001055523777
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 1,
+        "E": 1
+      },
+      "expected": {
+        "Y": 1
+      },
+      "measured_V": {
+        "Y": 1.100000002539714
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 0,
+        "E": 0
+      },
+      "expected": {
+        "Y": 1
+      },
+      "measured_V": {
+        "Y": 1.09999577298095
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 0,
+        "E": 1
+      },
+      "expected": {
+        "Y": 1
+      },
+      "measured_V": {
+        "Y": 1.099995468407654
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 1,
+        "E": 0
+      },
+      "expected": {
+        "Y": 1
+      },
+      "measured_V": {
+        "Y": 1.09998085104591
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 1,
+        "E": 1
+      },
+      "expected": {
+        "Y": 0
+      },
+      "measured_V": {
+        "Y": -1.4714662966958932e-06
+      },
+      "pass": true
+    }
+  ]
+}

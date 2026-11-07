@@ -1,0 +1,23 @@
+simulator lang=spectre
+include "/ecel/UFAD/ymahmud/vlsi_sram_project/Project files/gpdk045_mos.scs" section=tt
+parameters vdd=1.1 voffset=0
+simOptions options reltol=1e-5 vabstol=1e-7 iabstol=1e-14 temp=27 gmin=1e-14
+Vdd (Vdd 0) vsource dc=vdd
+subckt sram_cell_physical (GND Vdd WL Q Q_bar BL_bar BL)
+M6 (BL_bar WL Q_bar GND) g45n1svt l=4.5e-08 w=2.4e-07 ad=3.36e-14 as=3.36e-14 pd=7.6e-07 ps=7.6e-07 sa=1.4e-07 sb=1.4e-07 sca=9.45211 scb=0.00821004 scc=0.000286958
+M7 (GND Q Q_bar GND) g45n1svt l=4.5e-08 w=3.6e-07 ad=5.04e-14 as=5.04e-14 pd=1e-06 ps=1e-06 sa=1.4e-07 sb=1.4e-07 sca=5.75838 scb=0.0022385 scc=1.60319e-05
+M8 (GND Q_bar Q GND) g45n1svt l=4.5e-08 w=3.6e-07 ad=5.04e-14 as=5.04e-14 pd=1e-06 ps=1e-06 sa=1.4e-07 sb=1.4e-07 sca=5.75838 scb=0.0022385 scc=1.60319e-05
+M9 (Q WL BL GND) g45n1svt l=4.5e-08 w=2.4e-07 ad=3.36e-14 as=3.36e-14 pd=7.6e-07 ps=7.6e-07 sa=1.4e-07 sb=1.4e-07 sca=6.06571 scb=0.00385227 scc=0.000152152
+M10 (Vdd Q Q_bar Vdd) g45p1svt l=4.5e-08 w=1.2e-07 ad=1.68e-14 as=1.68e-14 pd=5.2e-07 ps=5.2e-07 sa=1.4e-07 sb=1.4e-07 sca=57.0437 scb=0.0528056 scc=0.00752443
+M11 (Q Q_bar Vdd Vdd) g45p1svt l=4.5e-08 w=1.2e-07 ad=1.68e-14 as=1.68e-14 pd=5.2e-07 ps=5.2e-07 sa=1.4e-07 sb=1.4e-07 sca=73.81 scb=0.0749781 scc=0.0101674
+ends sram_cell_physical
+subckt sram_cell (BL BL_bar WL Q Q_bar Vdd GND)
+Xphysical (GND Vdd WL Q Q_bar BL_bar BL) sram_cell_physical
+ends sram_cell
+Xcell (BL BL_bar WL Q Q_bar Vdd 0) sram_cell
+Vwl (WL 0) vsource type=pulse val0=0 val1=vdd delay=0 rise=100p fall=100p width=249.9n period=500n
+Vbl (BL 0) vsource type=pulse val0=0 val1=vdd delay=0 rise=100p fall=100p width=49.9n period=100n
+Vblb (BL_bar 0) vsource type=pulse val0=vdd val1=0 delay=0 rise=100p fall=100p width=49.9n period=100n
+ic Q=0 Q_bar=vdd
+tran tran stop=800n maxstep=1n errpreset=conservative
+save WL BL BL_bar Q Q_bar

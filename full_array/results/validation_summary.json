@@ -1,0 +1,226 @@
+{
+  "pass": true,
+  "checks": {
+    "drc_inv": true,
+    "lvs_inv": true,
+    "native_inv": true,
+    "drc_nand3": true,
+    "lvs_nand3": true,
+    "native_nand3": true,
+    "drc_and3": true,
+    "lvs_and3": true,
+    "native_and3": true,
+    "drc_nand2": true,
+    "lvs_nand2": true,
+    "native_nand2": true,
+    "drc_tg": true,
+    "lvs_tg": true,
+    "native_tg": true,
+    "drc_precharge_unit": true,
+    "lvs_precharge_unit": true,
+    "native_precharge_unit": true,
+    "drc_sense_amp": true,
+    "lvs_sense_amp": true,
+    "native_sense_amp": true,
+    "drc_read_latch": true,
+    "lvs_read_latch": true,
+    "native_read_latch": true,
+    "drc_row_decoder": true,
+    "lvs_row_decoder": true,
+    "native_row_decoder": true,
+    "drc_column_decoder": true,
+    "lvs_column_decoder": true,
+    "native_column_decoder": true,
+    "drc_rw_control": true,
+    "lvs_rw_control": true,
+    "native_rw_control": true,
+    "drc_write_driver": true,
+    "lvs_write_driver": true,
+    "native_write_driver": true,
+    "drc_column_mux": true,
+    "lvs_column_mux": true,
+    "native_column_mux": true,
+    "drc_precharge": true,
+    "lvs_precharge": true,
+    "native_precharge": true,
+    "drc_bitcell": true,
+    "lvs_bitcell": true,
+    "native_bitcell": true,
+    "drc_bit_array": true,
+    "lvs_bit_array": true,
+    "native_bit_array": true,
+    "drc_sram_4x6": true,
+    "lvs_sram_4x6": true,
+    "native_sram_4x6": true,
+    "array_tt_27": true,
+    "array_ff_-40": true,
+    "array_ss_125": true,
+    "array_fs_27": true,
+    "array_sf_27": true,
+    "array_tt_-40": true,
+    "array_tt_125": true,
+    "array_ff_27": true,
+    "array_ss_27": true,
+    "unit_inv": true,
+    "unit_nand2": true,
+    "unit_nand3": true,
+    "unit_and3": true,
+    "unit_row_decoder": true,
+    "unit_column_decoder": true,
+    "unit_rw_control": true,
+    "unit_sense_amp": true,
+    "extracted_array": true,
+    "timing_markers": true,
+    "precharge_to_vdd": true,
+    "output_hold": true,
+    "simulator_array_tt_27": true,
+    "simulator_array_ff_-40": true,
+    "simulator_array_ss_125": true,
+    "simulator_array_fs_27": true,
+    "simulator_array_sf_27": true,
+    "simulator_array_tt_-40": true,
+    "simulator_array_tt_125": true,
+    "simulator_array_ff_27": true,
+    "simulator_array_ss_27": true,
+    "simulator_array_extracted_tt_27": true,
+    "simulator_array_timing": true,
+    "simulator_unit_inv": true,
+    "simulator_unit_nand2": true,
+    "simulator_unit_nand3": true,
+    "simulator_unit_and3": true,
+    "simulator_unit_row_decoder": true,
+    "simulator_unit_column_decoder": true,
+    "simulator_unit_rw_control": true,
+    "simulator_unit_sense_amp": true,
+    "single_orientation_poly": true,
+    "orientation_Metal2": true,
+    "orientation_Metal3": true,
+    "orientation_Metal4": true,
+    "orientation_Metal5": true,
+    "orientation_Metal6": true,
+    "orientation_Metal7": true,
+    "layout_boundary": true,
+    "extracted_transistor_count": true,
+    "address_coverage": true
+  },
+  "physical": [
+    {
+      "cell": "inv",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "nand3",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "and3",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "nand2",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "tg",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "precharge_unit",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "sense_amp",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "read_latch",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "row_decoder",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "column_decoder",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "rw_control",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "write_driver",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "column_mux",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "precharge",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "bitcell",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "bit_array",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    },
+    {
+      "cell": "sram_4x6",
+      "drc_results": 0,
+      "lvs": "MATCH"
+    }
+  ],
+  "functional_cases": [
+    "array_tt_27",
+    "array_ff_-40",
+    "array_ss_125",
+    "array_fs_27",
+    "array_sf_27",
+    "array_tt_-40",
+    "array_tt_125",
+    "array_ff_27",
+    "array_ss_27"
+  ],
+  "nominal_operations": 244,
+  "corner_operations": 852,
+  "extracted_operations": 268,
+  "extracted_read_operations": 168,
+  "unit_vectors": 110,
+  "simulator_runs": 19,
+  "transistors": 371,
+  "layout_dimensions_um": [
+    131.84,
+    42.050000000000004
+  ],
+  "layout_area_um2": 5543.872,
+  "vertical_poly_shapes": 2597,
+  "metal_orientation": {
+    "Metal2": true,
+    "Metal3": true,
+    "Metal4": true,
+    "Metal5": true,
+    "Metal6": true,
+    "Metal7": true
+  },
+  "layout_gds_sha256": "cf3f14e2bcb9a61300775fbcbf3f56dbb58461e8834dd423b34f4200f0b93d6a"
+}

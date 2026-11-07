@@ -1,0 +1,22 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+* CDL Netlist:
+*
+* Cell Name: nand2
+* Netlisted: 2026-11-07 03:30:30
+* Pegasus 25.14-s010
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+*.DEVTMPLT 0 MN(g45n1svt) _nmos1v ndiff_conn(D) poly_conn(G) ndiff_conn(S) psubstrate(B)
+*.DEVTMPLT 1 MP(g45p1svt) _pmos1v pdiff_conn(D) poly_conn(G) pdiff_conn(S) nwell_conn(B)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+* subckt nmos1v_CDNS_794040200140
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+* N=4 EP=4 NDC=1 FDC=1 HDC=1
+* MN(g45n1svt) $dt=0 element=M NDC=1 FDC=1 HDC=1
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+* subckt nand2
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+* N=6 EP=5 NDC=2 FDC=4 HDC=3
+* MN(g45n1svt) $dt=0 element=M NDC=0 FDC=2 HDC=1
+* MP(g45p1svt) $dt=1 element=M NDC=2 FDC=2 HDC=2

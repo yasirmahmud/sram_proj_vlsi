@@ -1,0 +1,30 @@
+                     *****************************************************
+                     **                                                 **
+                     **                L V S  R E P O R T               **
+                     **                                                 **
+                     *****************************************************
+
+
+Report File Name         : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/read_latch/lvs_report.txt
+ERC Summary File         : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/read_latch/result.sum
+LVS Comparison Report    : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/read_latch/lvs_report.txt.cls
+LVS Softchk Report       : read_latch.softchk
+Layout Name              : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/read_latch/layout.gds ("read_latch")
+User Name                : ymahmud
+Creation Time            : Sat Nov  7 03:31:07 2026
+Current directory        : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/read_latch
+Pegasus version          : 25.14-s010
+
+
+                     *****************************************************
+                     **                                                 **
+                     **            D E V E X T  R E P O R T             **
+                     **                                                 **
+                     *****************************************************
+
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+

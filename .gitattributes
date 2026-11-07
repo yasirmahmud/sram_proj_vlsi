@@ -1,0 +1,23 @@
+*.py text eol=lf
+*.sh text eol=lf
+*.il text eol=lf
+*.ocn text eol=lf
+*.scs text eol=lf
+*.cdl text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+*.oa binary
+*.dm binary
+*.gds binary
+*.pdf binary
+*.docx binary
+*.png binary
+# Preserve generated evidence byte for byte and keep waveform diffs manageable.
+sram_cell/results/** -text -whitespace
+sram_cell/results/**/psf/** -diff
+sram_cell/netlists/** -text -whitespace
+sram_cell/scripts/reference_snapshot/** -whitespace
+full_array/results/** -text -whitespace
+full_array/results/**/psf/** -diff
+full_array/netlists/** -text -whitespace

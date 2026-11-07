@@ -1,0 +1,58 @@
+{
+  "cell": "nand2",
+  "pass": true,
+  "checks": [
+    {
+      "inputs": {
+        "A": 0,
+        "B": 0
+      },
+      "expected": {
+        "Y": 1
+      },
+      "measured_V": {
+        "Y": 1.099999965700947
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 1
+      },
+      "expected": {
+        "Y": 1
+      },
+      "measured_V": {
+        "Y": 1.099999925220848
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 0
+      },
+      "expected": {
+        "Y": 1
+      },
+      "measured_V": {
+        "Y": 1.099994147189856
+      },
+      "pass": true
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 1
+      },
+      "expected": {
+        "Y": 0
+      },
+      "measured_V": {
+        "Y": -7.495641341317651e-07
+      },
+      "pass": true
+    }
+  ]
+}

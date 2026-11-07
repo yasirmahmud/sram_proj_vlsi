@@ -1,0 +1,80 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.02s.
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 09/03/2024 18:58 (sjfhw317) $
+          : sub-version  IC6.1.8-64b.500.36 
+Started at: 07-Nov-2026  03:30:00
+User Name : ymahmud
+Host Name : ece-lnx-07
+Directory : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+Loading gpdk045/libInit.il ...
+	Loading gpdk045/loadCxt.ile ... done!
+	Loading context 'gpdk045' from library 'gpdk045' ... done!
+	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+	Loading gpdk045/gpdk045_customFilter.il ... done!
+	Loading gpdk045/libInitCustomExit.il ... 
+	Loading Environment Settings ...
+	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 45nm PDK                       *           
+  *                        (gpdk045)                          *           
+  *                                                           *           
+  *************************************************************           
+	
+
+	VERSION: 6.0 (09-September-2019)
+
+done!
+Loaded gpdk045/libInit.il successfully!
+WARNING (XSTRM-20): Output Stream file '/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/nand2/layout.gds' already exists. It will be overwritten.
+INFO (XSTRM-217): Reading the layer map file, /apps/cds/local/GPDK045/gpdk045/gpdk045.layermap
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 sram_project
+strmFile                                /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/nand2/layout.gds
+topCell                                 nand2
+view                                    layout
+logFile                                 /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/nand2/streamout.log
+layerMap                                /apps/cds/local/GPDK045/gpdk045/gpdk045.layermap
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_794040200140.
+INFO (XSTRM-223): 2. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_794040200141.
+INFO (XSTRM-223): 3. Translating cellView sram_project/nand2/layout as STRUCTURE nand2.
+
+Summary of Objects Translated:
+	Scalar Instances:                       4
+	Array Instances:                        0
+	Polygons:                               0
+	Paths:                                  0
+	Rectangles:                             193
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               0
+	Text:                                   5
+	TextDisplay:                            0
+	Cells:                                  3
+
+Elapsed Time: 0.3s   User Time: 0.1s   CPU Time: 0.0s   Peak VM: 5500KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

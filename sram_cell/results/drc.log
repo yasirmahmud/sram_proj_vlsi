@@ -1,0 +1,58 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.05s.
+
+@(#)$CDS: ivVerify version 6.1.8-64b 09/03/2024 19:05 (sjfhw317) $
+
+Reading data sram_cell/sram_cell/layout
+*WARNING* LIB sram_cell from File /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/cds.lib Line 5 redefines
+LIB sram_cell from the same file (defined earlier.)
+*WARNING* LIB sram_cell from File /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/cds.lib Line 5 redefines
+LIB sram_cell from the same file (defined earlier.)
+Loading gpdk045/libInit.il ...
+	Loading gpdk045/loadCxt.ile ... done!
+	Loading context 'gpdk045' from library 'gpdk045' ... done!
+	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+	Loading gpdk045/gpdk045_customFilter.il ... done!
+	Loading gpdk045/libInitCustomExit.il ... 
+	Loading Environment Settings ...
+	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 45nm PDK                       *           
+  *                        (gpdk045)                          *           
+  *                                                           *           
+  *************************************************************           
+	
+
+	VERSION: 6.0 (09-September-2019)
+
+done!
+Loaded gpdk045/libInit.il successfully!
+DRC started at Sat Nov  7 02:02:03 2026
+
+Validating hierarchy instantiation for:
+library: sram_cell
+cell:    sram_cell
+view:    layout
+Rules source is a simple file.
+Rules path is /apps/cds/local/GPDK045/diva/divaDRC.rul.
+Inclusion limit is set to 1000.
+Parsing drcExtractRules of "/apps/cds/local/GPDK045/diva/divaDRC.rul"...
+Optimizing rules...
+removing unused task: metal1_wo_diode = geomAndNot(metal1_conn metal1_with_diode)
+removing unused task: metal1_with_diode = geomOr(L77036 L90713)
+removing unused task: L77036 = geomButtOrOver(metal1_conn L28904)
+removing unused task: L28904 = drc(diff_diode (area >= 0.1))
+removing unused task: L90713 = geomButtOrOver(metal1_conn diff_diode (keep > 1))
+removing unused task: poly_tap = geomAnd(Poly poly_on_field)
+removing unused task: poly_on_field = geomAndNot(Poly Oxide)
+removing unused task: diff_diode = geomOr(ndiff_conn pdiff_conn)
+removing unused task: cont_diode = geomOr(cont_ndiff cont_pdiff)
+removing unused task: cont_antenna = geomAnd(Poly cont_poly)
+*WARNING* No  DRC (Assura_DV_design_rule_checker) or DRC (312) license is available
+*WARNING* Verification program terminated.
+
+
+*****  ivVerify terminated abnormally  *****
+

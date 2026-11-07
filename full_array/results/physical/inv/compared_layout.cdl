@@ -1,0 +1,9 @@
+** Layout Netlist, pegasus precompare
+** 
+
+.subckt inv GND VDD OUT IN 
+MM0 GND IN OUT GND G45N1SVT L=4.5e-08 W=3.6e-07 AD=5.04e-14 AS=5.04e-14 PD=1e-06 PS=1e-06 m=1 
+MM1 VDD IN OUT VDD G45P1SVT L=4.5e-08 W=3.6e-07 AD=5.04e-14 AS=5.04e-14 PD=1e-06 PS=1e-06 m=1 
+.ends
+
+

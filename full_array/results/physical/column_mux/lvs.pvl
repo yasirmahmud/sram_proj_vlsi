@@ -1,0 +1,7 @@
+layout_path "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/column_mux/layout.gds" gdsii;
+layout_primary "column_mux";
+schematic_path "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/netlists/native.cdl" spice;
+schematic_primary "column_mux";
+lvs_report_file "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/column_mux/lvs_report.txt";
+lvs_write_netlist -layout "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/column_mux/compared_layout.cdl";
+include "/apps/cds/local/GPDK045/pvs/pvlLVS.rul"

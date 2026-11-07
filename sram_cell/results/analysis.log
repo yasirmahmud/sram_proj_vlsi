@@ -1,0 +1,117 @@
+{
+  "write_50pct": {
+    "1": {
+      "trigger_s": 1.0005000000000003e-07,
+      "response_s": 1.0009565386233547e-07,
+      "delay_ps": 45.65386233544228
+    },
+    "0": {
+      "trigger_s": 1.5005000000000002e-07,
+      "response_s": 1.5008598985989633e-07,
+      "delay_ps": 35.98985989630815
+    }
+  },
+  "write_default_50pct": {
+    "1": {
+      "trigger_s": 1.0005e-07,
+      "response_s": 1.000957411323035e-07,
+      "delay_ps": 45.741132303501715
+    },
+    "0": {
+      "trigger_s": 1.5005e-07,
+      "response_s": 1.5008858719816198e-07,
+      "delay_ps": 38.58719816198349
+    }
+  },
+  "extracted_write_50pct": {
+    "1": {
+      "trigger_s": 1.0005e-07,
+      "response_s": 1.0009562216550294e-07,
+      "delay_ps": 45.62216550293669
+    },
+    "0": {
+      "trigger_s": 1.5004999999999997e-07,
+      "response_s": 1.5008596510896628e-07,
+      "delay_ps": 35.96510896630854
+    }
+  },
+  "read_forced_50pct": {
+    "1": {
+      "trigger_s": 1.0004999999999997e-07,
+      "response_s": 1.0168258898394165e-07,
+      "delay_ps": 1632.588983941675
+    },
+    "0": {
+      "trigger_s": 1.5005000000000002e-07,
+      "response_s": 1.5011362127383224e-07,
+      "delay_ps": 63.62127383222056
+    }
+  },
+  "margins": [
+    {
+      "kind": "read",
+      "sizing": "default",
+      "margin_mV": 215.25385615447306,
+      "square_x_V": 0.28563333333333335,
+      "square_y_V": 0.8407703250055938,
+      "square_side_V": 0.21525385615447307
+    },
+    {
+      "kind": "read",
+      "sizing": "access2",
+      "margin_mV": 177.1925937612599,
+      "square_x_V": 0.3289,
+      "square_y_V": 0.8686414655499801,
+      "square_side_V": 0.1771925937612599
+    },
+    {
+      "kind": "read",
+      "sizing": "pulldown2",
+      "margin_mV": 248.18057117207408,
+      "square_x_V": 0.8147333333333333,
+      "square_y_V": 0.22599865970063893,
+      "square_side_V": 0.2481805711720741
+    },
+    {
+      "kind": "read",
+      "sizing": "final",
+      "margin_mV": 223.5818469785737,
+      "square_x_V": 0.8345333333333333,
+      "square_y_V": 0.24214014885613513,
+      "square_side_V": 0.2235818469785737
+    },
+    {
+      "kind": "write",
+      "sizing": "default",
+      "margin_mV": 531.8881363578838,
+      "square_x_V": 0.0,
+      "square_y_V": 0.2852436687312416,
+      "square_side_V": 0.5318881363578838
+    },
+    {
+      "kind": "write",
+      "sizing": "access2",
+      "margin_mV": 541.8937471084064,
+      "square_x_V": 0.0,
+      "square_y_V": 0.114816013792962,
+      "square_side_V": 0.5418937471084064
+    },
+    {
+      "kind": "write",
+      "sizing": "pullup2",
+      "margin_mV": 438.5790319471854,
+      "square_x_V": 0.088,
+      "square_y_V": 0.6087150420080386,
+      "square_side_V": 0.4385790319471854
+    },
+    {
+      "kind": "write",
+      "sizing": "final",
+      "margin_mV": 513.5739219491369,
+      "square_x_V": 0.0,
+      "square_y_V": 0.1148160113498356,
+      "square_side_V": 0.5135739219491369
+    }
+  ]
+}
+Functional runs: 17 failures: []

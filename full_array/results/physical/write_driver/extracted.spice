@@ -1,0 +1,28 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+* CDL Netlist:
+*
+* Cell Name: write_driver
+* Netlisted: 2026-11-07 03:32:04
+* Pegasus 25.14-s010
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+*.LDD
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+* Sub cell: tg
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.subckt tg GND VDD A B EN ENB
+M0 A EN B GND g45n1svt L=4.5e-08 W=1.08e-06 AD=1.512e-13 AS=1.512e-13 PD=2.44e-06 PS=2.44e-06 fw=1.08e-06 sa=1.4e-07 sb=1.4e-07 sca=3.04786 scb=0.000104839 scc=6.53879e-09 $X=4640 $Y=1540
+M1 A ENB B VDD g45p1svt L=4.5e-08 W=1.08e-06 AD=1.512e-13 AS=1.512e-13 PD=2.44e-06 PS=2.44e-06 fw=1.08e-06 sa=1.4e-07 sb=1.4e-07 sca=11.3534 scb=0.00879444 scc=0.000426483 $X=5340 $Y=5720
+** N=6 EP=6 NDC=2 FDC=2 HDC=2
+.ends tg
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+* Sub cell: write_driver
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.subckt write_driver GND VDD DIN GBL WEN WENB GBLB
+X0 GND VDD DIN GBL WEN WENB tg $T=12840 700 0 0 $X=13200 $Y=760
+X1 GND VDD 3 GBLB WEN WENB tg $T=21380 700 0 0 $X=21740 $Y=760
+M2 GND DIN 3 GND g45n1svt L=4.5e-08 W=3.6e-07 AD=5.04e-14 AS=5.04e-14 PD=1e-06 PS=1e-06 fw=3.6e-07 sa=1.4e-07 sb=1.4e-07 sca=3.70436 scb=0.000161812 scc=1.4064e-08 $X=8940 $Y=2240
+M3 VDD DIN 3 VDD g45p1svt L=4.5e-08 W=3.6e-07 AD=5.04e-14 AS=5.04e-14 PD=1e-06 PS=1e-06 fw=3.6e-07 sa=1.4e-07 sb=1.4e-07 sca=21.3981 scb=0.0224765 scc=0.00127211 $X=9640 $Y=4980
+** N=8 EP=7 NDC=2 FDC=6 HDC=4
+.ends write_driver

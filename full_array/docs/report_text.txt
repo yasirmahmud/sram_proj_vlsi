@@ -1,0 +1,538 @@
+     Design, Simulation, and Layout of a 4 × 6 SRAM
+            Array in 45 nm CMOS Technology
+   EEE5322 • Fall 2026 • University of Florida
+
+   Authors: __________________________________________________________
+
+   Abstract—A 24-bit individually addressable SRAM was implemented with GPDK045 CMOS at 1.1
+   V using native Cadence Virtuoso schematic, symbol, and layout views. The circuit integrates 371
+   MOS transistors and operates at 20 MHz. All 24 cells pass write-one, write-zero, and
+   mixed-pattern readback; repeated reads preserve the stored data. Nine process/temperature
+   cases pass 852 schematic-level operations, and a device-extracted netlist passes a further 268
+   operations. Nominal 50%-to-50% write-one/write-zero delays are 0.4152/0.2187 ns;
+   read-one/read-zero delays are 0.3693/0.3859 ns. All 17 implemented cells and blocks have zero
+   DRC violations and matching LVS. The complete layout measures 131.84 × 42.05 µm, or
+   5543.872 µm².
+
+   Index Terms—SRAM, 6T bitcell, decoder, precharge, differential sense amplifier, GPDK045,
+   Spectre, DRC, LVS.
+
+   I. INTRODUCTION
+   The EEE5322 assignment requires four rows and six columns with individually addressed bits
+   [1]. A pair of cross-coupled CMOS inverters stores each bit, and two access devices connect it to
+   complementary bitlines. The project includes the transistor design, reusable logic cells, memory
+   peripherals, full-array simulation, physical layout, and independent layout verification. This
+   report follows the section structure of the supplied reference report [5]; its measurements and
+   verification results come from the new 4 × 6 implementation.
+
+   II. DESIGN OVERVIEW
+   R1:R0 selects one of four rows. C2:C1:C0 selects columns 0–5; 110 and 111 select no column.
+   The logical address used in the validation tables is a = 6r + c, with r = 2R1 + R0 and c = 4C2 +
+   2C1 + C0. CLK2 controls precharge; CLK1 enables the requested read or write after precharge
+   ends. DIN is the write input and DOUT is the latched read output. All blocks use explicit VDD
+   and GND connections.
+
+    Interface                                         Meaning
+
+    R1, R0 / C2, C1, C0                               2 row bits / 3 column bits
+
+    CLK1 / CLK2                                       Access clock / active-high precharge phase
+
+    WR / RD                                           Exclusive write / read request
+
+    DIN / DOUT                                        Single-bit input / held single-bit output
+
+    VDD / GND                                         1.1 V supply / explicit ground
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                   1
+   Fig. 1. Architecture of the nine blocks instantiated by sram_4x6.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                   2
+   III. IMPLEMENTATION
+
+   A. SRAM Bitcell and Reusable Logic
+   The 6T cell uses 120 nm PMOS pull-ups, 240 nm NMOS access devices, and 360 nm NMOS
+   pull-downs; all channel lengths are 45 nm. The width ratios PD/access = 1.5 and access/PU = 2
+   strengthen the pull-down against read disturbance while retaining write ability. A
+   minimum-width all-120 nm baseline is retained in the separate single-cell study. That study
+   measures a nominal read static-noise margin of 223.58 mV for the final sized cell [6]. Full-array
+   nondestructive readback is verified separately here.
+
+   The compact layout preserves the supplied arrangement: cross-coupled inverter devices in the
+   center and staggered access devices on either side. Its boundary is 2.12 × 1.68 µm (3.5616 µm²),
+   including explicit body taps. Poly runs vertically; metal interconnect closes the feedback loop.
+   The cell is repeated on a 2.30 × 2.02 µm placement pitch in the array.
+
+
+
+
+   Fig. 2. Final bitcell schematic, symbol, and physical layout.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                   3
+   Inverter, NAND2, NAND3, AND3, and transmission-gate cells provide reusable schematic
+   symbols. Series NMOS devices are widened to maintain drive: NAND2 uses 720 nm NMOS;
+   NAND3 uses 1080 nm NMOS. Their PMOS devices and the basic inverter devices are 360 nm.
+   Transmission gates use 1080 nm devices. Every device has L = 45 nm. AND3 is a NAND3
+   followed by an inverter; the layout contains the same eight transistors.
+
+
+
+
+   Fig. 3. Primitive schematic and layout views used by the hierarchy.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                        4
+   B. Row Decoder
+   The enabled 2-to-4 row decoder contains two address inverters and four AND3 minterms. WLr =
+   ROWEN AND the row-address minterm for r. Thus exactly one wordline is high during a valid
+   access, and all wordlines are low during idle, precharge, invalid columns, or conflicting
+   commands. Eight unit vectors cover both enable values and every row address.
+
+
+
+
+   Fig. 4. Row decoder native schematic, symbol, and layout.
+
+
+
+
+   Fig. 5. Spectre verification of all row addresses with enable low and high.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                             5
+   C. Column Decoder and Selection
+   The 3-to-6 column decoder contains three input inverters and six AND3 minterms. CS0–CS5
+   decode 000–101. No minterm exists for 110 or 111, so both unused addresses produce six low
+   outputs. Each CS controls two transmission gates joining one physical bitline pair to GBL/GBLB.
+   Unit simulation covers all eight codes; array tests exercise both invalid codes on every row for
+   reads and writes.
+
+
+
+
+   Fig. 6. Column decoder schematic, symbol, and layout.
+
+
+
+
+   Fig. 7. One-hot selection for columns 0–5 and no selection for 110/111.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                  6
+   Fig. 8. Differential column multiplexer; six pairs share GBL and GBLB.
+
+
+   D. Precharge Circuit
+   Each column has two 1080 nm PMOS devices charging BL and BLB to VDD and a third PMOS
+   equalizing the pair. PCB = NOT CLK2 is the active-low gate signal. All six pairs precharge
+   together before access. Both bitlines approach 1.1 V, as required; they are not biased to half
+   supply. The measured 10%–90% recharge time for a discharged bitline is 0.1181 ns under the
+   stated schematic testbench load.
+
+
+
+
+   Fig. 9. Precharge unit and six-column precharge bank.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                7
+   Fig. 10. Actual BL/BLB precharge waveforms and 10%–90% delta marker.
+
+
+   E. Read/Write Circuitry and Sense Amplifier
+   The control logic defines VALID = NOT(C2 AND C1), WEN = CLK1 AND WR AND NOT(RD) AND
+   VALID AND NOT(CLK2), and REN = CLK1 AND RD AND NOT(WR) AND VALID AND
+   NOT(CLK2). ROWEN = WEN OR REN. Therefore precharge and access are interlocked, invalid
+   columns disable access, and simultaneous RD/WR commands disable both paths. Normal
+   stimulus keeps RD and WR exclusive; separate fault tests deliberately assert conflicts to verify
+   the hardware protection.
+
+   The write driver inverts DIN and uses complementary-enabled transmission gates to drive
+   GBL/GBLB only when WEN is high. It presents high impedance when disabled. The sense
+   amplifier is a five-transistor NMOS differential OTA with a PMOS mirror load, followed by a
+   CMOS output inverter (seven transistors total). The input devices are 240 nm, mirror devices
+   1440 nm, and tail/output-inverter devices 360 nm. The polarity is DOUT = 1 when BIT exceeds
+   BIT_bar. Six standalone tests include both polarities of a 100 mV difference at common-mode
+   voltages 1.05 V and 0.75 V, as well as rail-to-rail differential inputs.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                  8
+   Fig. 11. Read/write interlock and differential write-driver implementation.
+
+
+
+
+   Fig. 12. Fine-resolution write-path simulation for both data values.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                             9
+   Fig. 13. Sense amplifier and transmission-gate output holding latch.
+
+   The eight-transistor read latch is transparent during REN and holds the last read value
+   otherwise. This prevents the read output from tracking the disabled sense amplifier during
+   writes or precharge. It has no reset input; an initial DOUT value is not specified before the first
+   valid read. Full-array checking begins output comparisons only when a read result is defined.
+
+
+
+
+   Fig. 14. All six sense-amplifier input cases resolve to the expected rail.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                     10
+   F. Top Level Array
+   The top level instantiates CTRL, ROW, COL, PRE, MUX, WRITE, MEM, SENSE, and LATCH.
+   MEM contains 24 six-transistor cells, sharing four horizontal wordlines and six vertical
+   complementary bitline pairs. The complete flattened circuit contains 371 MOS transistors.
+   Observation nets Qr_c and QBr_c are saved for schematic simulation; they do not add transistors
+   or external top-level pins. All native schematics pass Check and Save with zero errors and zero
+   warnings.
+
+
+
+
+   Fig. 15. Complete hierarchical 4 × 6 SRAM schematic.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                 11
+   Fig. 16. Top-level interface symbol.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                      12
+   Fig. 17. All 24 bitcells in the four-row, six-column memory bank.
+
+
+
+
+   Fig. 18. Physical memory bank, 20.11 × 11.02 µm.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                   13
+   IV. WORK DISTRIBUTION AND CHALLENGES
+   Work distribution: __________________________________________________
+
+   ________________________________________________________________
+
+    Name                                               Actual contribution
+
+
+
+
+   The contribution fields are intentionally blank for the submission authors to complete. The main
+   circuit challenge was resolving a small negative differential near VDD at the sense input. The
+   initially explored sizing did not reliably meet the standalone low-output rail criterion for this
+   case. A sizing sweep and repeat simulation led to the final 240 nm input / 1440 nm mirror / 360
+   nm tail combination. The final six input cases and all array corner cases pass.
+
+   The physical-design challenges were preserving explicit ground connectivity, meeting small
+   metal landing-area rules, and routing hierarchical ports without accidental shorts. Directional
+   via landings and separated routing channels resolved these issues. The full default DRC deck is
+   used, and LVS compares extracted devices against a CDL export of the actual saved native
+   schematics. No DRC or LVS waiver is used.
+
+   V. SIMULATION RESULTS
+
+   A. Testbench and Timing Setup
+   Spectre 21.1.0.664 runs the supplied GPDK045 BSIM models at VDD = 1.1 V. The main case is
+   TT, 27 °C. A 50 ns period gives 20 MHz, above the 10 MHz requirement. Inputs settle at 0.2–0.3
+   ns within each cycle; CLK2 rises at 2.0–2.1 ns and falls at 12.0–12.1 ns. CLK1 rises at 20.0–20.1
+   ns and falls at 40.0–40.1 ns. Thus nominal precharge and access do not overlap. Address and
+   data are held throughout the access.
+
+   The schematic fixture adds 20 fF to each of 12 physical bitlines, 5 fF to each global bitline, and
+   10 fF at DOUT. Initial conditions set storage nodes only at simulation start; they do not force a
+   stored bit during operation. A complete write phase precedes every read phase. Coverage
+   simulations use a maximum 500 ps timestep and 500 ps saved strobes. Every operation checks
+   all 24 Q/Qbar pairs at 37 ns in its cycle with 0.1VDD/0.9VDD rail limits. DOUT is checked on
+   reads, wordlines and selects are checked for proper enabling, and later read scans verify
+   retained data.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                    14
+   B. All-Address Functional Validation
+   At nominal conditions, the sequence writes all 24 ones and reads every address twice, then
+   writes all 24 zeros and reads every address twice, then writes the explicit mixed sequence
+   100110101001011001110010 and reads every address twice. The mixed rows are 100110 /
+   101001 / 011001 / 110010. Two scans after each write phase demonstrate repeated
+   nondestructive readback. Every write also checks that all other cells retain their expected states,
+   including unselected cells on an active row.
+
+    Nominal coverage                                            Count
+
+    Valid writes: 3 patterns × 24 addresses                     72
+
+    Valid reads: 3 patterns × 24 × 2 scans                      144
+
+    Invalid read/write addresses                                16
+
+    Simultaneous RD/WR faults                                   8
+
+    Overlapping-clock faults                                    4
+
+    Total nominal operations                                    244 (all pass)
+
+
+   Fault operations require every wordline and both access enables to remain low. Invalid column
+   codes also require all column selects low. The nominal read-low storage voltage reaches at most
+   0.12085 V at saved samples during reads, and the read-high storage voltage remains at least
+   1.09959 V at those samples. These are sampled values rather than continuous-time extrema. The
+   storage-state checks and repeated readback provide the functional nondestructive-read
+   evidence. The complete 72-row address/pattern table is supplied in
+   results/address_validation.csv.
+
+
+
+
+   Fig. 19. Entire nominal simulation with all three patterns and protection tests.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                     15
+   Fig. 20. All 24 storage pairs during the write-one phase.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                           16
+   Fig. 21. All 24 storage pairs during the write-zero phase.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                            17
+   Fig. 22. All 24 storage pairs during the explicit mixed-pattern write phase.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                              18
+   Fig. 23. Expected patterns and both measured readback scans across all 24 cells.
+
+
+
+
+   Fig. 24. Invalid addresses, simultaneous RD/WR, and clock overlap inhibit access.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                   19
+   C. Required 50%-to-50% Timing Measurements
+   A separate four-operation full-circuit run performs write-one, read-one, write-zero, and read-zero
+   at row 0, column 0. It uses a 5 ps maximum timestep, conservative accuracy, and no saved-data
+   strobing. For each operation, the rising CLK1 threshold is 0.55 V. The response threshold is the
+   corresponding rising or falling 0.55 V crossing of the stored Q for writes and DOUT for reads.
+   Linear interpolation between saved samples gives the delta markers. The same loads and
+   complete transistor circuit are retained.
+
+    Measurement (TT, 27 °C, 1.1 V)                            Delay, ns
+
+    CLK1 → Q, write 1                                         0.4152
+
+    CLK1 → Q, write 0                                         0.2187
+
+    CLK1 → DOUT, read 1                                       0.3693
+
+    CLK1 → DOUT, read 0                                       0.3859
+
+    BL precharge, 10% → 90%                                   0.1181
+
+
+   The write-one trigger/response times are 20.0500/20.4652 ns; write-zero times are
+   120.0500/120.2687 ns. Read-one times are 70.0500/70.4193 ns; read-zero times are
+   170.0500/170.4359 ns. These are measured access delays for the stated fixture, not a
+   characterization of maximum clock frequency or a worst-case address/corner delay. All 12
+   bitlines reach at least 1.09999988 V at the pre-access sample across the nominal sequence.
+
+
+
+
+   Fig. 25. Required write/read delta markers, both data polarities, at 50% VDD.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                    20
+   D. Process/Temperature Checks and Extracted Replay
+   Nine schematic cases use the same 1.1 V supply and 20 MHz clocks. TT/27 °C runs all three
+   patterns and two scans; each additional case writes and reads all 24 mixed-pattern bits once and
+   repeats the 28 protection operations. All nine cases pass 852 operations in total (264 writes, 336
+   reads, and 252 protection checks). These cases extend the assignment validation; they are not an
+   exhaustive statistical or voltage-corner characterization.
+
+    Process / temperature             Operations                        Result
+
+    ff / -40 °C                       76                                PASS
+
+    ff / 27 °C                        76                                PASS
+
+    fs / 27 °C                        76                                PASS
+
+    sf / 27 °C                        76                                PASS
+
+    ss / 125 °C                       76                                PASS
+
+    ss / 27 °C                        76                                PASS
+
+    tt / -40 °C                       76                                PASS
+
+    tt / 125 °C                       76                                PASS
+
+    tt / 27 °C                        244                               PASS
+
+
+   The Pegasus-extracted flat netlist contains 371 MOS transistors. It was converted directly into a
+   Spectre subcircuit, preserving extracted device dimensions and source/drain geometry
+   parameters. The nominal replay executes 268 operations, including 72 writes, 168 reads, and 28
+   protection operations. It adds a final complete read scan after all faults; all outputs match the
+   expected state. No initial storage-node forcing is used in this extracted replay; the initial
+   complete write establishes the contents.
+
+   This is a device-extracted topology simulation. It includes intrinsic model/device capacitances
+   and a 10 fF output load, with no added schematic bitline load. It does not contain extracted
+   interconnect resistance/capacitance. Therefore the four reported timing values are
+   schematic-fixture measurements, and are not claimed as full RC post-layout timing. Nineteen
+   final Spectre jobs (nine array, eight unit, one fine timing, and one extracted array) finish with
+   zero simulator errors and zero warnings. The unit jobs cover 110 input vectors.
+
+   VI. DRC/LVS RESULTS
+   Cadence Pegasus 25.14 checks GDS exported from the saved native layouts. All 562 checks in
+   the installed GPDK045 default DRC deck are retained. Each of 17 individual/hierarchical cells
+   has zero reported DRC results and an LVS MATCH against the native schematic CDL. The
+   top-level source and extracted circuit each contain 371 MOS transistors. Explicit ground and
+   supply connectivity are checked with no ground-short exception.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                    21
+    Cell/block                   DRC results                 LVS               Area (µm²)
+
+    inv                          0                           MATCH             11.6603
+
+    nand3                        0                           MATCH             36.9375
+
+    and3                         0                           MATCH             49.9653
+
+    nand2                        0                           MATCH             22.5301
+
+    tg                           0                           MATCH             19.5435
+
+    precharge_unit               0                           MATCH             22.0275
+
+    sense_amp                    0                           MATCH             49.1337
+
+    read_latch                   0                           MATCH             135.5634
+
+    row_decoder                  0                           MATCH             402.5006
+
+    column_decoder               0                           MATCH             621.2276
+
+    rw_control                   0                           MATCH             867.7372
+
+    write_driver                 0                           MATCH             111.0032
+
+    column_mux                   0                           MATCH             856.0782
+
+    precharge                    0                           MATCH             297.3530
+
+    bitcell                      0                           MATCH             3.5616
+
+    bit_array                    0                           MATCH             221.6122
+
+    sram_4x6                     0                           MATCH             5543.8720
+
+
+   Native Check and Save also reports (0 errors, 0 warnings) for all 17 schematics. A GDS geometry
+   audit confirms vertical poly throughout the top-level hierarchy and the selected metal directions:
+   Metal2 horizontal, Metal3 vertical, Metal4 horizontal, Metal5 vertical, Metal6 horizontal, and
+   Metal7 vertical. Metal1 includes local device/contact connections. Implants and wells follow
+   device/tap geometry. The audit reports 101 passing evidence checks.
+
+   The complete boundary is 131.84 × 42.05 µm = 5543.872 µm². The memory bank itself occupies
+   20.11 × 11.02 µm = 221.6122 µm², and the compact cell is 3.5616 µm². The top level uses the
+   smallest bounding area among four generated shelf-packing candidates. Peripheral channel
+   routing and explicit hierarchy make this a conservative educational macro; the reported area is
+   actual, not a claim of a globally minimum SRAM layout.
+
+
+
+
+   Fig. 26. Captured lines from the saved top-level DRC and LVS reports.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                    22
+   Fig. 27. Complete physically connected 4 × 6 SRAM macro, 131.84 × 42.05 µm.
+
+   Raw top-level evidence is retained in full_array/results/physical/sram_4x6/: layout.gds,
+   drc_summary.txt, drc.log, lvs_report.txt, lvs_report.txt.cls, lvs.log, and extracted.spice. Per-cell
+   folders retain equivalent evidence. The model SHA-256 is
+   4cece5fcde03aa0addfd42d5e06d9c270c42dc91f88cd0ec7e4256c98408fcae; the top-level GDS
+   SHA-256 is cf3f14e2bcb9a61300775fbcbf3f56dbb58461e8834dd423b34f4200f0b93d6a.
+
+   VII. CONCLUSION
+   The 4 × 6 SRAM integrates all required memory and peripheral blocks, writes and reads every
+   valid address at 20 MHz, and preserves data over repeated reads and protection tests. Both data
+   polarities have explicit 50%-to-50% timing markers. All 17 layouts have zero DRC violations and
+   matching LVS, and the extracted transistor circuit reproduces the expected output sequence.
+   Native Cadence views, simulation decks and waveforms, verification logs, scripts, and editable
+   report are supplied for review and reproduction. Further optimization could reduce peripheral
+   routing area and characterize full interconnect-RC timing.
+
+   REFERENCES
+   [1] EEE4310/5322, Final Project Slides, Fall 2026, supplied Project Instruction Files/Final
+   Project Slides.pdf.
+
+   [2] Supplied SRAM Cell.pdf and FinalProjectSchematicHelp.pdf, Project Instruction Files.
+
+   [3] Supplied Final Project Layout Help.pdf, Overview of Design Rules – 45 nm.pdf, and
+   gpdk045_drc.pdf.
+
+   [4] Cadence GPDK045, installed BSIM model gpdk045_mos.scs and default pvs/pvlDRC.rul and
+   pvlLVS.rul decks; local Virtuoso IC6.1.8, Spectre 21.1, and Pegasus 25.14.
+
+   [5] Supplied Old reference project/Report.pdf, used for report organization and circuit reference,
+   not its measurements or verification exceptions.
+
+   [6] Companion single-cell design and measured study, sram_cell/SRAM_Cell_Report.pdf and its
+   saved simulation/verification evidence.
+
+
+
+
+EEE5322 • 4 × 6 SRAM                                                                                      23
+

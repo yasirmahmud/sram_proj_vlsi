@@ -1,0 +1,4 @@
+INCLUDE /apps/cds/IC618/share/cdssetup/cds.lib
+DEFINE gpdk045 /apps/cds/local/GPDK045/gpdk045
+DEFINE sram_cell ../sram_cell/cadence
+DEFINE sram_project ./cadence

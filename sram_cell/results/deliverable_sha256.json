@@ -1,0 +1,18 @@
+{
+  "Layout_Preview.png": "e7bcf501ced7d5088ed5294ed7bfd9b1496edd2e21318cb563109ef5d969c58f",
+  "SRAM_Cell_Report.pdf": "0f821b6071b97aff0df8fad687ee3c18ddc41c20987c9d1ded81466d7e6c774f",
+  "SRAM_Cell_Report.docx": "7cec957100409f522a7c4f05cec6ee7bfdfba3b222616704bb6f1eb9f6743237",
+  "README.md": "9827e2136cb23ec8baec52d747971052052fd9935c917b06f31b1040d009c6f3",
+  "scripts/build_layout.il": "5011333752840e6563b387eedc79b5a824611db1fb85c8c6bb95960852472f2e",
+  "netlists/sram_cell.cdl": "c975b2f1c4a86a17fcec3cf3da75f60c6e3d5e0c887b311e225973e8ac02dee1",
+  "netlists/sram_cell_extracted.scs": "f9c8fec4e0cfd12f653a88a11f60265a36decb67b18eb912d630f0bfd3428a8c",
+  "results/sram_cell.gds": "704df561855a0e1c22901561506e44fab88e0e0489ba568d7f0c800ddebf891b",
+  "results/sram_cell_default.gds": "006ea7426b94d5ded504238fec117dc5c5db32c0e92d9e6c82f90c55d4bc970b",
+  "results/metrics.json": "3e260a9fe6c6e8872478e460d43b702d27457bba6b9b7168f0096f839f23075c",
+  "results/validation_summary.json": "78484b466f3fb4489093437a90c3c4cd160c2fa929eebac4d49ff37c5022c8cd",
+  "results/layout_geometry.json": "7ffbbc87ddefb8d179dc564cf553a830b7e0fed696b5303329b84317c406148c",
+  "results/drc/summary.txt": "c7521b8344f1630ce32e4bfd839173af207003ec2434798650accbc5a0067623",
+  "results/lvs/report.txt.cls": "08e4967683fa20a6f9bf8c903d4afbd108e07e4d143ab603c83e934c6ea3c631",
+  "results/default_drc/summary.txt": "13cd1b5f59dd8efa40b572fc00341e78e795b2c8fbb632ed035b653d16251744",
+  "results/default_lvs/report.txt.cls": "50f87a50c46dd982eb974c65bf63bc9b82702b5592d08f62c4cfc7f3cc01e715"
+}

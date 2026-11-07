@@ -1,0 +1,108 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.02s.
+*WARNING* LIB sram_project from File /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/cds.lib Line 6 redefines
+LIB sram_project from the same file (defined earlier.)
+Loading gpdk045/libInit.il ...
+	Loading gpdk045/loadCxt.ile ... done!
+	Loading context 'gpdk045' from library 'gpdk045' ... done!
+	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+	Loading gpdk045/gpdk045_customFilter.il ... done!
+	Loading gpdk045/libInitCustomExit.il ... 
+	Loading Environment Settings ...
+	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 45nm PDK                       *           
+  *                        (gpdk045)                          *           
+  *                                                           *           
+  *************************************************************           
+	
+
+	VERSION: 6.0 (09-September-2019)
+
+done!
+Loaded gpdk045/libInit.il successfully!
+CELL inverter
+PIN IN input
+PIN OUT output
+PIN VDD input
+PIN GND input
+MOS NM0 nmos1v W="360n" L="45n" D=OUT B=GND G=IN S=GND
+MOS PM0 pmos1v W="360n" L="45n" D=OUT B=VDD G=IN S=VDD
+Loading techComp.cxt 
+BBOX ((0.0 -0.02) (1.46 1.62))
+LPIN IN ((0.165 0.77) (0.225 0.83))
+LPIN OUT ((0.94 0.775) (1.0 0.835))
+LPIN VDD ((0.64 1.47) (0.7 1.53))
+LPIN GND ((0.635 0.07) (0.695 0.13))
+CELL 3_input_nand
+PIN A input
+PIN B input
+PIN E input
+PIN VDD input
+PIN GND input
+PIN Y output
+MOS NM3 nmos1v W="360n" L="45n" D=Y B=GND G=net7 S=GND
+MOS NM2 nmos1v W="1.08u" L="45n" D=net2 B=GND G=E S=GND
+MOS NM1 nmos1v W="1.08u" L="45n" D=net1 B=GND G=B S=net2
+MOS NM0 nmos1v W="1.08u" L="45n" D=net7 B=GND G=A S=net1
+MOS PM3 pmos1v W="360n" L="45n" D=Y B=VDD G=net7 S=VDD
+MOS PM2 pmos1v W="360n" L="45n" D=net7 B=VDD G=E S=VDD
+MOS PM1 pmos1v W="360n" L="45n" D=net7 B=VDD G=B S=VDD
+MOS PM0 pmos1v W="360n" L="45n" D=net7 B=VDD G=A S=VDD
+BBOX ((0.0 0.0) (3.46 3.46))
+LPIN A ((0.695 2.085) (0.755 2.145))
+LPIN B ((0.53 1.935) (0.59 1.995))
+LPIN E ((1.855 1.965) (1.915 2.025))
+LPIN VDD ((1.005 2.98) (1.065 3.04))
+LPIN GND ((2.625 0.875) (2.685 0.935))
+LPIN Y ((2.975 1.57) (3.035 1.63))
+CELL sense_amp
+PIN BIT input
+PIN BIT_bar input
+PIN RE input
+PIN VDD input
+PIN GND input
+PIN AMP_OUT output
+MOS PM6 pmos1v W="120n" L="45n" D=net4 B=VDD G=net4 S=VDD
+MOS PM5 pmos1v W="120n" L="45n" D=net2 B=VDD G=net4 S=VDD
+MOS PM7 pmos1v W="160n" L="45n" D=AMP_OUT B=VDD G=net2 S=VDD
+MOS NM41 nmos1v W="120n" L="45n" D=net2 B=GND G=BIT S=net1
+MOS NM40 nmos1v W="120n" L="45n" D=net4 B=GND G=BIT_bar S=net1
+MOS NM39 nmos1v W="120n" L="45n" D=AMP_OUT B=GND G=net2 S=GND
+MOS NM38 nmos1v W="120n" L="45n" D=net1 B=GND G=RE S=GND
+BBOX ((-2.5275 -3.775) (6.849 -0.23))
+LPIN BIT ((2.185 -2.245) (2.245 -2.185))
+LPIN BIT_bar ((0.205 -2.35) (0.265 -2.29))
+LPIN RE ((1.02 -2.535) (1.08 -2.475))
+LPIN VDD ((0.275 -0.76) (0.335 -0.7))
+LPIN GND ((0.72 -3.305) (0.78 -3.245))
+LPIN AMP_OUT ((3.39 -2.075) (3.45 -2.015))
+CELL drv1
+PIN IN input
+PIN VDD input
+PIN GND input
+PIN OUT output
+MOS NM2 nmos1v W="1.08u" L="45n" D=OUT B=GND G=IN S=GND
+MOS PM2 pmos1v W="1.08u" L="45n" D=OUT B=VDD G=IN S=VDD
+BBOX ((0.0 0.0) (5.505 5.23))
+LPIN IN ((2.29 2.98) (2.35 3.04))
+LPIN VDD ((2.66 4.71) (2.72 4.77))
+LPIN GND ((2.665 1.22) (2.725 1.28))
+LPIN OUT ((3.135 2.98) (3.195 3.04))
+CELL DRV2
+PIN GND input
+PIN VDD input
+PIN IN input
+PIN OUT output
+MOS NM2 nmos1v W="3.24u" L="45n" D=OUT B=GND G=IN S=GND
+MOS PM2 pmos1v W="3.24u" L="45n" D=OUT B=VDD G=IN S=VDD
+BBOX ((1.945 1.775) (2.62 9.475))
+LPIN GND ((2.15 1.845) (2.21 1.905))
+LPIN VDD ((2.135 9.345) (2.195 9.405))
+LPIN IN ((2.195 5.765) (2.255 5.825))
+LPIN OUT ((2.46 5.655) (2.52 5.715))
+
+*WARNING* LIB sram_project from File /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/cds.lib Line 6 redefines
+LIB sram_project from the same file (defined earlier.)

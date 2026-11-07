@@ -1,0 +1,7 @@
+layout_path "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sense_amp/layout.gds" gdsii;
+layout_primary "sense_amp";
+schematic_path "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/netlists/native.cdl" spice;
+schematic_primary "sense_amp";
+lvs_report_file "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sense_amp/lvs_report.txt";
+lvs_write_netlist -layout "/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/sense_amp/compared_layout.cdl";
+include "/apps/cds/local/GPDK045/pvs/pvlLVS.rul"

@@ -1,0 +1,9 @@
+* Exported from native OA schematic sram_cell/sram_cell/schematic
+.SUBCKT sram_cell BL BL_bar WL Q Q_bar Vdd GND
+MPM0 Q_bar Q Vdd Vdd g45p1svt W=120n L=45n
+MPM1 Q Q_bar Vdd Vdd g45p1svt W=120n L=45n
+MNM2 Q_bar WL BL_bar GND g45n1svt W=240n L=45n
+MNM0 Q_bar Q GND GND g45n1svt W=360n L=45n
+MNM3 BL WL Q GND g45n1svt W=240n L=45n
+MNM1 Q Q_bar GND GND g45n1svt W=360n L=45n
+.ENDS sram_cell

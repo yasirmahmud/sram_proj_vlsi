@@ -1,0 +1,12 @@
+PASS simulator: vdd_refine_0.330
+PASS simulator: vdd_refine_0.340
+PASS simulator: vdd_refine_0.310
+PASS simulator: vdd_refine_0.320
+PASS simulator: mismatch_0.1_1.1
+PASS simulator: mismatch_0.2_1.1
+PASS simulator: mismatch_0.1_1.0
+PASS simulator: mismatch_0.2_1.0
+PASS simulator: mismatch_0.3_1.1
+PASS simulator: mismatch_0.3_1.0
+PASS simulator: mismatch_0.4_1.1
+PASS simulator: mismatch_0.4_1.0

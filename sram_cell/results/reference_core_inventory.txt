@@ -1,0 +1,35 @@
+BBOX ((-2.115 0.0) (-0.005 1.42))
+SHAPE rect ("Nwell" "drawing") ((-1.52 1.005) (-0.56 1.305)) nil
+SHAPE rect ("Poly" "drawing") ((-1.905 0.0) (-1.86 0.67)) nil
+SHAPE rect ("Poly" "drawing") ((-1.32 0.665) (-1.275 1.045)) nil
+SHAPE rect ("Poly" "drawing") ((-1.29 0.75) (-1.07 0.795)) nil
+SHAPE rect ("Poly" "drawing") ((-1.01 0.915) (-0.76 0.96)) nil
+SHAPE rect ("Poly" "drawing") ((-0.805 0.655) (-0.76 1.06)) nil
+SHAPE rect ("Poly" "drawing") ((-1.905 0.0) (-0.215 0.045)) nil
+SHAPE rect ("Poly" "drawing") ((-0.26 0.0) (-0.215 0.885)) nil
+SHAPE rect ("Pimp" "drawing") ((-1.115 1.055) (-0.985 1.315)) nil
+SHAPE rect ("Nimp" "drawing") ((-1.07 0.16) (-1.01 0.66)) nil
+SHAPE rect ("Metal1" "drawing") ((-2.035 0.5) (-1.94 0.74)) nil
+SHAPE rect ("Metal1" "drawing") ((-1.8 1.36) (-0.855 1.42)) nil
+SHAPE rect ("Metal1" "drawing") ((-1.43 0.13) (-1.37 0.33)) nil
+SHAPE rect ("Metal1" "drawing") ((-1.43 1.235) (-1.37 1.42)) nil
+SHAPE rect ("Metal1" "drawing") ((-1.81 0.685) (-1.75 0.97)) nil
+SHAPE rect ("Metal1" "drawing") ((-1.81 0.91) (-1.165 0.97)) nil
+SHAPE rect ("Metal1" "drawing") ((-1.225 0.575) (-1.165 1.145)) nil
+SHAPE rect ("Metal1" "drawing") ((-1.225 0.91) (-0.98 0.97)) nil
+SHAPE rect ("Metal1" "drawing") ((-1.43 1.36) (-0.855 1.42)) nil
+SHAPE rect ("Metal1" "drawing") ((-0.915 1.125) (-0.855 1.42)) nil
+SHAPE rect ("Metal1" "drawing") ((-1.73 0.11) (-0.85 0.17)) nil
+SHAPE rect ("Metal1" "drawing") ((-0.915 0.13) (-0.85 0.325)) nil
+SHAPE rect ("Metal1" "drawing") ((-0.71 0.39) (-0.65 1.245)) nil
+SHAPE rect ("Metal1" "drawing") ((-0.99 0.75) (-0.31 0.81)) nil
+SHAPE rect ("Metal1" "drawing") ((-0.37 0.795) (-0.31 1.065)) nil
+SHAPE rect ("Metal1" "drawing") ((-0.18 0.815) (-0.085 1.055)) nil
+VIA (db:0x0508c99d cellView db:0x0508cd9a objType "stdVia" prop nil purpose "drawing" viaHeader db:0x0508cc1f route db:0x0508c91a routeStatus "normal" direction "layer1ToLayer2" topology "none" origin (-1.04 0.94) orient "R90" bBox ((-1.1 0.89) (-0.98 0.99)) net nil pin nil connRoutes nil figGroup nil markers nil groupMembers nil isUnshielded nil shieldedNet1 nil shieldedNet2 nil parent nil children nil)
+VIA (db:0x0508c99c cellView db:0x0508cd9a objType "stdVia" prop nil purpose "drawing" viaHeader db:0x0508cc1f route db:0x0508c91b routeStatus "normal" direction "layer1ToLayer2" topology "none" origin (-1.04 0.78) orient "R90" bBox ((-1.1 0.73) (-0.98 0.83)) net nil pin nil connRoutes nil figGroup nil markers nil groupMembers nil isUnshielded nil shieldedNet1 nil shieldedNet2 nil parent nil children nil)
+INST NM3 nmos1v (-0.26 0.835) "R0" ((-0.47 0.735) (-0.005 1.175))
+INST NM2 nmos1v (-1.905 0.5) "R0" ((-2.115 0.4) (-1.65 0.84))
+INST NM1 nmos1v (-0.805 0.23) "R0" ((-1.015 0.13) (-0.55 0.69))
+INST NM0 nmos1v (-1.32 0.23) "R0" ((-1.53 0.13) (-1.065 0.69))
+INST PM1 pmos1v (-0.76 1.125) "MY" ((-1.015 1.025) (-0.55 1.345))
+INST PM0 pmos1v (-1.32 1.125) "R0" ((-1.53 1.025) (-1.065 1.345))

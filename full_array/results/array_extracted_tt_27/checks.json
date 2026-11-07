@@ -1,0 +1,2428 @@
+{
+  "pass": true,
+  "operations": 268,
+  "reads": 168,
+  "writes": 72,
+  "internal_nodes_observed": false,
+  "bitline_load": "intrinsic extracted devices",
+  "output_load_fF": 10,
+  "rows": [
+    {
+      "operation": 0,
+      "kind": "write",
+      "phase": "ones",
+      "address": 0,
+      "expected_bit": 1,
+      "DOUT_V": 1.582545619926476e-07,
+      "pass": true
+    },
+    {
+      "operation": 1,
+      "kind": "write",
+      "phase": "ones",
+      "address": 1,
+      "expected_bit": 1,
+      "DOUT_V": 1.6015218320082396e-07,
+      "pass": true
+    },
+    {
+      "operation": 2,
+      "kind": "write",
+      "phase": "ones",
+      "address": 2,
+      "expected_bit": 1,
+      "DOUT_V": 1.591413361645111e-07,
+      "pass": true
+    },
+    {
+      "operation": 3,
+      "kind": "write",
+      "phase": "ones",
+      "address": 3,
+      "expected_bit": 1,
+      "DOUT_V": 1.5913548983856683e-07,
+      "pass": true
+    },
+    {
+      "operation": 4,
+      "kind": "write",
+      "phase": "ones",
+      "address": 4,
+      "expected_bit": 1,
+      "DOUT_V": 1.5828337676238768e-07,
+      "pass": true
+    },
+    {
+      "operation": 5,
+      "kind": "write",
+      "phase": "ones",
+      "address": 5,
+      "expected_bit": 1,
+      "DOUT_V": 1.5911030686816078e-07,
+      "pass": true
+    },
+    {
+      "operation": 6,
+      "kind": "write",
+      "phase": "ones",
+      "address": 6,
+      "expected_bit": 1,
+      "DOUT_V": 1.5653624511624464e-07,
+      "pass": true
+    },
+    {
+      "operation": 7,
+      "kind": "write",
+      "phase": "ones",
+      "address": 7,
+      "expected_bit": 1,
+      "DOUT_V": 1.5542074511954274e-07,
+      "pass": true
+    },
+    {
+      "operation": 8,
+      "kind": "write",
+      "phase": "ones",
+      "address": 8,
+      "expected_bit": 1,
+      "DOUT_V": 1.5447576723557147e-07,
+      "pass": true
+    },
+    {
+      "operation": 9,
+      "kind": "write",
+      "phase": "ones",
+      "address": 9,
+      "expected_bit": 1,
+      "DOUT_V": 1.5644691179513753e-07,
+      "pass": true
+    },
+    {
+      "operation": 10,
+      "kind": "write",
+      "phase": "ones",
+      "address": 10,
+      "expected_bit": 1,
+      "DOUT_V": 1.5451063267878122e-07,
+      "pass": true
+    },
+    {
+      "operation": 11,
+      "kind": "write",
+      "phase": "ones",
+      "address": 11,
+      "expected_bit": 1,
+      "DOUT_V": 1.5539374566718419e-07,
+      "pass": true
+    },
+    {
+      "operation": 12,
+      "kind": "write",
+      "phase": "ones",
+      "address": 12,
+      "expected_bit": 1,
+      "DOUT_V": 1.7064115454663825e-07,
+      "pass": true
+    },
+    {
+      "operation": 13,
+      "kind": "write",
+      "phase": "ones",
+      "address": 13,
+      "expected_bit": 1,
+      "DOUT_V": 1.6957525695483328e-07,
+      "pass": true
+    },
+    {
+      "operation": 14,
+      "kind": "write",
+      "phase": "ones",
+      "address": 14,
+      "expected_bit": 1,
+      "DOUT_V": 1.7047159053065816e-07,
+      "pass": true
+    },
+    {
+      "operation": 15,
+      "kind": "write",
+      "phase": "ones",
+      "address": 15,
+      "expected_bit": 1,
+      "DOUT_V": 1.69576635229943e-07,
+      "pass": true
+    },
+    {
+      "operation": 16,
+      "kind": "write",
+      "phase": "ones",
+      "address": 16,
+      "expected_bit": 1,
+      "DOUT_V": 1.645267964322203e-07,
+      "pass": true
+    },
+    {
+      "operation": 17,
+      "kind": "write",
+      "phase": "ones",
+      "address": 17,
+      "expected_bit": 1,
+      "DOUT_V": 1.6852697815477757e-07,
+      "pass": true
+    },
+    {
+      "operation": 18,
+      "kind": "write",
+      "phase": "ones",
+      "address": 18,
+      "expected_bit": 1,
+      "DOUT_V": 1.721992963194031e-07,
+      "pass": true
+    },
+    {
+      "operation": 19,
+      "kind": "write",
+      "phase": "ones",
+      "address": 19,
+      "expected_bit": 1,
+      "DOUT_V": 1.6887590795459016e-07,
+      "pass": true
+    },
+    {
+      "operation": 20,
+      "kind": "write",
+      "phase": "ones",
+      "address": 20,
+      "expected_bit": 1,
+      "DOUT_V": 1.7103606831655387e-07,
+      "pass": true
+    },
+    {
+      "operation": 21,
+      "kind": "write",
+      "phase": "ones",
+      "address": 21,
+      "expected_bit": 1,
+      "DOUT_V": 1.7003277049373589e-07,
+      "pass": true
+    },
+    {
+      "operation": 22,
+      "kind": "write",
+      "phase": "ones",
+      "address": 22,
+      "expected_bit": 1,
+      "DOUT_V": 1.7087867089192098e-07,
+      "pass": true
+    },
+    {
+      "operation": 23,
+      "kind": "write",
+      "phase": "ones",
+      "address": 23,
+      "expected_bit": 1,
+      "DOUT_V": 1.7003139723059737e-07,
+      "pass": true
+    },
+    {
+      "operation": 24,
+      "kind": "read",
+      "phase": "ones",
+      "address": 0,
+      "expected_bit": 1,
+      "DOUT_V": 1.100000207466771,
+      "pass": true
+    },
+    {
+      "operation": 25,
+      "kind": "read",
+      "phase": "ones",
+      "address": 1,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999774438866,
+      "pass": true
+    },
+    {
+      "operation": 26,
+      "kind": "read",
+      "phase": "ones",
+      "address": 2,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999773673445,
+      "pass": true
+    },
+    {
+      "operation": 27,
+      "kind": "read",
+      "phase": "ones",
+      "address": 3,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999775707747,
+      "pass": true
+    },
+    {
+      "operation": 28,
+      "kind": "read",
+      "phase": "ones",
+      "address": 4,
+      "expected_bit": 1,
+      "DOUT_V": 1.09999977620564,
+      "pass": true
+    },
+    {
+      "operation": 29,
+      "kind": "read",
+      "phase": "ones",
+      "address": 5,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999775670549,
+      "pass": true
+    },
+    {
+      "operation": 30,
+      "kind": "read",
+      "phase": "ones",
+      "address": 6,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999998407558,
+      "pass": true
+    },
+    {
+      "operation": 31,
+      "kind": "read",
+      "phase": "ones",
+      "address": 7,
+      "expected_bit": 1,
+      "DOUT_V": 1.09999954040703,
+      "pass": true
+    },
+    {
+      "operation": 32,
+      "kind": "read",
+      "phase": "ones",
+      "address": 8,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999543101179,
+      "pass": true
+    },
+    {
+      "operation": 33,
+      "kind": "read",
+      "phase": "ones",
+      "address": 9,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999540976792,
+      "pass": true
+    },
+    {
+      "operation": 34,
+      "kind": "read",
+      "phase": "ones",
+      "address": 10,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999540433145,
+      "pass": true
+    },
+    {
+      "operation": 35,
+      "kind": "read",
+      "phase": "ones",
+      "address": 11,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999541067171,
+      "pass": true
+    },
+    {
+      "operation": 36,
+      "kind": "read",
+      "phase": "ones",
+      "address": 12,
+      "expected_bit": 1,
+      "DOUT_V": 1.100000009331012,
+      "pass": true
+    },
+    {
+      "operation": 37,
+      "kind": "read",
+      "phase": "ones",
+      "address": 13,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999780721061,
+      "pass": true
+    },
+    {
+      "operation": 38,
+      "kind": "read",
+      "phase": "ones",
+      "address": 14,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999778371349,
+      "pass": true
+    },
+    {
+      "operation": 39,
+      "kind": "read",
+      "phase": "ones",
+      "address": 15,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999780710052,
+      "pass": true
+    },
+    {
+      "operation": 40,
+      "kind": "read",
+      "phase": "ones",
+      "address": 16,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999776962201,
+      "pass": true
+    },
+    {
+      "operation": 41,
+      "kind": "read",
+      "phase": "ones",
+      "address": 17,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999779973843,
+      "pass": true
+    },
+    {
+      "operation": 42,
+      "kind": "read",
+      "phase": "ones",
+      "address": 18,
+      "expected_bit": 1,
+      "DOUT_V": 1.09999948804611,
+      "pass": true
+    },
+    {
+      "operation": 43,
+      "kind": "read",
+      "phase": "ones",
+      "address": 19,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999746119046,
+      "pass": true
+    },
+    {
+      "operation": 44,
+      "kind": "read",
+      "phase": "ones",
+      "address": 20,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999931699945,
+      "pass": true
+    },
+    {
+      "operation": 45,
+      "kind": "read",
+      "phase": "ones",
+      "address": 21,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999933927282,
+      "pass": true
+    },
+    {
+      "operation": 46,
+      "kind": "read",
+      "phase": "ones",
+      "address": 22,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999931109761,
+      "pass": true
+    },
+    {
+      "operation": 47,
+      "kind": "read",
+      "phase": "ones",
+      "address": 23,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999746162693,
+      "pass": true
+    },
+    {
+      "operation": 48,
+      "kind": "read",
+      "phase": "ones",
+      "address": 0,
+      "expected_bit": 1,
+      "DOUT_V": 1.100000005881735,
+      "pass": true
+    },
+    {
+      "operation": 49,
+      "kind": "read",
+      "phase": "ones",
+      "address": 1,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999775749857,
+      "pass": true
+    },
+    {
+      "operation": 50,
+      "kind": "read",
+      "phase": "ones",
+      "address": 2,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999773674616,
+      "pass": true
+    },
+    {
+      "operation": 51,
+      "kind": "read",
+      "phase": "ones",
+      "address": 3,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999775709497,
+      "pass": true
+    },
+    {
+      "operation": 52,
+      "kind": "read",
+      "phase": "ones",
+      "address": 4,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999776207055,
+      "pass": true
+    },
+    {
+      "operation": 53,
+      "kind": "read",
+      "phase": "ones",
+      "address": 5,
+      "expected_bit": 1,
+      "DOUT_V": 1.09999977567229,
+      "pass": true
+    },
+    {
+      "operation": 54,
+      "kind": "read",
+      "phase": "ones",
+      "address": 6,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999998395798,
+      "pass": true
+    },
+    {
+      "operation": 55,
+      "kind": "read",
+      "phase": "ones",
+      "address": 7,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999540411141,
+      "pass": true
+    },
+    {
+      "operation": 56,
+      "kind": "read",
+      "phase": "ones",
+      "address": 8,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999543101219,
+      "pass": true
+    },
+    {
+      "operation": 57,
+      "kind": "read",
+      "phase": "ones",
+      "address": 9,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999540976835,
+      "pass": true
+    },
+    {
+      "operation": 58,
+      "kind": "read",
+      "phase": "ones",
+      "address": 10,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999540433187,
+      "pass": true
+    },
+    {
+      "operation": 59,
+      "kind": "read",
+      "phase": "ones",
+      "address": 11,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999541067214,
+      "pass": true
+    },
+    {
+      "operation": 60,
+      "kind": "read",
+      "phase": "ones",
+      "address": 12,
+      "expected_bit": 1,
+      "DOUT_V": 1.100000009332631,
+      "pass": true
+    },
+    {
+      "operation": 61,
+      "kind": "read",
+      "phase": "ones",
+      "address": 13,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999780721064,
+      "pass": true
+    },
+    {
+      "operation": 62,
+      "kind": "read",
+      "phase": "ones",
+      "address": 14,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999778371353,
+      "pass": true
+    },
+    {
+      "operation": 63,
+      "kind": "read",
+      "phase": "ones",
+      "address": 15,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999780710056,
+      "pass": true
+    },
+    {
+      "operation": 64,
+      "kind": "read",
+      "phase": "ones",
+      "address": 16,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999776962206,
+      "pass": true
+    },
+    {
+      "operation": 65,
+      "kind": "read",
+      "phase": "ones",
+      "address": 17,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999779973847,
+      "pass": true
+    },
+    {
+      "operation": 66,
+      "kind": "read",
+      "phase": "ones",
+      "address": 18,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999488052505,
+      "pass": true
+    },
+    {
+      "operation": 67,
+      "kind": "read",
+      "phase": "ones",
+      "address": 19,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999746119046,
+      "pass": true
+    },
+    {
+      "operation": 68,
+      "kind": "read",
+      "phase": "ones",
+      "address": 20,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999931699945,
+      "pass": true
+    },
+    {
+      "operation": 69,
+      "kind": "read",
+      "phase": "ones",
+      "address": 21,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999933927281,
+      "pass": true
+    },
+    {
+      "operation": 70,
+      "kind": "read",
+      "phase": "ones",
+      "address": 22,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999931109761,
+      "pass": true
+    },
+    {
+      "operation": 71,
+      "kind": "read",
+      "phase": "ones",
+      "address": 23,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999746162692,
+      "pass": true
+    },
+    {
+      "operation": 72,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 0,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999657234574,
+      "pass": true
+    },
+    {
+      "operation": 73,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 1,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999685549238,
+      "pass": true
+    },
+    {
+      "operation": 74,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 2,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999654971003,
+      "pass": true
+    },
+    {
+      "operation": 75,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 3,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999685524702,
+      "pass": true
+    },
+    {
+      "operation": 76,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 4,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999685113643,
+      "pass": true
+    },
+    {
+      "operation": 77,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 5,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999685484117,
+      "pass": true
+    },
+    {
+      "operation": 78,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 6,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999650880042,
+      "pass": true
+    },
+    {
+      "operation": 79,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 7,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999688224819,
+      "pass": true
+    },
+    {
+      "operation": 80,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 8,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999688899016,
+      "pass": true
+    },
+    {
+      "operation": 81,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 9,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999688232741,
+      "pass": true
+    },
+    {
+      "operation": 82,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 10,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999691580235,
+      "pass": true
+    },
+    {
+      "operation": 83,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 11,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999688231651,
+      "pass": true
+    },
+    {
+      "operation": 84,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 12,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999649886941,
+      "pass": true
+    },
+    {
+      "operation": 85,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 13,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999686848513,
+      "pass": true
+    },
+    {
+      "operation": 86,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 14,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999687539664,
+      "pass": true
+    },
+    {
+      "operation": 87,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 15,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999686847146,
+      "pass": true
+    },
+    {
+      "operation": 88,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 16,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999651270676,
+      "pass": true
+    },
+    {
+      "operation": 89,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 17,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999686846319,
+      "pass": true
+    },
+    {
+      "operation": 90,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 18,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999650100387,
+      "pass": true
+    },
+    {
+      "operation": 91,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 19,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999654059393,
+      "pass": true
+    },
+    {
+      "operation": 92,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 20,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999653334372,
+      "pass": true
+    },
+    {
+      "operation": 93,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 21,
+      "expected_bit": 0,
+      "DOUT_V": 1.09999965404794,
+      "pass": true
+    },
+    {
+      "operation": 94,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 22,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999690812657,
+      "pass": true
+    },
+    {
+      "operation": 95,
+      "kind": "write",
+      "phase": "zeros",
+      "address": 23,
+      "expected_bit": 0,
+      "DOUT_V": 1.099999688433783,
+      "pass": true
+    },
+    {
+      "operation": 96,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 0,
+      "expected_bit": 0,
+      "DOUT_V": -2.494433815772548e-07,
+      "pass": true
+    },
+    {
+      "operation": 97,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 1,
+      "expected_bit": 0,
+      "DOUT_V": -2.878396141008948e-08,
+      "pass": true
+    },
+    {
+      "operation": 98,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 2,
+      "expected_bit": 0,
+      "DOUT_V": -2.8228614390771315e-08,
+      "pass": true
+    },
+    {
+      "operation": 99,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 3,
+      "expected_bit": 0,
+      "DOUT_V": -2.9463725784295096e-08,
+      "pass": true
+    },
+    {
+      "operation": 100,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 4,
+      "expected_bit": 0,
+      "DOUT_V": -2.5739742512456056e-08,
+      "pass": true
+    },
+    {
+      "operation": 101,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 5,
+      "expected_bit": 0,
+      "DOUT_V": -2.9557214750557774e-08,
+      "pass": true
+    },
+    {
+      "operation": 102,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 6,
+      "expected_bit": 0,
+      "DOUT_V": -4.5036991799056805e-09,
+      "pass": true
+    },
+    {
+      "operation": 103,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 7,
+      "expected_bit": 0,
+      "DOUT_V": -6.3873608166763636e-09,
+      "pass": true
+    },
+    {
+      "operation": 104,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 8,
+      "expected_bit": 0,
+      "DOUT_V": -3.3235109795697474e-09,
+      "pass": true
+    },
+    {
+      "operation": 105,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 9,
+      "expected_bit": 0,
+      "DOUT_V": -6.296359939934397e-09,
+      "pass": true
+    },
+    {
+      "operation": 106,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 10,
+      "expected_bit": 0,
+      "DOUT_V": -7.276171369878777e-11,
+      "pass": true
+    },
+    {
+      "operation": 107,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 11,
+      "expected_bit": 0,
+      "DOUT_V": -6.334087265726842e-09,
+      "pass": true
+    },
+    {
+      "operation": 108,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 12,
+      "expected_bit": 0,
+      "DOUT_V": -7.160360189222178e-08,
+      "pass": true
+    },
+    {
+      "operation": 109,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 13,
+      "expected_bit": 0,
+      "DOUT_V": -4.3573301775083e-08,
+      "pass": true
+    },
+    {
+      "operation": 110,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 14,
+      "expected_bit": 0,
+      "DOUT_V": 2.3595131559331628e-08,
+      "pass": true
+    },
+    {
+      "operation": 111,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 15,
+      "expected_bit": 0,
+      "DOUT_V": -4.368588974730638e-08,
+      "pass": true
+    },
+    {
+      "operation": 112,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 16,
+      "expected_bit": 0,
+      "DOUT_V": 2.296490602741531e-08,
+      "pass": true
+    },
+    {
+      "operation": 113,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 17,
+      "expected_bit": 0,
+      "DOUT_V": -4.358477917690644e-08,
+      "pass": true
+    },
+    {
+      "operation": 114,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 18,
+      "expected_bit": 0,
+      "DOUT_V": -3.453145636883425e-08,
+      "pass": true
+    },
+    {
+      "operation": 115,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 19,
+      "expected_bit": 0,
+      "DOUT_V": -3.631180895413778e-08,
+      "pass": true
+    },
+    {
+      "operation": 116,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 20,
+      "expected_bit": 0,
+      "DOUT_V": -7.134449408537027e-08,
+      "pass": true
+    },
+    {
+      "operation": 117,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 21,
+      "expected_bit": 0,
+      "DOUT_V": -3.8478913646342975e-08,
+      "pass": true
+    },
+    {
+      "operation": 118,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 22,
+      "expected_bit": 0,
+      "DOUT_V": -3.835084572213758e-08,
+      "pass": true
+    },
+    {
+      "operation": 119,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 23,
+      "expected_bit": 0,
+      "DOUT_V": -3.8368980625950073e-08,
+      "pass": true
+    },
+    {
+      "operation": 120,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 0,
+      "expected_bit": 0,
+      "DOUT_V": -3.312436049829509e-08,
+      "pass": true
+    },
+    {
+      "operation": 121,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 1,
+      "expected_bit": 0,
+      "DOUT_V": -2.9772989628357854e-08,
+      "pass": true
+    },
+    {
+      "operation": 122,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 2,
+      "expected_bit": 0,
+      "DOUT_V": -2.8226930375483293e-08,
+      "pass": true
+    },
+    {
+      "operation": 123,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 3,
+      "expected_bit": 0,
+      "DOUT_V": -2.946339065236203e-08,
+      "pass": true
+    },
+    {
+      "operation": 124,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 4,
+      "expected_bit": 0,
+      "DOUT_V": -2.5739401394632192e-08,
+      "pass": true
+    },
+    {
+      "operation": 125,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 5,
+      "expected_bit": 0,
+      "DOUT_V": -2.9556868704612545e-08,
+      "pass": true
+    },
+    {
+      "operation": 126,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 6,
+      "expected_bit": 0,
+      "DOUT_V": -4.500345206668622e-09,
+      "pass": true
+    },
+    {
+      "operation": 127,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 7,
+      "expected_bit": 0,
+      "DOUT_V": -6.386410555903991e-09,
+      "pass": true
+    },
+    {
+      "operation": 128,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 8,
+      "expected_bit": 0,
+      "DOUT_V": -3.3232148706739327e-09,
+      "pass": true
+    },
+    {
+      "operation": 129,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 9,
+      "expected_bit": 0,
+      "DOUT_V": -6.295601357195194e-09,
+      "pass": true
+    },
+    {
+      "operation": 130,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 10,
+      "expected_bit": 0,
+      "DOUT_V": -7.237152550367886e-11,
+      "pass": true
+    },
+    {
+      "operation": 131,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 11,
+      "expected_bit": 0,
+      "DOUT_V": -6.33332702359714e-09,
+      "pass": true
+    },
+    {
+      "operation": 132,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 12,
+      "expected_bit": 0,
+      "DOUT_V": -7.160177774247826e-08,
+      "pass": true
+    },
+    {
+      "operation": 133,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 13,
+      "expected_bit": 0,
+      "DOUT_V": -4.3573513043388836e-08,
+      "pass": true
+    },
+    {
+      "operation": 134,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 14,
+      "expected_bit": 0,
+      "DOUT_V": 2.3595101577247596e-08,
+      "pass": true
+    },
+    {
+      "operation": 135,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 15,
+      "expected_bit": 0,
+      "DOUT_V": -4.368587034569703e-08,
+      "pass": true
+    },
+    {
+      "operation": 136,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 16,
+      "expected_bit": 0,
+      "DOUT_V": 2.2964880802909686e-08,
+      "pass": true
+    },
+    {
+      "operation": 137,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 17,
+      "expected_bit": 0,
+      "DOUT_V": -4.358474852402691e-08,
+      "pass": true
+    },
+    {
+      "operation": 138,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 18,
+      "expected_bit": 0,
+      "DOUT_V": -3.453269467059214e-08,
+      "pass": true
+    },
+    {
+      "operation": 139,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 19,
+      "expected_bit": 0,
+      "DOUT_V": -3.631181389010888e-08,
+      "pass": true
+    },
+    {
+      "operation": 140,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 20,
+      "expected_bit": 0,
+      "DOUT_V": -7.134451197550689e-08,
+      "pass": true
+    },
+    {
+      "operation": 141,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 21,
+      "expected_bit": 0,
+      "DOUT_V": -3.8478923176868164e-08,
+      "pass": true
+    },
+    {
+      "operation": 142,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 22,
+      "expected_bit": 0,
+      "DOUT_V": -3.835084246846252e-08,
+      "pass": true
+    },
+    {
+      "operation": 143,
+      "kind": "read",
+      "phase": "zeros",
+      "address": 23,
+      "expected_bit": 0,
+      "DOUT_V": -3.83689906119063e-08,
+      "pass": true
+    },
+    {
+      "operation": 144,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 0,
+      "expected_bit": 1,
+      "DOUT_V": 1.5286166933112442e-07,
+      "pass": true
+    },
+    {
+      "operation": 145,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 1,
+      "expected_bit": 0,
+      "DOUT_V": 1.9313490441689888e-07,
+      "pass": true
+    },
+    {
+      "operation": 146,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 2,
+      "expected_bit": 0,
+      "DOUT_V": 1.2847443866593364e-07,
+      "pass": true
+    },
+    {
+      "operation": 147,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 3,
+      "expected_bit": 1,
+      "DOUT_V": 1.7141455576899782e-07,
+      "pass": true
+    },
+    {
+      "operation": 148,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 4,
+      "expected_bit": 1,
+      "DOUT_V": 1.71503280138482e-07,
+      "pass": true
+    },
+    {
+      "operation": 149,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 5,
+      "expected_bit": 0,
+      "DOUT_V": 1.9308974474794758e-07,
+      "pass": true
+    },
+    {
+      "operation": 150,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 6,
+      "expected_bit": 1,
+      "DOUT_V": 1.4980471110938766e-07,
+      "pass": true
+    },
+    {
+      "operation": 151,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 7,
+      "expected_bit": 0,
+      "DOUT_V": 1.3383848528233805e-07,
+      "pass": true
+    },
+    {
+      "operation": 152,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 8,
+      "expected_bit": 1,
+      "DOUT_V": 1.6113556905876542e-07,
+      "pass": true
+    },
+    {
+      "operation": 153,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 9,
+      "expected_bit": 0,
+      "DOUT_V": 1.99740553740404e-07,
+      "pass": true
+    },
+    {
+      "operation": 154,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 10,
+      "expected_bit": 0,
+      "DOUT_V": 1.9368162980307176e-07,
+      "pass": true
+    },
+    {
+      "operation": 155,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 11,
+      "expected_bit": 1,
+      "DOUT_V": 1.5359110883697187e-07,
+      "pass": true
+    },
+    {
+      "operation": 156,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 12,
+      "expected_bit": 0,
+      "DOUT_V": 1.9644011963300838e-07,
+      "pass": true
+    },
+    {
+      "operation": 157,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 13,
+      "expected_bit": 1,
+      "DOUT_V": 1.5326723545788465e-07,
+      "pass": true
+    },
+    {
+      "operation": 158,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 14,
+      "expected_bit": 1,
+      "DOUT_V": 1.5551344806556814e-07,
+      "pass": true
+    },
+    {
+      "operation": 159,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 15,
+      "expected_bit": 0,
+      "DOUT_V": 1.9958660057374232e-07,
+      "pass": true
+    },
+    {
+      "operation": 160,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 16,
+      "expected_bit": 0,
+      "DOUT_V": 1.9302825621297723e-07,
+      "pass": true
+    },
+    {
+      "operation": 161,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 17,
+      "expected_bit": 1,
+      "DOUT_V": 1.5327105042245495e-07,
+      "pass": true
+    },
+    {
+      "operation": 162,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 18,
+      "expected_bit": 1,
+      "DOUT_V": 1.51514300887743e-07,
+      "pass": true
+    },
+    {
+      "operation": 163,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 19,
+      "expected_bit": 1,
+      "DOUT_V": 1.703654229246397e-07,
+      "pass": true
+    },
+    {
+      "operation": 164,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 20,
+      "expected_bit": 0,
+      "DOUT_V": 2.016027378640096e-07,
+      "pass": true
+    },
+    {
+      "operation": 165,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 21,
+      "expected_bit": 0,
+      "DOUT_V": 1.9648166193269684e-07,
+      "pass": true
+    },
+    {
+      "operation": 166,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 22,
+      "expected_bit": 1,
+      "DOUT_V": 1.7227562525689762e-07,
+      "pass": true
+    },
+    {
+      "operation": 167,
+      "kind": "write",
+      "phase": "mixed",
+      "address": 23,
+      "expected_bit": 0,
+      "DOUT_V": 1.9198839617042922e-07,
+      "pass": true
+    },
+    {
+      "operation": 168,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 0,
+      "expected_bit": 1,
+      "DOUT_V": 1.100000349392718,
+      "pass": true
+    },
+    {
+      "operation": 169,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 1,
+      "expected_bit": 0,
+      "DOUT_V": 1.617177751185268e-07,
+      "pass": true
+    },
+    {
+      "operation": 170,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 2,
+      "expected_bit": 0,
+      "DOUT_V": -2.725070062026883e-08,
+      "pass": true
+    },
+    {
+      "operation": 171,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 3,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999633817112,
+      "pass": true
+    },
+    {
+      "operation": 172,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 4,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999776054778,
+      "pass": true
+    },
+    {
+      "operation": 173,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 5,
+      "expected_bit": 0,
+      "DOUT_V": 1.6243455890529475e-07,
+      "pass": true
+    },
+    {
+      "operation": 174,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 6,
+      "expected_bit": 1,
+      "DOUT_V": 1.100000503421581,
+      "pass": true
+    },
+    {
+      "operation": 175,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 7,
+      "expected_bit": 0,
+      "DOUT_V": 9.452734977496015e-08,
+      "pass": true
+    },
+    {
+      "operation": 176,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 8,
+      "expected_bit": 1,
+      "DOUT_V": 1.100000471667894,
+      "pass": true
+    },
+    {
+      "operation": 177,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 9,
+      "expected_bit": 0,
+      "DOUT_V": 9.442764263189001e-08,
+      "pass": true
+    },
+    {
+      "operation": 178,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 10,
+      "expected_bit": 0,
+      "DOUT_V": 1.6193229775166255e-09,
+      "pass": true
+    },
+    {
+      "operation": 179,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 11,
+      "expected_bit": 1,
+      "DOUT_V": 1.100000467916216,
+      "pass": true
+    },
+    {
+      "operation": 180,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 12,
+      "expected_bit": 0,
+      "DOUT_V": 6.977482123981148e-08,
+      "pass": true
+    },
+    {
+      "operation": 181,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 13,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999793221395,
+      "pass": true
+    },
+    {
+      "operation": 182,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 14,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999778145604,
+      "pass": true
+    },
+    {
+      "operation": 183,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 15,
+      "expected_bit": 0,
+      "DOUT_V": 1.6833820317676697e-07,
+      "pass": true
+    },
+    {
+      "operation": 184,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 16,
+      "expected_bit": 0,
+      "DOUT_V": 2.424863551752988e-08,
+      "pass": true
+    },
+    {
+      "operation": 185,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 17,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999793169505,
+      "pass": true
+    },
+    {
+      "operation": 186,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 18,
+      "expected_bit": 1,
+      "DOUT_V": 1.09999948823329,
+      "pass": true
+    },
+    {
+      "operation": 187,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 19,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999745916096,
+      "pass": true
+    },
+    {
+      "operation": 188,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 20,
+      "expected_bit": 0,
+      "DOUT_V": -1.3030339219471757e-07,
+      "pass": true
+    },
+    {
+      "operation": 189,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 21,
+      "expected_bit": 0,
+      "DOUT_V": -3.808377629494362e-08,
+      "pass": true
+    },
+    {
+      "operation": 190,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 22,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999665780751,
+      "pass": true
+    },
+    {
+      "operation": 191,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 23,
+      "expected_bit": 0,
+      "DOUT_V": -1.292470744080008e-07,
+      "pass": true
+    },
+    {
+      "operation": 192,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 0,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999998118950365,
+      "pass": true
+    },
+    {
+      "operation": 193,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 1,
+      "expected_bit": 0,
+      "DOUT_V": 1.617137700464457e-07,
+      "pass": true
+    },
+    {
+      "operation": 194,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 2,
+      "expected_bit": 0,
+      "DOUT_V": -2.7250615187317965e-08,
+      "pass": true
+    },
+    {
+      "operation": 195,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 3,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999996338171216,
+      "pass": true
+    },
+    {
+      "operation": 196,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 4,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999997760547453,
+      "pass": true
+    },
+    {
+      "operation": 197,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 5,
+      "expected_bit": 0,
+      "DOUT_V": 1.6243487398335245e-07,
+      "pass": true
+    },
+    {
+      "operation": 198,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 6,
+      "expected_bit": 1,
+      "DOUT_V": 1.1000005034207878,
+      "pass": true
+    },
+    {
+      "operation": 199,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 7,
+      "expected_bit": 0,
+      "DOUT_V": 9.452735019061891e-08,
+      "pass": true
+    },
+    {
+      "operation": 200,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 8,
+      "expected_bit": 1,
+      "DOUT_V": 1.1000004716677039,
+      "pass": true
+    },
+    {
+      "operation": 201,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 9,
+      "expected_bit": 0,
+      "DOUT_V": 9.442764165617072e-08,
+      "pass": true
+    },
+    {
+      "operation": 202,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 10,
+      "expected_bit": 0,
+      "DOUT_V": 1.6193829565800135e-09,
+      "pass": true
+    },
+    {
+      "operation": 203,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 11,
+      "expected_bit": 1,
+      "DOUT_V": 1.1000004679160709,
+      "pass": true
+    },
+    {
+      "operation": 204,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 12,
+      "expected_bit": 0,
+      "DOUT_V": 6.970372042106747e-08,
+      "pass": true
+    },
+    {
+      "operation": 205,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 13,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999793221419,
+      "pass": true
+    },
+    {
+      "operation": 206,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 14,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999997781456061,
+      "pass": true
+    },
+    {
+      "operation": 207,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 15,
+      "expected_bit": 0,
+      "DOUT_V": 1.6833837122049197e-07,
+      "pass": true
+    },
+    {
+      "operation": 208,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 16,
+      "expected_bit": 0,
+      "DOUT_V": 2.4248683658878087e-08,
+      "pass": true
+    },
+    {
+      "operation": 209,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 17,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999793169537,
+      "pass": true
+    },
+    {
+      "operation": 210,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 18,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999994882332897,
+      "pass": true
+    },
+    {
+      "operation": 211,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 19,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999997459160982,
+      "pass": true
+    },
+    {
+      "operation": 212,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 20,
+      "expected_bit": 0,
+      "DOUT_V": -1.3030338633256816e-07,
+      "pass": true
+    },
+    {
+      "operation": 213,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 21,
+      "expected_bit": 0,
+      "DOUT_V": -3.808377846146987e-08,
+      "pass": true
+    },
+    {
+      "operation": 214,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 22,
+      "expected_bit": 1,
+      "DOUT_V": 1.099999665778872,
+      "pass": true
+    },
+    {
+      "operation": 215,
+      "kind": "read",
+      "phase": "mixed",
+      "address": 23,
+      "expected_bit": 0,
+      "DOUT_V": -1.2924707176678207e-07,
+      "pass": true
+    },
+    {
+      "operation": 216,
+      "kind": "invalid_write",
+      "phase": "invalid",
+      "address": 6,
+      "expected_bit": 1,
+      "DOUT_V": 1.6254986506634923e-07,
+      "pass": true
+    },
+    {
+      "operation": 217,
+      "kind": "invalid_read",
+      "phase": "invalid",
+      "address": 6,
+      "expected_bit": 1,
+      "DOUT_V": 2.016080918811234e-07,
+      "pass": true
+    },
+    {
+      "operation": 218,
+      "kind": "invalid_write",
+      "phase": "invalid",
+      "address": 7,
+      "expected_bit": 1,
+      "DOUT_V": 1.6123566898332803e-07,
+      "pass": true
+    },
+    {
+      "operation": 219,
+      "kind": "invalid_read",
+      "phase": "invalid",
+      "address": 7,
+      "expected_bit": 1,
+      "DOUT_V": 1.6519119016914109e-07,
+      "pass": true
+    },
+    {
+      "operation": 220,
+      "kind": "invalid_write",
+      "phase": "invalid",
+      "address": 14,
+      "expected_bit": 1,
+      "DOUT_V": 1.6149639700021125e-07,
+      "pass": true
+    },
+    {
+      "operation": 221,
+      "kind": "invalid_read",
+      "phase": "invalid",
+      "address": 14,
+      "expected_bit": 1,
+      "DOUT_V": 1.6517160426202198e-07,
+      "pass": true
+    },
+    {
+      "operation": 222,
+      "kind": "invalid_write",
+      "phase": "invalid",
+      "address": 15,
+      "expected_bit": 1,
+      "DOUT_V": 1.6203271236179548e-07,
+      "pass": true
+    },
+    {
+      "operation": 223,
+      "kind": "invalid_read",
+      "phase": "invalid",
+      "address": 15,
+      "expected_bit": 1,
+      "DOUT_V": 1.6516710038679392e-07,
+      "pass": true
+    },
+    {
+      "operation": 224,
+      "kind": "invalid_write",
+      "phase": "invalid",
+      "address": 22,
+      "expected_bit": 1,
+      "DOUT_V": 1.614955879175421e-07,
+      "pass": true
+    },
+    {
+      "operation": 225,
+      "kind": "invalid_read",
+      "phase": "invalid",
+      "address": 22,
+      "expected_bit": 1,
+      "DOUT_V": 1.651630516786355e-07,
+      "pass": true
+    },
+    {
+      "operation": 226,
+      "kind": "invalid_write",
+      "phase": "invalid",
+      "address": 23,
+      "expected_bit": 1,
+      "DOUT_V": 1.6203138859378797e-07,
+      "pass": true
+    },
+    {
+      "operation": 227,
+      "kind": "invalid_read",
+      "phase": "invalid",
+      "address": 23,
+      "expected_bit": 1,
+      "DOUT_V": 1.651602290682154e-07,
+      "pass": true
+    },
+    {
+      "operation": 228,
+      "kind": "invalid_write",
+      "phase": "invalid",
+      "address": 30,
+      "expected_bit": 1,
+      "DOUT_V": 1.6143662692540987e-07,
+      "pass": true
+    },
+    {
+      "operation": 229,
+      "kind": "invalid_read",
+      "phase": "invalid",
+      "address": 30,
+      "expected_bit": 1,
+      "DOUT_V": 1.6515835605482608e-07,
+      "pass": true
+    },
+    {
+      "operation": 230,
+      "kind": "invalid_write",
+      "phase": "invalid",
+      "address": 31,
+      "expected_bit": 1,
+      "DOUT_V": 1.6203082774216295e-07,
+      "pass": true
+    },
+    {
+      "operation": 231,
+      "kind": "invalid_read",
+      "phase": "invalid",
+      "address": 31,
+      "expected_bit": 1,
+      "DOUT_V": 1.6515675646316793e-07,
+      "pass": true
+    },
+    {
+      "operation": 232,
+      "kind": "conflict",
+      "phase": "interlock",
+      "address": 0,
+      "expected_bit": 1,
+      "DOUT_V": 1.619682288041126e-07,
+      "pass": true
+    },
+    {
+      "operation": 233,
+      "kind": "conflict",
+      "phase": "interlock",
+      "address": 1,
+      "expected_bit": 1,
+      "DOUT_V": 1.6198154595446176e-07,
+      "pass": true
+    },
+    {
+      "operation": 234,
+      "kind": "conflict",
+      "phase": "interlock",
+      "address": 2,
+      "expected_bit": 1,
+      "DOUT_V": 1.6162636591562233e-07,
+      "pass": true
+    },
+    {
+      "operation": 235,
+      "kind": "conflict",
+      "phase": "interlock",
+      "address": 3,
+      "expected_bit": 1,
+      "DOUT_V": 1.6198196458437587e-07,
+      "pass": true
+    },
+    {
+      "operation": 236,
+      "kind": "conflict",
+      "phase": "interlock",
+      "address": 4,
+      "expected_bit": 1,
+      "DOUT_V": 1.6217481618437472e-07,
+      "pass": true
+    },
+    {
+      "operation": 237,
+      "kind": "conflict",
+      "phase": "interlock",
+      "address": 5,
+      "expected_bit": 1,
+      "DOUT_V": 1.6198634259447004e-07,
+      "pass": true
+    },
+    {
+      "operation": 238,
+      "kind": "conflict",
+      "phase": "interlock",
+      "address": 6,
+      "expected_bit": 1,
+      "DOUT_V": 1.6163083348596538e-07,
+      "pass": true
+    },
+    {
+      "operation": 239,
+      "kind": "conflict",
+      "phase": "interlock",
+      "address": 7,
+      "expected_bit": 1,
+      "DOUT_V": 1.6198632685196056e-07,
+      "pass": true
+    },
+    {
+      "operation": 240,
+      "kind": "overlap",
+      "phase": "clock_interlock",
+      "address": 0,
+      "expected_bit": 1,
+      "DOUT_V": 1.605057081129374e-07,
+      "pass": true
+    },
+    {
+      "operation": 241,
+      "kind": "overlap",
+      "phase": "clock_interlock",
+      "address": 1,
+      "expected_bit": 1,
+      "DOUT_V": 1.6434579011514514e-07,
+      "pass": true
+    },
+    {
+      "operation": 242,
+      "kind": "overlap",
+      "phase": "clock_interlock",
+      "address": 2,
+      "expected_bit": 1,
+      "DOUT_V": 1.6305524491960963e-07,
+      "pass": true
+    },
+    {
+      "operation": 243,
+      "kind": "overlap",
+      "phase": "clock_interlock",
+      "address": 3,
+      "expected_bit": 1,
+      "DOUT_V": 1.6310457378814263e-07,
+      "pass": true
+    },
+    {
+      "operation": 244,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 0,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999998396360589,
+      "pass": true
+    },
+    {
+      "operation": 245,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 1,
+      "expected_bit": 0,
+      "DOUT_V": 1.465453345983827e-07,
+      "pass": true
+    },
+    {
+      "operation": 246,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 2,
+      "expected_bit": 0,
+      "DOUT_V": -1.1621751766547274e-08,
+      "pass": true
+    },
+    {
+      "operation": 247,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 3,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999996964286782,
+      "pass": true
+    },
+    {
+      "operation": 248,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 4,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999999682906525,
+      "pass": true
+    },
+    {
+      "operation": 249,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 5,
+      "expected_bit": 0,
+      "DOUT_V": 1.4445994755446055e-07,
+      "pass": true
+    },
+    {
+      "operation": 250,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 6,
+      "expected_bit": 1,
+      "DOUT_V": 1.1000000593704848,
+      "pass": true
+    },
+    {
+      "operation": 251,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 7,
+      "expected_bit": 0,
+      "DOUT_V": 1.0259902001287612e-07,
+      "pass": true
+    },
+    {
+      "operation": 252,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 8,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999996353051948,
+      "pass": true
+    },
+    {
+      "operation": 253,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 9,
+      "expected_bit": 0,
+      "DOUT_V": 1.0062209815546544e-07,
+      "pass": true
+    },
+    {
+      "operation": 254,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 10,
+      "expected_bit": 0,
+      "DOUT_V": -3.21263534665037e-08,
+      "pass": true
+    },
+    {
+      "operation": 255,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 11,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999996357086759,
+      "pass": true
+    },
+    {
+      "operation": 256,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 12,
+      "expected_bit": 0,
+      "DOUT_V": 1.695401403368995e-07,
+      "pass": true
+    },
+    {
+      "operation": 257,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 13,
+      "expected_bit": 1,
+      "DOUT_V": 1.1000001560401627,
+      "pass": true
+    },
+    {
+      "operation": 258,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 14,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999999612377385,
+      "pass": true
+    },
+    {
+      "operation": 259,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 15,
+      "expected_bit": 0,
+      "DOUT_V": 3.518675379427315e-07,
+      "pass": true
+    },
+    {
+      "operation": 260,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 16,
+      "expected_bit": 0,
+      "DOUT_V": 2.2084767769307557e-08,
+      "pass": true
+    },
+    {
+      "operation": 261,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 17,
+      "expected_bit": 1,
+      "DOUT_V": 1.1000001561282633,
+      "pass": true
+    },
+    {
+      "operation": 262,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 18,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999994988261224,
+      "pass": true
+    },
+    {
+      "operation": 263,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 19,
+      "expected_bit": 1,
+      "DOUT_V": 1.0999999182219535,
+      "pass": true
+    },
+    {
+      "operation": 264,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 20,
+      "expected_bit": 0,
+      "DOUT_V": 2.0585607283940847e-07,
+      "pass": true
+    },
+    {
+      "operation": 265,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 21,
+      "expected_bit": 0,
+      "DOUT_V": -7.73423594711914e-08,
+      "pass": true
+    },
+    {
+      "operation": 266,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 22,
+      "expected_bit": 1,
+      "DOUT_V": 1.1000000773114629,
+      "pass": true
+    },
+    {
+      "operation": 267,
+      "kind": "read",
+      "phase": "post_interlock_readback",
+      "address": 23,
+      "expected_bit": 0,
+      "DOUT_V": 2.0488448630560696e-07,
+      "pass": true
+    }
+  ],
+  "patterns": {
+    "ones": "111111111111111111111111",
+    "zeros": "000000000000000000000000",
+    "mixed": "100110101001011001110010"
+  }
+}

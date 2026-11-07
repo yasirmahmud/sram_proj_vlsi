@@ -1,0 +1,16 @@
+PASS simulator: functional
+PASS simulator: functional_tt_-40
+PASS simulator: functional_tt_125
+PASS simulator: functional_tt_27
+PASS simulator: functional_ss_-40
+PASS simulator: functional_ff_125
+PASS simulator: functional_ff_27
+PASS simulator: functional_ff_-40
+PASS simulator: functional_ss_125
+PASS simulator: functional_fs_27
+PASS simulator: functional_fs_-40
+PASS simulator: functional_ss_27
+PASS simulator: functional_sf_-40
+PASS simulator: functional_sf_27
+PASS simulator: functional_fs_125
+PASS simulator: functional_sf_125

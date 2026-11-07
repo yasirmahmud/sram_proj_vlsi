@@ -1,0 +1,12 @@
+PM0 pmos1v w="120n" l="45n"
+ D=Q_bar B=Vdd G=Q S=Vdd
+PM1 pmos1v w="120n" l="45n"
+ D=Q B=Vdd G=Q_bar S=Vdd
+NM2 nmos1v w="240n" l="45n"
+ D=Q_bar B=GND G=WL S=BL_bar
+NM0 nmos1v w="360n" l="45n"
+ D=Q_bar B=GND G=Q S=GND
+NM3 nmos1v w="240n" l="45n"
+ D=BL B=GND G=WL S=Q
+NM1 nmos1v w="360n" l="45n"
+ D=Q B=GND G=Q_bar S=GND

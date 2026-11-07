@@ -1,0 +1,5 @@
+lib=ddGetObj("sram_project")
+unless(lib lib=ddCreateLib("sram_project" "./cadence"))
+techBindTechFile(lib "gpdk045")
+printf("SRAM_PROJECT_LIBRARY_READY\n")
+exit()

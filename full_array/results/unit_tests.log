@@ -1,0 +1,16 @@
+SIMULATOR PASS unit_inv
+UNIT inv True
+SIMULATOR PASS unit_nand2
+UNIT nand2 True
+SIMULATOR PASS unit_nand3
+UNIT nand3 True
+SIMULATOR PASS unit_and3
+UNIT and3 True
+SIMULATOR PASS unit_row_decoder
+UNIT row_decoder True
+SIMULATOR PASS unit_column_decoder
+UNIT column_decoder True
+SIMULATOR PASS unit_sense_amp
+UNIT sense_amp True
+SIMULATOR PASS unit_rw_control
+UNIT rw_control True

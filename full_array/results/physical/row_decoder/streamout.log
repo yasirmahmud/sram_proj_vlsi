@@ -1,0 +1,60 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 09/03/2024 18:58 (sjfhw317) $
+          : sub-version  IC6.1.8-64b.500.36 
+Started at: 07-Nov-2026  03:30:48
+User Name : ymahmud
+Host Name : ece-lnx-07
+Directory : /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/row_decoder/layout.gds' already exists. It will be overwritten.
+INFO (XSTRM-217): Reading the layer map file, /apps/cds/local/GPDK045/gpdk045/gpdk045.layermap
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 sram_project
+strmFile                                /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/row_decoder/layout.gds
+topCell                                 row_decoder
+view                                    layout
+logFile                                 /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/full_array/results/physical/row_decoder/streamout.log
+layerMap                                /apps/cds/local/GPDK045/gpdk045/gpdk045.layermap
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_794040248390.
+INFO (XSTRM-223): 2. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_794040248391.
+INFO (XSTRM-223): 3. Translating cellView sram_project/inv/layout as STRUCTURE inv.
+INFO (XSTRM-223): 4. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_794040248392.
+INFO (XSTRM-223): 5. Translating cellView sram_project/and3/layout as STRUCTURE and3.
+INFO (XSTRM-223): 6. Translating cellView sram_project/row_decoder/layout as STRUCTURE row_decoder.
+
+Summary of Objects Translated:
+	Scalar Instances:                       16
+	Array Instances:                        0
+	Polygons:                               0
+	Paths:                                  0
+	Rectangles:                             801
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               0
+	Text:                                   19
+	TextDisplay:                            0
+	Cells:                                  6
+
+Elapsed Time: 0.4s   User Time: 0.1s   CPU Time: 0.0s   Peak VM: 5772KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

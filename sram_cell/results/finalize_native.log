@@ -1,0 +1,167 @@
+\# Program start time:     UTC 2026.11.07 07:16:46.076
+\# Local time: EST (UTC-05:00) 2026.11.07 02:16:46.076
+\o Program:		@(#)$CDS: virtuoso version 6.1.8-64b 09/03/2024 19:11 (sjfhw316) $
+\o Hierarchy:		/apps/cds/IC618/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.8-64b.500.36  (64-bit addresses)
+\# Command line:	/apps/cds/IC618/tools/dfII/bin/64bit/virtuoso -nographE -nocdsinit -replay scripts/finalize_native.il -log results/finalize_native.log
+\# Host name (type):	ece-lnx-07 (x86_64)
+\# Operating system:	Linux 4.18.0-553.180.1.el8_10.x86_64 #1 SMP Tue Oct 27 22:01:38 EDT 2026
+\# Linux /etc/issue:	\S
+\# Linux /etc/issue:	Kernel \r on an \m
+\# X display name (WxH):	:1539 (1024x868)
+\# Available geometry:			TL(0:0) BR(1023:867)
+\# X server:			The X.Org Foundation
+\# Depth of Visual (Root):	24 (24)
+\# Number of Planes Used:	24
+\# X version:		11.0 (vendor release 12011000)
+\# X resource pool:	base 0x400000, mask 0x1fffff (2097151), shift 0
+\# 			current id 0x0, current max 0x1ffffa (2097146)
+\# Max data seg size:	     unlimited
+\# Max process size:	     unlimited
+\# Initial sbrk value:	        617 MB
+\# Available memory:	    603,533 MB
+\# System memory:	    646,255 MB
+\# Maximum memory size:	    645,758 MB
+\# Max mem available:	    603,652 MB
+\# Initial memory used:	        120 MB
+\#        process size:	      1,707 MB
+\# Thread usage limits (effective/default):	maxthreads 2060485/2060485 maxload 64.00/64.00
+\# Qt version:		5.9.1
+\# Window Manager:	other
+\# User Name:		ymahmud
+\o Working Directory:	ece-lnx-07:/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell
+\# Process Id:		1738531
+\o 
+\o COPYRIGHT (C) 1992-2024  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           (C) 1992-2024  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading wireEdit.cxt 
+\o Loading pte2.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Loading adexlDM.cxt 
+\o Loading cpf.cxt 
+\o Loading cli.cxt 
+\o Loading lp.cxt 
+\# [02:16:46.075161] Configured Lic search path (22.01-s002): 5280@ece-itop-licsvr.ece.ufl.edu
+\o Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.02s.
+\# Memory report: using         231 MB, process size 1,897 MB at UTC 2026.11.07 07:16:48.235
+\p > 
+\i ; Add observable storage terminals and consistent reusable symbols.
+\# [02:16:48.290865] Periodic Lic check successful
+\# [02:16:48.290874] Feature usage summary:
+\# [02:16:48.290875] 111
+\i pinMaster=dbOpenCellViewByType("basic" "iopin" "symbol" "" "r")
+\t db:0x26c9e49a
+\p > 
+\i symMaster=dbOpenCellViewByType("basic" "sympin" "symbol" "" "r")
+\t db:0x26c9d99a
+\p > 
+\i foreach(cellName '("sram_cell" "sram_cell_default")
+\i  c=dbOpenCellViewByType("sram_cell" cellName "schematic" "" "a")
+\i  foreach(spec '(("Q" "NM3" "S") ("Q_bar" "NM2" "D"))
+\i   name=car(spec) i=dbFindAnyInstByName(c cadr(spec))
+\i   loc=dbTransformPoint(centerBox(car(dbFindTermByName(i~>master caddr(spec))~>pins)~>fig~>bBox) i~>transform)
+\i   existing=dbFindTermByName(c name)
+\i   when(existing && null(existing~>pins) dbDeleteObject(existing))
+\i   unless(dbFindTermByName(c name) schCreatePin(c pinMaster name "inputOutput" nil loc "R0"))
+\i  )
+\i  dbSave(c) dbClose(c)
+\i  s=dbOpenCellViewByType("sram_cell" cellName "symbol" "schematicSymbol" "w")
+\i  dbCreateRect(s '("device" "drawing") '((0.0 0.0) (2.0 3.0)))
+\i  dbCreateLabel(s '("device" "drawing") '(1.0 1.5) "6T SRAM" "centerCenter" "R0" "roman" .18)
+\i  foreach(spec '(("WL" "input" -.25 2.25 0.0 2.25 .10 2.25 "centerLeft") ("BL" "inputOutput" -.25 1.0 0.0 1.0 .10 1.0 "centerLeft") ("BL_bar" "inputOutput" -.25 .5 0.0 .5 .10 .5 "centerLeft") ("Q" "inputOutput" 2.25 2.0 2.0 2.0 1.90 2.0 "centerRight") ("Q_bar" "inputOutput" 2.25 1.0 2.0 1.0 1.90 1.0 "centerRight") ("Vdd" "input" 1.0 3.25 1.0 3.0 1.0 2.80 "centerCenter") ("GND" "input" 1.0 -.25 1.0 0.0 1.0 .20 "centerCenter"))
+\i   schCreateSymbolPin(s symMaster car(spec) cadr(spec) list(nth(2 spec) nth(3 spec)) "R0" t nil nil if(car(spec)=="Vdd" then "power" else if(car(spec)=="GND" then "ground" else "signal")))
+\i   dbCreateLine(s '("device" "drawing") list(list(nth(2 spec) nth(3 spec)) list(nth(4 spec) nth(5 spec))))
+\i   dbCreateLabel(s '("device" "drawing") list(nth(6 spec) nth(7 spec)) car(spec) nth(8 spec) "R0" "roman" .14)
+\i  )
+\i  dbFindTermByName(s "Vdd")~>sigType="power"
+\i  dbFindTermByName(s "GND")~>sigType="ground"
+\i  dbSave(s) dbClose(s)
+\i  c=dbOpenCellViewByType("sram_cell" cellName "schematic" "" "a")
+\i  printf("NATIVE_CHECK %s %L\n" cellName schCheck(c)) dbSave(c) dbClose(c)
+\i )
+\o Loading gpdk045/libInit.il ...
+\o 	Loading gpdk045/loadCxt.ile ... done!
+\o 	Loading context 'gpdk045' from library 'gpdk045' ... done!
+\o 	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+\o 	Loading gpdk045/gpdk045_customFilter.il ... done!
+\o 	Loading gpdk045/libInitCustomExit.il ... 
+\o 	Loading Environment Settings ...
+\o 	Loading Model Management File ...
+\o Loading oasis.cxt 
+\o Loading analog.cxt 
+\o Loading asimenv.cxt 
+\o Loading spectrei.cxt 
+\o Loading dal.cxt 
+\o Loading awv.cxt 
+\o Loading socket.cxt 
+\o Loading par.cxt 
+\o Loading alvs.cxt 
+\o Loading caa.cxt 
+\o Loading amps.cxt 
+\o Loading adexlCore.cxt 
+\# Memory report: using         342 MB, process size 2,123 MB at UTC 2026.11.07 07:16:49.200
+\o Loading adexl.cxt 
+\o Loading vdsil.cxt 
+\o Loading lx.cxt 
+\o Loading lce.cxt 
+\o Loading le.cxt 
+\o Loading drdEdit.cxt 
+\o Loading rte.cxt 
+\o Loading te.cxt 
+\o Loading schHDL.cxt 
+\o Loading devCheck.cxt 
+\o Loading relXpert.cxt 
+\o Loading hspiceD.cxt 
+\o Loading spectreinl.cxt 
+\o Loading UltraSim.cxt 
+\o Loading msgHandler.cxt 
+\o Loading AMSOSS.cxt 
+\o Loading AMS.cxt 
+\o 	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+\o 
+\o   *************************************************************           
+\o   *              Cadence Design Systems, Inc.                 *           
+\o   *                                                           *           
+\o   *                    Generic 45nm PDK                       *           
+\o   *                        (gpdk045)                          *           
+\o   *                                                           *           
+\o   *************************************************************           
+\o 	
+\o 
+\o 	VERSION: 6.0 (09-September-2019)
+\o 
+\o done!
+\o Loaded gpdk045/libInit.il successfully!
+\o Loading schematic.cxt 
+\o INFO (SCH-1170): Extracting "sram_cell schematic"
+\o NATIVE_CHECK sram_cell (0 0)
+\o INFO (SCH-1170): Extracting "sram_cell_default schematic"
+\o NATIVE_CHECK sram_cell_default (0 0)
+\t ("sram_cell" "sram_cell_default")
+\p > 
+\i exit()
+\o 
+\# Lic Summary:
+\# [02:16:51.466928] Cdslmd servers: ece-itop-licsvr
+\# [02:16:51.466944] Feature usage summary:
+\# [02:16:51.466945] 111
+\# Memory report: on exit            400 MB, process size 2,181 MB at UTC 2026.11.07 07:16:51.991
+\# Memory report: peak usage         400 MB, process size 2,181 MB

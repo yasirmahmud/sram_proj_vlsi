@@ -1,0 +1,20 @@
+{
+  "boundary_um": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      2.12,
+      1.68
+    ]
+  ],
+  "dimensions_um": [
+    2.12,
+    1.68
+  ],
+  "area_um2": 3.5616,
+  "vertical_poly_rectangles": 42,
+  "all_poly_vertical": true,
+  "gds_sha256": "704df561855a0e1c22901561506e44fab88e0e0489ba568d7f0c800ddebf891b"
+}

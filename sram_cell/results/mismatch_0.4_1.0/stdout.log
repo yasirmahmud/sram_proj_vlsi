@@ -1,0 +1,228 @@
+
+Spectre (R) Circuit Simulator
+Version 21.1.0.664.isr16 64bit -- 24 Feb 2023
+Copyright (C) 1989-2023 Cadence Design Systems, Inc. All rights reserved
+        worldwide. Cadence and Spectre are registered trademarks of Cadence
+        Design Systems, Inc. All others are the property of their respective
+        holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA
+        Security, Inc.
+
+User: ymahmud   Host: ece-lnx-07   HostID: E30ABEE8   PID: 1737242
+Memory  available: 522.9494 GB  physical: 540.2090 GB
+Linux   : Red Hat Enterprise Linux release 8.10 (Ootpa)
+CPU Type: AMD EPYC 7662 64-Core Processor
+        Socket: Processors [Frequency]
+        0:       0 [2000.0],  1 [2000.0],  2 [2000.0],  3 [2000.0],  4
+        [2000.0]
+                 5 [2000.0],  6 [2000.0],  7 [3257.0],  8 [2000.0],  9
+        [2000.0]
+                10 [2000.0], 11 [2000.0], 12 [2000.0], 13 [2000.0], 14
+        [2000.0]
+                15 [2000.0], 16 [2000.0], 17 [2000.0], 18 [2000.0], 19
+        [2000.0]
+                20 [2000.0], 21 [2000.0], 22 [2000.0], 23 [2000.0], 24
+        [2000.0]
+                25 [2000.0], 26 [2000.0], 27 [2000.0], 28 [2000.0], 29
+        [2000.0]
+                30 [2000.0], 31 [2000.0], 32 [2000.0], 33 [2000.0], 34
+        [2000.0]
+                35 [2000.0], 36 [3267.4], 37 [2000.0], 38 [2000.0], 39
+        [2000.0]
+                40 [2000.0], 41 [2000.0], 42 [2000.0], 43 [2000.0], 44
+        [2000.0]
+                45 [2000.0], 46 [2000.0], 47 [2000.0], 48 [2988.8], 49
+        [2000.0]
+                50 [2000.0], 51 [2000.0], 52 [2000.0], 53 [2000.0], 54
+        [2000.0]
+                55 [2000.0], 56 [2000.0], 57 [2000.0], 58 [2000.0], 59
+        [2000.0]
+                60 [2000.0], 61 [2000.0], 62 [2000.0], 63 [2000.0]
+        
+System load averages (1min, 5min, 15min) : 2.8 %, 3.0 %, 2.1 %
+
+
+Simulating
+        `/ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/netlists/mismatch_0.4_1.0.scs'
+        on ece-lnx-07 at 2:15:18 AM, Sat Nov 7, 2026 (process id: 1737242).
+Current working directory:
+        /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/results/mismatch_0.4_1.0
+Command line:
+    /apps/cds/spectre211/tools.lnx86/bin/spectre -64  \
+        /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/netlists/mismatch_0.4_1.0.scs
+        \
+        -raw  \
+        /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/results/mismatch_0.4_1.0/psf
+        \
+        -format psfascii +log  \
+       
+        /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/results/mismatch_0.4_1.0/spectre.log
+Licensing Information:
+[02:15:18.175497] Configured Lic search path (21.01-s002):
+        5280@ece-itop-licsvr.ece.ufl.edu
+
+Licensing Information:
+[02:15:18.361680] Periodic Lic check successful
+
+Reading file: 
+        /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/netlists/mismatch_0.4_1.0.scs
+Reading file: 
+        /apps/cds/spectre211/tools.lnx86/spectre/etc/configs/spectre.cfg
+Reading file:  /ecel/UFAD/ymahmud/vlsi_sram_project/Project
+        files/gpdk045_mos.scs
+Time for NDB Parsing: CPU = 245.087 ms, elapsed = 394.666 ms.
+Time accumulated: CPU = 291.4 ms, elapsed = 394.668 ms.
+Peak resident memory used = 150 Mbytes.
+
+Reading link:  /apps/cds/spectre211/tools.lnx86/spectre/etc/ahdl/discipline.h
+Reading file: 
+        /apps/cds/spectre211/tools.lnx86/spectre/etc/ahdl/disciplines.vams
+Reading link:  /apps/cds/spectre211/tools.lnx86/spectre/etc/ahdl/constants.h
+Reading file: 
+        /apps/cds/spectre211/tools.lnx86/spectre/etc/ahdl/constants.vams
+Compiling ahdlcmi module library for bsource_2b273e.
+Finished compilation in 1.9 s (elapsed) for bsource_2b273e.
+Installed compiled interface for bsource_2b273e.
+Time for Elaboration: CPU = 48.163 ms, elapsed = 1.98863 s.
+Time accumulated: CPU = 339.634 ms, elapsed = 2.38337 s.
+Peak resident memory used = 169 Mbytes.
+
+
+Time for EDB Visiting: CPU = 714 us, elapsed = 2.66314 ms.
+Time accumulated: CPU = 340.425 ms, elapsed = 2.38611 s.
+Peak resident memory used = 169 Mbytes.
+
+
+Global user options:
+            vabstol = 1e-07
+            iabstol = 1e-14
+               temp = 27
+               gmin = 1e-14
+             reltol = 1e-05
+
+Scoped user options:
+
+Circuit inventory:
+              nodes 13
+              bsim4 6     
+     bsource_2b273e 6     
+            vsource 5     
+
+Analysis and control statement inventory:
+               tran 1     
+
+Output statements:
+             .probe 0     
+           .measure 0     
+               save 1     
+
+Time for parsing: CPU = 1.235 ms, elapsed = 5.16605 ms.
+Time accumulated: CPU = 341.715 ms, elapsed = 2.39133 s.
+Peak resident memory used = 172 Mbytes.
+
+~~~~~~~~~~~~~~~~~~~~~~
+Pre-Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+
+*************************************************
+Transient Analysis `tran': time = (0 s -> 800 ns)
+*************************************************
+
+Notice from spectre during IC analysis, during transient analysis `tran'.
+    There are 2 IC nodes defined.
+
+Trying `homotopy = gmin' for initial conditions.
+DC simulation time: CPU = 3.17 ms, elapsed = 3.74293 ms.
+
+Opening the PSFASCII file
+        /ecel/UFAD/ymahmud/vlsi_sram_project/project_file/sram_cell/results/mismatch_0.4_1.0/psf/tran.tran.tran
+        ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 800 ns
+    step = 800 ps
+    maxstep = 1 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-06
+    abstol(V) = 100 nV
+    abstol(I) = 10 fA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 10 fS
+
+
+Output and IC/nodeset summary:
+                 save   5       (voltage)
+                 ic     2       
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             3621
+
+Maximum value achieved for any signal of each quantity: 
+V: V(Xcell.NM0.n1) = 1.405 V
+I: I(Vblb:p) = 61.74 uA
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+   -   Non-default settings that could significantly slow down simulation
+          errpreset = conservative, default moderate
+          maxstep = 1 ns, default 8 ns (conservative)
+          reltol = 1e-06, default 100e-06 (conservative)
+          abstol(V) = 100 nV, default 1 uV
+          abstol(I) = 10 fA, default 1 pA
+          gmin = 10 fS, default 1 pS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (7.8 %)       1 (20.6 %)      2 (1.2 %)       3 (5.0 %)
+         4 (2.0 %)       5 (8.3 %)       6 (3.1 %)       7 (6.6 %)
+         8 (10.9 %)      9 (4.3 %)      10 (5.1 %)      11 (22.0 %)
+        12 (1.2 %)      14 (5.9 %)      15 (4.7 %)      16 (16.0 %)
+        17 (3.5 %)      18 (22.2 %)     19 (3.5 %)      20 (3.1 %)
+        21 (1.6 %)      23 (4.7 %)      24 (9.0 %)      25 (7.1 %)
+        26 (4.3 %)      27 (18.8 %)     28 (3.5 %)      29 (2.7 %)
+        30 (22.1 %)     31 (1.2 %)      32 (5.1 %)      33 (2.7 %)
+        34 (1.2 %)      36 (4.7 %)      37 (2.0 %)      39 (2.0 %)
+        40 (19.8 %)     41 (3.5 %)      42 (4.3 %)      44 (22.4 %)
+        45 (1.6 %)      46 (7.0 %)      47 (10.2 %)     49 (8.9 %)
+        50 (1.9 %)      51 (1.2 %)      52 (2.0 %)      54 (2.4 %)
+        55 (6.6 %)      56 (4.7 %)      57 (4.3 %)      58 (4.3 %)
+        59 (1.6 %)      60 (8.6 %)      61 (1.6 %)      62 (1.2 %)
+        63 (5.9 %)      
+        Total: 375.7%
+Initial condition solution time: CPU = 3.198 ms, elapsed = 3.77178 ms.
+Intrinsic tran analysis time:    CPU = 190.337 ms, elapsed = 194.43 ms.
+Total time required for tran analysis `tran': CPU = 194.117 ms, elapsed =
+        200.421 ms, util. = 96.9%.
+Time accumulated: CPU = 541.229 ms, elapsed = 2.59935 s.
+Peak resident memory used = 174 Mbytes.
+
+Licensing Information:
+Lic Summary:
+[02:15:20.282219] Cdslmd servers:5280@ece-itop-licsvr.ece.ufl.edu
+[02:15:20.282235] Feature usage summary:
+[02:15:20.282235] Virtuoso_Multi_mode_Simulation
+
+
+Aggregate audit (2:15:20 AM, Sat Nov 7, 2026):
+Time used: CPU = 543 ms, elapsed = 2.6 s, util. = 20.9%.
+Time spent in licensing: elapsed = 47.6 ms.
+Peak memory used = 175 Mbytes.
+Simulation started at: 2:15:18 AM, Sat Nov 7, 2026, ended at: 2:15:20 AM, Sat
+        Nov 7, 2026, with elapsed time (wall clock): 2.6 s.
+spectre completes with 0 errors, 0 warnings, and 2 notices.

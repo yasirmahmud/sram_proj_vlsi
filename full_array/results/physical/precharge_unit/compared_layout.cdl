@@ -1,0 +1,10 @@
+** Layout Netlist, pegasus precompare
+** 
+
+.subckt precharge_unit GND VDD PCB BL BLB 
+MM3 VDD PCB BL VDD G45P1SVT L=4.5e-08 W=1.08e-06 AD=1.512e-13 AS=1.512e-13 PD=2.44e-06 PS=2.44e-06 m=1 
+MM4 VDD PCB BLB VDD G45P1SVT L=4.5e-08 W=1.08e-06 AD=1.512e-13 AS=1.512e-13 PD=2.44e-06 PS=2.44e-06 m=1 
+MM5 BLB PCB BL VDD G45P1SVT L=4.5e-08 W=1.08e-06 AD=1.512e-13 AS=1.512e-13 PD=2.44e-06 PS=2.44e-06 m=1 
+.ends
+
+
